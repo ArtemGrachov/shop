@@ -11,7 +11,7 @@ global.$ = {
     del: require('del')
 }
 
-$.path.task.forEach(function(taskPath) {
+$.path.task.forEach(function (taskPath) {
     require(taskPath)();
 });
 
@@ -23,6 +23,7 @@ $.gulp.task('default', [
     'scripts',
     'js-libs',
     'img',
+    'fonts',
     'browser-sync',
     'sprite',
     'watch'
