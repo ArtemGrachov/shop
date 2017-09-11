@@ -40,23 +40,8 @@ footer.footer
                         a.socials-link(href="#") In
                     li.socials-item
                         a.socials-link(href="#") YouTube
-        .footer-block
-            .footer-block-header
-                | Best seller
-            .footer-block-body
-                ul.footer-products-list
-                    +footer-product-item('Einstein T-Shirt', '799')
-                    +footer-product-item('Dope T-Shirt', '199')
-                    +footer-product-item('Poker King T-Shirt', '439')
-        .footer-block
-            .footer-block-header
-                | Just added
-            .footer-block-body
-                ul.footer-products-list
-                ul.footer-products-list
-                    +footer-product-item('Happy T-Shirt', '289')
-                    +footer-product-item('Beetles T-Shirt', '569')
-                    +footer-product-item('Captain Awesome T-Shirt', '139')
+        include ../includes/best-seller.pug
+        include ../includes/just-added.pug
     .footer-bottom
         .footer-copyright Copyright
             a(href="#") Shopmint

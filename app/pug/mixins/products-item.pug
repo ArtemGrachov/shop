@@ -1,0 +1,19 @@
+mixin products-item(name, price, discount)
+    li.products-item
+        .products-preview
+            .products-preview__img
+                img(src="" alt="Product image")
+            if discount
+                .products-preview__price #{price}
+                .products-preview__currency USD
+            .products__name #{name}
+        .products-bottom
+            .products-bottom__left
+                .products-bottom__price
+                    if discount
+                        | #{discount}
+                    else
+                        | #{price}
+                .products-bottom__currency USD
+            .products-bottom__right
+                a.btn.btn-primary(href="#") Add to cart
