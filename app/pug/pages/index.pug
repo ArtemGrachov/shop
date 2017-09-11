@@ -4,40 +4,41 @@ block variables
     - var title = "HeroWP.com"
 
 block content
-    .slider
-        .slider-list
-            .slider-item
-                .slider-circle.slider-circle_small
-                    .slider-circle__text Delivery
-                    .slider-circle__text_large Free
-                .slider-circle.slider-circle_largr
-                    .slider-circle__text_large Great sale
-                    .slider-circle__text On all models
-                .slider-circle.slider-circle_small
-                    .slider-circle__text Starting from
-                    .slider-circle__text_large 429 $
-        .slider-controls
-            a.slider-btn.slider-btn_left(href="#")
-            a.slider-btn.slider-btn_right(href="#")
-    .proudcts-preview
-        ul.products-select-list
-            li.product-select-item
-                a.product-select__link(href="#") Hot products.
-            li.product-select-item
-                a.product-select__link(href="#") Latest products.
-            li.product-select-item
-                a.product-select__link(href="#") Best seller.
-        ul.products-list
-            +products-item('Dope T-Shirt', '799')
-            +products-item('Einstein T-Shirt', '469', '369')
-            +products-item('Rock Roll T-Shirt', '199')
-            +products-item('The Beetles T-Shirt', '209')
-            +products-item('Cocaine Zero T-Shirt', '799')
-            +products-item('Power King T-Shirt', '369')
-            +products-item('Captain Awesome T-Shirt', '199')
-            +products-item('Happy T-Shirt', '209')
-    .useful-info
-        ul.userful-info-list
-            +useful-info-item('Very fast delivery')
-            +useful-info-item('Every week discounts')
-            +useful-info-item('Money saver')
+    .container
+        .slider
+            .slider-list
+                .slider-item
+                    .slider-circle.slider-circle_small
+                        .slider-circle__text Delivery
+                        .slider-circle__text_large Free
+                    .slider-circle.slider-circle_largr
+                        .slider-circle__text_large Great sale
+                        .slider-circle__text On all models
+                    .slider-circle.slider-circle_small
+                        .slider-circle__text Starting from
+                        .slider-circle__text_large 429 $
+            .slider-controls
+                a.slider-btn.slider-btn_left(href="#")
+                a.slider-btn.slider-btn_right(href="#")
+        .proudcts-preview
+            ul.products-select-list
+                li.product-select-item
+                    a.product-select__link(href="#") Hot products.
+                li.product-select-item
+                    a.product-select__link(href="#") Latest products.
+                li.product-select-item
+                    a.product-select__link(href="#") Best seller.
+            ul.products-list
+                +products-item('Dope T-Shirt', '799')
+                +products-item('Einstein T-Shirt', '469', '369')
+                +products-item('Rock Roll T-Shirt', '199')
+                +products-item('The Beetles T-Shirt', '209')
+                +products-item('Cocaine Zero T-Shirt', '799')
+                +products-item('Power King T-Shirt', '369')
+                +products-item('Captain Awesome T-Shirt', '199')
+                +products-item('Happy T-Shirt', '209')
+        .useful-info
+            ul.userful-info-list
+                +useful-info-item('Very fast delivery')
+                +useful-info-item('Every week discounts')
+                +useful-info-item('Money saver')

@@ -1,0 +1,7 @@
+mixin review-item(name, title, body)
+    li.review-item
+        .review-header
+            a(href="#").review__name #{name}
+            | says
+            span.review__title #{title}
+        .review__body #{body}

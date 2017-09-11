@@ -1,0 +1,65 @@
+extends ../templates/layout.pug
+
+block variables
+    - var title = "Product"
+
+block content
+    +page-nav(title)
+    .container
+        main.main
+            .product__image
+            .product-select
+            .product-title
+                .product__name
+                .product__category
+            .product-price
+            .product-info
+                .product-tabs
+                    ul.product-tabs-nav-list
+                        li.product-tabs-nav-item.product-tabs-nav-item_active
+                            a.product-tabs-nav__link(href="#") Description
+                        li.product-tabs-nav-item
+                            a.product-tabs-nav__link(href="#") Additional information
+                        li.product-tabs-nav-item
+                            a.product-tabs-nav__link(href="#") Customer reviews(3)
+                    ul.product-tabs
+                        li.product-tabs-item.product-tabs-item_active
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quibusdam, at corrupti dolorem hic repudiandae fugiat necessitatibus amet, esse voluptatem sapiente, cupiditate ducimus delectus dolorum officiis nisi error aperiam officia.
+                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, eos? Recusandae, enim illo consequuntur iure autem cupiditate quisquam voluptatibus quas, odit eos repellendus incidunt, debitis est tempora repudiandae modi sint!
+                        li.product-tabs-item
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quibusdam, at corrupti dolorem hic repudiandae fugiat necessitatibus amet, esse voluptatem sapiente, cupiditate ducimus delectus dolorum officiis nisi error aperiam officia.
+                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, eos? Recusandae, enim illo consequuntur iure autem cupiditate quisquam voluptatibus quas, odit eos repellendus incidunt, debitis est tempora repudiandae modi sint!
+                        li.product-tabs-item
+                            input(type="text" placeholder="Name").review-input
+                            input(type="email" placeholder="Email").review-input
+                            select.review-input
+                                option(value="rate") Rate
+                            textarea.review-textarea(placeholder="Your review")
+                            ul.reviews-list
+                                +review-item('John Doe','Not bad', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu purus sit amet nisl cursus tincidunt. Integer et libero pharetra, fringilla metus vitae, tempor lacus. Nulla vitae est leo. Nam gravida posuere')
+                                +review-item('Elizabeth Taylor','Very poor','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu purus sit amet nisl cursus tincidunt. Integer et libero pharetra, fringilla metus vitae, tempor lacus. Nulla vitae est leo. Nam gravida posuere')
+                                +review-item('John Smith','Excellent','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu purus sit amet nisl cursus tincidunt. Integer et libero pharetra, fringilla metus vitae, tempor lacus. Nulla vitae est leo. Nam gravida posuere  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu purus sit amet nisl cursus tincidunt. Integer et libero pharetra, fringilla metus vitae, tempor lacus. Nulla vitae est leo. Nam gravida posuere')
+        aside.sidebar
+            ul.sidebar-list
+                li.sidebar-item
+                    include ../includes/best-seller.pug
+                li.sidebar-item
+                    include ../includes/just-added.pug
+                li.sidebar-item
+                    .sidebar__header Search our shop
+                    .sidebar__body
+                        input(type="text" placeholder="Search product...")
+                li.sidebar-item
+                    .title.title_medium Shop tags
+                    .sidebar__body
+                        ul.tags-list
+                            li.tags-item awesomeness
+                            li.tags-item cool
+                            li.tags-item awesome
+        .bottom
+            .title.title_large You migh also like
+            ul.products-list
+                +products-item('Dope T-Shirt', '799')
+                +products-item('Einstein T-Shirt', '469', '369')
+                +products-item('Rock Roll T-Shirt', '199')
+                +products-item('The Beetles T-Shirt', '209')

@@ -1,0 +1,8 @@
+mixin page-nav(page)
+    nav.page-nav
+        .container
+            ul.breadcrumbs-list
+                li.breadcrumbs-item
+                    a.breadcrumbs__link(href="#") Homepage
+                li.breadcrumbs-item #{page}
+            .page-nav__page-title #{page}

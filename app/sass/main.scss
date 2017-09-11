@@ -1,4 +1,19 @@
+*,
+*:before,
+*:after {
+    outline: 1px solid blue;
+}
+
 .header,
 .footer {
     background: green;
+}
+
+.page-nav {
+    background: gold;
+}
+
+.container {
+    width: 1440px;
+    margin: auto;
 }

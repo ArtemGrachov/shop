@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HeroWP.com</title>
+    <title>Product</title>
     <link rel="stylesheet" href="/css/libs.min.css">
     <link rel="stylesheet" href="/css/main.css">
     <script src="/js/libs.min.js"></script>
@@ -74,32 +74,148 @@
                     </div>
                 </div>
             </header>
+            <nav class="page-nav">
+                <div class="container">
+                    <ul class="breadcrumbs-list">
+                        <li class="breadcrumbs-item"><a class="breadcrumbs__link" href="#">Homepage</a></li>
+                        <li class="breadcrumbs-item">Product</li>
+                    </ul>
+                    <div class="page-nav__page-title">Product</div>
+                </div>
+            </nav>
             <div class="container">
-                <div class="slider">
-                    <div class="slider-list">
-                        <div class="slider-item">
-                            <div class="slider-circle slider-circle_small">
-                                <div class="slider-circle__text">Delivery</div>
-                                <div class="slider-circle__text_large">Free</div>
-                            </div>
-                            <div class="slider-circle slider-circle_largr">
-                                <div class="slider-circle__text_large">Great sale</div>
-                                <div class="slider-circle__text">On all models</div>
-                            </div>
-                            <div class="slider-circle slider-circle_small">
-                                <div class="slider-circle__text">Starting from</div>
-                                <div class="slider-circle__text_large">429 $</div>
-                            </div>
+                <main class="main">
+                    <div class="product__image"></div>
+                    <div class="product-select"></div>
+                    <div class="product-title">
+                        <div class="product__name"></div>
+                        <div class="product__category"></div>
+                    </div>
+                    <div class="product-price"></div>
+                    <div class="product-info">
+                        <div class="product-tabs">
+                            <ul class="product-tabs-nav-list">
+                                <li class="product-tabs-nav-item product-tabs-nav-item_active"><a class="product-tabs-nav__link" href="#">Description</a></li>
+                                <li class="product-tabs-nav-item"><a class="product-tabs-nav__link" href="#">Additional information</a></li>
+                                <li class="product-tabs-nav-item"><a class="product-tabs-nav__link" href="#">Customer reviews(3)</a></li>
+                            </ul>
+                            <ul class="product-tabs">
+                                <li class="product-tabs-item product-tabs-item_active">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quibusdam, at corrupti dolorem hic repudiandae fugiat necessitatibus amet, esse voluptatem sapiente, cupiditate ducimus delectus dolorum officiis
+                                        nisi error aperiam officia.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, eos? Recusandae, enim illo consequuntur iure autem cupiditate quisquam voluptatibus quas, odit eos repellendus incidunt, debitis est tempora repudiandae
+                                        modi sint!</p>
+                                </li>
+                                <li class="product-tabs-item">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quibusdam, at corrupti dolorem hic repudiandae fugiat necessitatibus amet, esse voluptatem sapiente, cupiditate ducimus delectus dolorum officiis
+                                        nisi error aperiam officia.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, eos? Recusandae, enim illo consequuntur iure autem cupiditate quisquam voluptatibus quas, odit eos repellendus incidunt, debitis est tempora repudiandae
+                                        modi sint!</p>
+                                </li>
+                                <li class="product-tabs-item"><input class="review-input" type="text" placeholder="Name"><input class="review-input" type="email" placeholder="Email"><select class="review-input"><option value="rate">Rate</option></select><textarea class="review-textarea"
+                                        placeholder="Your review"></textarea>
+                                    <ul class="reviews-list">
+                                        <li class="review-item">
+                                            <div class="review-header"><a class="review__name" href="#">John Doe</a>says<span class="review__title">Not bad</span></div>
+                                            <div class="review__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu purus sit amet nisl cursus tincidunt. Integer et libero pharetra, fringilla metus vitae, tempor lacus. Nulla vitae est leo. Nam gravida posuere</div>
+                                        </li>
+                                        <li class="review-item">
+                                            <div class="review-header"><a class="review__name" href="#">Elizabeth Taylor</a>says<span class="review__title">Very poor</span></div>
+                                            <div class="review__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu purus sit amet nisl cursus tincidunt. Integer et libero pharetra, fringilla metus vitae, tempor lacus. Nulla vitae est leo. Nam gravida posuere</div>
+                                        </li>
+                                        <li class="review-item">
+                                            <div class="review-header"><a class="review__name" href="#">John Smith</a>says<span class="review__title">Excellent</span></div>
+                                            <div class="review__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu purus sit amet nisl cursus tincidunt. Integer et libero pharetra, fringilla metus vitae, tempor lacus. Nulla vitae est leo. Nam gravida posuere
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu purus sit amet nisl cursus tincidunt. Integer et libero pharetra, fringilla metus vitae, tempor lacus. Nulla vitae est leo. Nam gravida posuere</div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="slider-controls"><a class="slider-btn slider-btn_left" href="#"></a><a class="slider-btn slider-btn_right" href="#"></a></div>
-                </div>
-                <div class="proudcts-preview">
-                    <ul class="products-select-list">
-                        <li class="product-select-item"><a class="product-select__link" href="#">Hot products.</a></li>
-                        <li class="product-select-item"><a class="product-select__link" href="#">Latest products.</a></li>
-                        <li class="product-select-item"><a class="product-select__link" href="#">Best seller.</a></li>
+                </main>
+                <aside class="sidebar">
+                    <ul class="sidebar-list">
+                        <li class="sidebar-item">
+                            <div class="product-group__header">Just added</div>
+                            <div class="product-group-body">
+                                <ul class="aside-products-list">
+                                    <li class="aside-products-item">
+                                        <div class="aside-products-descr">
+                                            <div class="aside-products-descr__header">Happy T-Shirt</div>Lorem ipsum dolor sit amet, consecteur...</div>
+                                        <div class="aside-products-right">
+                                            <div class="aside-products-price">289</div>
+                                            <div class="aside-products-currency">USD</div>
+                                        </div>
+                                    </li>
+                                    <li class="aside-products-item">
+                                        <div class="aside-products-descr">
+                                            <div class="aside-products-descr__header">Beetles T-Shirt</div>Lorem ipsum dolor sit amet, consecteur...</div>
+                                        <div class="aside-products-right">
+                                            <div class="aside-products-price">569</div>
+                                            <div class="aside-products-currency">USD</div>
+                                        </div>
+                                    </li>
+                                    <li class="aside-products-item">
+                                        <div class="aside-products-descr">
+                                            <div class="aside-products-descr__header">Captain Awesome T-Shirt</div>Lorem ipsum dolor sit amet, consecteur...</div>
+                                        <div class="aside-products-right">
+                                            <div class="aside-products-price">139</div>
+                                            <div class="aside-products-currency">USD</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-item">
+                            <div class="product-group__header">Best seller</div>
+                            <div class="product-group-body">
+                                <ul class="aside-products-list">
+                                    <li class="aside-products-item">
+                                        <div class="aside-products-descr">
+                                            <div class="aside-products-descr__header">Einstein T-Shirt</div>Lorem ipsum dolor sit amet, consecteur...</div>
+                                        <div class="aside-products-right">
+                                            <div class="aside-products-price">799</div>
+                                            <div class="aside-products-currency">USD</div>
+                                        </div>
+                                    </li>
+                                    <li class="aside-products-item">
+                                        <div class="aside-products-descr">
+                                            <div class="aside-products-descr__header">Dope T-Shirt</div>Lorem ipsum dolor sit amet, consecteur...</div>
+                                        <div class="aside-products-right">
+                                            <div class="aside-products-price">199</div>
+                                            <div class="aside-products-currency">USD</div>
+                                        </div>
+                                    </li>
+                                    <li class="aside-products-item">
+                                        <div class="aside-products-descr">
+                                            <div class="aside-products-descr__header">Poker King T-Shirt</div>Lorem ipsum dolor sit amet, consecteur...</div>
+                                        <div class="aside-products-right">
+                                            <div class="aside-products-price">439</div>
+                                            <div class="aside-products-currency">USD</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-item">
+                            <div class="sidebar__header">Search our shop</div>
+                            <div class="sidebar__body"><input type="text" placeholder="Search product..."></div>
+                        </li>
+                        <li class="sidebar-item">
+                            <div class="title title_medium">Shop tags</div>
+                            <div class="sidebar__body">
+                                <ul class="tags-list">
+                                    <li class="tags-item">awesomeness</li>
+                                    <li class="tags-item">cool</li>
+                                    <li class="tags-item">awesome</li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
+                </aside>
+                <div class="bottom">
+                    <div class="title title_large">You migh also like</div>
                     <ul class="products-list">
                         <li class="products-item">
                             <div class="products-preview">
@@ -153,83 +269,6 @@
                                     <div class="products-bottom__currency">USD</div>
                                 </div>
                                 <div class="products-bottom__right"><a class="btn btn-primary" href="#">Add to cart</a></div>
-                            </div>
-                        </li>
-                        <li class="products-item">
-                            <div class="products-preview">
-                                <div class="products-preview__img"><img src="" alt="Product image" /></div>
-                                <div class="products__name">Cocaine Zero T-Shirt</div>
-                            </div>
-                            <div class="products-bottom">
-                                <div class="products-bottom__left">
-                                    <div class="products-bottom__price">799</div>
-                                    <div class="products-bottom__currency">USD</div>
-                                </div>
-                                <div class="products-bottom__right"><a class="btn btn-primary" href="#">Add to cart</a></div>
-                            </div>
-                        </li>
-                        <li class="products-item">
-                            <div class="products-preview">
-                                <div class="products-preview__img"><img src="" alt="Product image" /></div>
-                                <div class="products__name">Power King T-Shirt</div>
-                            </div>
-                            <div class="products-bottom">
-                                <div class="products-bottom__left">
-                                    <div class="products-bottom__price">369</div>
-                                    <div class="products-bottom__currency">USD</div>
-                                </div>
-                                <div class="products-bottom__right"><a class="btn btn-primary" href="#">Add to cart</a></div>
-                            </div>
-                        </li>
-                        <li class="products-item">
-                            <div class="products-preview">
-                                <div class="products-preview__img"><img src="" alt="Product image" /></div>
-                                <div class="products__name">Captain Awesome T-Shirt</div>
-                            </div>
-                            <div class="products-bottom">
-                                <div class="products-bottom__left">
-                                    <div class="products-bottom__price">199</div>
-                                    <div class="products-bottom__currency">USD</div>
-                                </div>
-                                <div class="products-bottom__right"><a class="btn btn-primary" href="#">Add to cart</a></div>
-                            </div>
-                        </li>
-                        <li class="products-item">
-                            <div class="products-preview">
-                                <div class="products-preview__img"><img src="" alt="Product image" /></div>
-                                <div class="products__name">Happy T-Shirt</div>
-                            </div>
-                            <div class="products-bottom">
-                                <div class="products-bottom__left">
-                                    <div class="products-bottom__price">209</div>
-                                    <div class="products-bottom__currency">USD</div>
-                                </div>
-                                <div class="products-bottom__right"><a class="btn btn-primary" href="#">Add to cart</a></div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="useful-info">
-                    <ul class="userful-info-list">
-                        <li class="userful-info-item">
-                            <div class="userful-info__icon">here will be icon</div>
-                            <div class="userful-info__body">
-                                <div class="userful-info__title">Very fast delivery</div>
-                                <div class="userful-info__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra, uma quis dignissim<a href="#">MORE ⟶</a></div>
-                            </div>
-                        </li>
-                        <li class="userful-info-item">
-                            <div class="userful-info__icon">here will be icon</div>
-                            <div class="userful-info__body">
-                                <div class="userful-info__title">Every week discounts</div>
-                                <div class="userful-info__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra, uma quis dignissim<a href="#">MORE ⟶</a></div>
-                            </div>
-                        </li>
-                        <li class="userful-info-item">
-                            <div class="userful-info__icon">here will be icon</div>
-                            <div class="userful-info__body">
-                                <div class="userful-info__title">Money saver</div>
-                                <div class="userful-info__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra, uma quis dignissim<a href="#">MORE ⟶</a></div>
                             </div>
                         </li>
                     </ul>
