@@ -1,1 +1,66 @@
-h1 footer!
+footer.footer
+    .footer-top
+        input(type="text" placeholder="Looking for another product? Use this search from and hit enter...")
+        a.btn.btn-primary Search product
+    .footer-main
+        .footer-block
+            .footer-block-header
+                .logo__char S
+            .footer-block-body
+                |  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed viverra, urna quisdignissim.
+                ul.contacts-list
+                    li.contacts-item
+                        span.contacts__dark +(49)
+                        |  123 456 789
+                    li.contacts-item
+                        span.contacts__dark +(49)
+                        |  789 654 321
+                ul.contacts-list
+                    li.contacts-item
+                        span.contacts__dark awesome@
+                        | email.com
+                    li.contacts-item
+                        span.contacts__dark sales@
+                        | email.com
+                ul.contacts-list
+                    li.contacts-item
+                        span.contacts__dark MONDAY-FRIDAY
+                        |  : 08:00-18:00
+                    li.contacts-item
+                        span.contacts__dark SATURDAYSUNDAY
+                        |  : Closed
+                ul.socials-list
+                    li.socials-item
+                        a.socials-link(href="#") F
+                    li.socials-item
+                        a.socials-link(href="#") T
+                    li.socials-item
+                        a.socials-link(href="#") O
+                    li.socials-item
+                        a.socials-link(href="#") In
+                    li.socials-item
+                        a.socials-link(href="#") YouTube
+        .footer-block
+            .footer-block-header
+                | Best seller
+                span.footer-header-dot .
+            .footer-block-body
+                ul.footer-products-list
+                    +footer-product-item('Einstein T-Shirt', '799')
+                    +footer-product-item('Dope T-Shirt', '199')
+                    +footer-product-item('Poker King T-Shirt', '439')
+        .footer-block
+            .footer-block-header
+                | Just added
+                span.footer-header-dot .
+            .footer-block-body
+                ul.footer-products-list
+                ul.footer-products-list
+                    +footer-product-item('Happy T-Shirt', '289')
+                    +footer-product-item('Beetles T-Shirt', '569')
+                    +footer-product-item('Captain Awesome T-Shirt', '139')
+    .footer-bottom
+        .footer-copyright Copyright
+            a(href="#") Shopmint
+            |  2013. All right reserved and stuff. Amsterdam 1024 NL // Netherlands. Proudly powered by
+            a(href="3") Wordpress.
