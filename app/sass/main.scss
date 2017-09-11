@@ -1,0 +1,29 @@
+body {
+    color: green;
+}
+
+h1 {
+    background: orange;
+    padding: 10px;
+    transition: 1s;
+    &:hover {
+        font-style: italic;
+    }
+}
+
+.test {
+    display: flex;
+}
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    &-orangered {
+        color: orangered;
+    }
+    &-green {
+        color: green;
+    }
+}
