@@ -1,7 +1,43 @@
 extends ../templates/layout.pug
 
 block variables
-    - var title = "Добро пожаловать!"
+    - var title = "HeroWP.com"
 
 block content
-    .test Non excepteur nostrud minim exercitation eu irure in et do adipisicing magna. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus commodi illum magni illo soluta qui fuga corporis ad dolorum asperiores. Labore commodi omnis eveniet distinctio quasi, sit exercitationem quod! Eos. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, accusantium. Esse recusandae temporibus id atque nostrum deserunt vel quidem! Earum officia deserunt nisi voluptatum. Esse voluptates molestiae alias provident in.
+    .slider
+        .slider-list
+            .slider-item
+                .slider-circle.slider-circle_small
+                    .slider-circle__text Delivery
+                    .slider-circle__text_large Free
+                .slider-circle.slider-circle_largr
+                    .slider-circle__text_large Great sale
+                    .slider-circle__text On all models
+                .slider-circle.slider-circle_small
+                    .slider-circle__text Starting from
+                    .slider-circle__text_large 429 $
+        .slider-controls
+            a.slider-btn.slider-btn_left(href="#")
+            a.slider-btn.slider-btn_right(href="#")
+    .proudcts-preview
+        ul.products-select-list
+            li.product-select-item
+                a.product-select__link(href="#") Hot products.
+            li.product-select-item
+                a.product-select__link(href="#") Latest products.
+            li.product-select-item
+                a.product-select__link(href="#") Best seller.
+        ul.products-list
+            +product-item('Dope T-Shirt', '799')
+            +product-item('Einstein T-Shirt', '469', '369')
+            +product-item('Rock Roll T-Shirt', '199')
+            +product-item('The Beetles T-Shirt', '209')
+            +product-item('Cocaine Zero T-Shirt', '799')
+            +product-item('Power King T-Shirt', '369')
+            +product-item('Captain Awesome T-Shirt', '199')
+            +product-item('Happy T-Shirt', '209')
+    .useful-info
+        ul.userful-info-list
+            +useful-info-item('Very fast delivery')
+            +useful-info-item('Every week discounts')
+            +useful-info-item('Money saver')
