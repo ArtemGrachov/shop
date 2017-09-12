@@ -6,4 +6,61 @@ block variables
 block content
     +page-nav(title)
     .container
-        table
+        table.block_bg
+            thead
+                tr
+                    th
+                    th Item
+                    th Quantity
+                    th Unit price
+                    th Total
+            tbody
+                tr
+                    td
+                    td Adidas Commander TD3 Code G48794
+                    td 12
+                    td 29,99 USD
+                    td 159,99 USD
+                tr
+                    td
+                    td Adidas Axz 1 Code V21609
+                    td 2
+                    td 39,99 USD
+                    td 169,99 USD
+                tr
+                    td
+                    td Adidas Barricade 6 Andy Murray Code G40436
+                    td 15
+                    td 49,99 USD
+                    td 179,99 USD
+                tr
+                    td
+                    td Adidas Galaxy Arriba II Code G60635
+                    td 20
+                    td 59,99 USD
+                    td 189,99 USD
+        form.block.block_half
+            .title.title_medium.text_red Discount coupon
+            | If you have a coupon code please enter it here
+            .form-group
+                input(type="test" id="discount_code")
+                input(type="submit" value="Submit")
+        table.block.block_half
+            tbodye.block_bg
+                tr
+                    td.title.title_medium.text_red Order subtotal
+                    td.title.title_medium.text_strong 11225,99 USD
+                tr
+                    td.title.title_medium.text_red Tax / Shipping (7%)
+                    td.title.title_medium.text_strong 157,99 USD
+                tr
+                    td.title.title_medium.text_red Order total
+                    td.title.title_medium.text_strong 26757,99 USD
+        .block_trnsp
+            ul.btn-list.btn-list_inline
+                li.btn-list-item
+                    a(href="#").btn.btn_default.btn_lg Shop more
+                li.btn-list-item
+                    a(href="#").btn.btn_default.btn_lg Update cart
+                li.btn-list-item
+                    a(href="#").btn.btn_primary.btn_lg Place order
