@@ -1,0 +1,21 @@
+extends ../templates/layout.pug
+
+block variables
+    - var title = "Contact us"
+
+block content
+    +page-nav(title)
+    .container
+        main.main.block_bg
+            .title.title-large Drop us a line.
+            hr
+            form
+                .form-group.from-group_sm
+                    input(type="text" placeholder="Name").form-input
+                    input(type="email" placeholder="Email").form-input
+                    input(type="text" placeholder="Subject").form-input
+                .from-group.from-group_lg
+                    textarea.form-textarea(placeholder="Your comment")
+                button(type="submit").btn.btn-primary
+        aside.sidebar
+            include ../includes/shopmint.pug
