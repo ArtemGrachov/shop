@@ -6,7 +6,7 @@ block variables
 block content
     +page-nav(title)
     .container
-        main.main.main_bg
+        main.main.block_bg
             .blog-img
                 img(src="" alt=title)
             .blog__title #{title}
@@ -38,10 +38,12 @@ block content
                                     +blog-comments-item
                 form.blog-comments-form
                     .title-latge Leave a reply
-                        input(type="text" placeholder="Name").form-input
-                        input(type="email" placeholder="Email").form-input
-                        input(type="text" placeholder="Website").form-input
-                        textarea.form-textarea(placeholder="Your comment")
-                        button(type="submit").btn.btn-primary
+                        .form-group.from-group_sm
+                            input(type="text" placeholder="Name").form-input
+                            input(type="email" placeholder="Email").form-input
+                            input(type="text" placeholder="Website").form-input
+                        .from-group.from-group_lg
+                            textarea.form-textarea(placeholder="Your comment")
+                            button(type="submit").btn.btn-primary
         aside.sidebar
             include ../includes/blog-sidebar.pug

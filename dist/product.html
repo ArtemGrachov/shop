@@ -69,7 +69,7 @@
                                 <div class="cart-descr">Cart <span class="cart-descr__number">3</span> items</div>
                                 <div class="cart-price">47,99 $</div>
                             </div>
-                            <div class="cart-search"><input type="text" placeholder="Search..."></div>
+                            <div class="cart-search"><input class="input-header-search" type="text" placeholder="Search..."></div>
                         </div>
                     </div>
                 </div>
@@ -84,12 +84,21 @@
                 </div>
             </nav>
             <div class="container">
-                <main class="main main_bg">
+                <main class="main block_bg">
                     <div class="product__image"></div>
-                    <div class="product-select"></div>
+                    <div class="product-select">
+                        <div class="from-group"><label for="size">Pick your desired size</label><select id="side"><option value="medium">Medium (M)</option></select></div>
+                        <div class="from-group"><label for="color">Pick your desired color</label><select id="color"><option value="yellow">Yellow</option></select></div>
+                        <div class="from-group"><label for="quantity">Select a quantity</label><input type="number" id="quantity"></div>
+                    </div>
                     <div class="product-title">
-                        <div class="product__name"></div>
-                        <div class="product__category"></div>
+                        <div class="product__name">Chuck Norris Was Here T-Shirt</div>
+                        <div class="product__category">
+                            <ul class="product__category-list">
+                                <li class="product__category-item">Added in category<a href="#">Mens⟶</a></li>
+                                <li class="product__category-item">Browse all the products inside the<a href="#">Mens⟶</a>category</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="product-price"></div>
                     <div class="product-info">
@@ -112,9 +121,10 @@
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, eos? Recusandae, enim illo consequuntur iure autem cupiditate quisquam voluptatibus quas, odit eos repellendus incidunt, debitis est tempora repudiandae
                                         modi sint!</p>
                                 </li>
-                                <li class="product-tabs-item"><input class="form-input" type="text" placeholder="Name"><input class="form-input" type="email" placeholder="Email"><select class="form-input"><option value="rate">Rate</option></select><textarea class="form-textarea" placeholder="Your review"></textarea>
-                                    <ul
-                                        class="reviews-list">
+                                <li class="product-tabs-item">
+                                    <div class="form-group form-group_sm"><input type="text" placeholder="Name"><input type="email" placeholder="Email"><select class="input-inline input-inline_sm"><option value="rate">Rate</option></select></div>
+                                    <div class="form-group form-group_lg"><textarea placeholder="Your review"></textarea></div>
+                                    <ul class="reviews-list">
                                         <li class="review-item">
                                             <div class="review-header"><a class="review__name" href="#">John Doe</a>says<span class="review__title">Not bad</span></div>
                                             <div class="review__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu purus sit amet nisl cursus tincidunt. Integer et libero pharetra, fringilla metus vitae, tempor lacus. Nulla vitae est leo. Nam gravida posuere</div>
@@ -128,8 +138,8 @@
                                             <div class="review__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu purus sit amet nisl cursus tincidunt. Integer et libero pharetra, fringilla metus vitae, tempor lacus. Nulla vitae est leo. Nam gravida posuere
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu purus sit amet nisl cursus tincidunt. Integer et libero pharetra, fringilla metus vitae, tempor lacus. Nulla vitae est leo. Nam gravida posuere</div>
                                         </li>
-                            </ul>
-                            </li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -278,7 +288,7 @@
     </div>
     <footer class="footer">
         <div class="container">
-            <div class="footer-top"><input type="text" placeholder="Looking for another product? Use this search from and hit enter..."><a class="btn btn-primary">Search product</a></div>
+            <div class="footer-top"><input class="input-rounded" type="text" placeholder="Looking for another product? Use this search from and hit enter..."><a class="btn btn-primary">Search product</a></div>
             <div class="footer-main">
                 <div class="footer-block">
                     <div class="footer-block-header">
