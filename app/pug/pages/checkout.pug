@@ -1,0 +1,104 @@
+extends ../templates/layout.pug
+
+block variables
+    - var title = "Checkout"
+
+block content
+    +page-nav(title)
+    .container
+        .block_bg
+            .title.title_medium.text_red Do you already have an account?
+            a(href="#").btn.btn-primary Login
+        .block_bg
+            .title.title_medium.text_red Create an accountif you don't have one
+            a(href="#").btn.btn-primary Create
+        form.block_bg
+            .block-header
+                .title.title_medium.text_red Please enter your billing address.
+            .block-body
+                .form-group.block_third
+                    label(for="first_name") First name
+                        span.text_red *
+                    input(type="text" id="first_name")
+                .form-group.block_two-thirds
+                    label(for="first_name") Last name
+                        span.text_red *
+                    input(type="text" id="last_name")
+                .form-group.block_third
+                    label(for="email") Email
+                        span.text_red *
+                    input(type="email" id="email")
+                .form-group.block_two-thirds
+                    label(for="phone") Phone number
+                        span.text_red *
+                    input(type="text" id="phone")
+                .form-group.block_third
+                    label(for="address1") Address line 1
+                        span.text_red *
+                    input(type="text" id="address1")
+                .form-group.block_third
+                    label(for="address2") Address line 2
+                    input(type="text" id="address2")
+                .form-group.block_third
+                    label(for="phone2") Phone number
+                    input(type="text" id="phone2")
+                .form-group.block_third
+                    label(for="city") City / Town
+                        span.text_red *
+                    input(type="text" id="city")
+                .form-group.block_third
+                    label(for="zip") Zip code
+                    input(type="text" id="zip")
+                .form-group.block_third
+                    label(for="country") Select country
+                    select(id="country")
+                        option(value="nd") Netherlands
+        .block_bg
+            .title.title_medium.text_red Please enter your shipping address.
+            input(type="checkbox" id="shipping_address")
+            label(for="shipping_address") Use my billing address
+        table.block_bg
+            caption.title.title-medium.text_red.block-header
+            thead
+                tr
+                    td Item
+                    td Quantity
+                    td Unit price
+                    td Total
+            tbody
+                tr
+                    td Adidas Commander TD3 Code G48794
+                    td 12
+                    td 29,99 USD
+                    td 159,99 USD
+                tr
+                    td Adidas Axz 1 Code V21609
+                    td 2
+                    td 39,99 USD
+                    td 169,99 USD
+                tr
+                    td Adidas Barricade 6 Andy Murray Code G40436
+                    td 15
+                    td 49,99 USD
+                    td 179,99 USD
+                tr
+                    td Adidas Galaxy Arriba II Code G60635
+                    td 20
+                    td 59,99 USD
+                    td 189,99 USD
+        include ../includes/discount-coupon.pug
+        .block_bg
+            .block-header
+                .title.title_medium.text_red Please select your payment method
+            ul.block-body.block-list
+                li.block-item
+                    input(type="radio" id="direct_bank")
+                    label(for="direct_bank") Pay by Direct Bank Transfer
+                li.block-item
+                    input(type="radio" id="cheque")
+                    label(for="cheque") Pay by Cheque
+                li.block-item
+                    input(type="radio" id="paypal" checked)
+                    label(for="paypal") Pay by PayPal
+        .block_trnsp
+            a(href="#").btn.btn_primary.btn_lg Place order

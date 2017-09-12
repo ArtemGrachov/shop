@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cart</title>
+    <title>Checkout</title>
     <link rel="stylesheet" href="/css/libs.min.css">
     <link rel="stylesheet" href="/css/main.css">
     <script src="/js/libs.min.js"></script>
@@ -78,46 +78,65 @@
                 <div class="container">
                     <ul class="breadcrumbs-list">
                         <li class="breadcrumbs-item"><a class="breadcrumbs__link" href="#">Homepage</a></li>
-                        <li class="breadcrumbs-item">Cart</li>
+                        <li class="breadcrumbs-item">Checkout</li>
                     </ul>
-                    <div class="page-nav__page-title">Cart</div>
+                    <div class="page-nav__page-title">Checkout</div>
                 </div>
             </nav>
             <div class="container">
+                <div class="block_bg">
+                    <div class="title title_medium text_red">Do you already have an account?</div><a class="btn btn-primary" href="#">Login</a></div>
+                <div class="block_bg">
+                    <div class="title title_medium text_red">Create an accountif you don't have one</div><a class="btn btn-primary" href="#">Create</a></div>
+                <form class="block_bg">
+                    <div class="block-header">
+                        <div class="title title_medium text_red">Please enter your billing address.</div>
+                    </div>
+                    <div class="block-body">
+                        <div class="form-group block_third"><label for="first_name">First name<span class="text_red">*</span></label><input type="text" id="first_name"></div>
+                        <div class="form-group block_two-thirds"><label for="first_name">Last name<span class="text_red">*</span></label><input type="text" id="last_name"></div>
+                        <div class="form-group block_third"><label for="email">Email<span class="text_red">*</span></label><input type="email" id="email"></div>
+                        <div class="form-group block_two-thirds"><label for="phone">Phone number<span class="text_red">*</span></label><input type="text" id="phone"></div>
+                        <div class="form-group block_third"><label for="address1">Address line 1<span class="text_red">*</span></label><input type="text" id="address1"></div>
+                        <div class="form-group block_third"><label for="address2">Address line 2</label><input type="text" id="address2"></div>
+                        <div class="form-group block_third"><label for="phone2">Phone number</label><input type="text" id="phone2"></div>
+                        <div class="form-group block_third"><label for="city">City / Town<span class="text_red">*</span></label><input type="text" id="city"></div>
+                        <div class="form-group block_third"><label for="zip">Zip code</label><input type="text" id="zip"></div>
+                        <div class="form-group block_third"><label for="country">Select country</label><select id="country"><option value="nd">Netherlands</option></select></div>
+                    </div>
+                </form>
+                <div class="block_bg">
+                    <div class="title title_medium text_red">Please enter your shipping address.</div><input type="checkbox" id="shipping_address"><label for="shipping_address">Use my billing address</label></div>
                 <table class="block_bg">
+                    <caption class="title title-medium text_red block-header"></caption>
                     <thead>
                         <tr>
-                            <th></th>
-                            <th>Item</th>
-                            <th>Quantity</th>
-                            <th>Unit price</th>
-                            <th>Total</th>
+                            <td>Item</td>
+                            <td>Quantity</td>
+                            <td>Unit price</td>
+                            <td>Total</td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td></td>
                             <td>Adidas Commander TD3 Code G48794</td>
                             <td>12</td>
                             <td>29,99 USD</td>
                             <td>159,99 USD</td>
                         </tr>
                         <tr>
-                            <td></td>
                             <td>Adidas Axz 1 Code V21609</td>
                             <td>2</td>
                             <td>39,99 USD</td>
                             <td>169,99 USD</td>
                         </tr>
                         <tr>
-                            <td></td>
                             <td>Adidas Barricade 6 Andy Murray Code G40436</td>
                             <td>15</td>
                             <td>49,99 USD</td>
                             <td>179,99 USD</td>
                         </tr>
                         <tr>
-                            <td></td>
                             <td>Adidas Galaxy Arriba II Code G60635</td>
                             <td>20</td>
                             <td>59,99 USD</td>
@@ -145,13 +164,17 @@
                         </tr>
                     </tbodye>
                 </table>
-                <div class="block_trnsp">
-                    <ul class="btn-list btn-list_inline">
-                        <li class="btn-list-item"><a class="btn btn_default btn_lg" href="#">Shop more</a></li>
-                        <li class="btn-list-item"><a class="btn btn_default btn_lg" href="#">Update cart</a></li>
-                        <li class="btn-list-item"><a class="btn btn_primary btn_lg" href="#">Place order</a></li>
+                <div class="block_bg">
+                    <div class="block-header">
+                        <div class="title title_medium text_red">Please select your payment method</div>
+                    </div>
+                    <ul class="block-body block-list">
+                        <li class="block-item"><input type="radio" id="direct_bank"><label for="direct_bank">Pay by Direct Bank Transfer</label></li>
+                        <li class="block-item"><input type="radio" id="cheque"><label for="cheque">Pay by Cheque</label></li>
+                        <li class="block-item"><input type="radio" id="paypal" checked><label for="paypal">Pay by PayPal</label></li>
                     </ul>
                 </div>
+                <div class="block_trnsp"><a class="btn btn_primary btn_lg" href="#">Place order</a></div>
             </div>
         </div>
     </div>
