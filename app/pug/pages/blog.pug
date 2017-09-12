@@ -1,0 +1,14 @@
+extends ../templates/layout.pug
+
+block variables
+    - var title = "Blog"
+
+block content
+    +page-nav(title)
+    .container
+        main.main
+            ul.blog-list
+                +blog-list-item('Chillin\' out and drinking some wine.')
+                +blog-list-item('Using an awesome typewritter')
+        aside.sidebar
+            include ../includes/blog-sidebar.pug

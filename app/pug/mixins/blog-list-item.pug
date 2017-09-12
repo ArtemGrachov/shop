@@ -1,0 +1,19 @@
+mixin blog-list-item(title)
+    li.blog-list-item
+        .blog-img
+            img(src="" alt=title)
+        .blog__title #{title}
+        .blog-meta
+            ul.blog-meta-list
+                li.blog-meta-item
+                    | By
+                    a(href="#") Admin
+                li.blog-meta-item
+                    | In
+                    a(href="#") Awesomeness
+                li.blog-meta-item
+                    | Date
+                    a(href="#") 28 oct 2013
+                li.blog-meta-item
+                    | 56
+                    a(href="#") comments
