@@ -1,0 +1,47 @@
+extends ../templates/layout.pug
+
+block variables
+    - var title = "Blog"
+
+block content
+    +page-nav(title)
+    .container
+        main.main.main_bg
+            .blog-img
+                img(src="" alt=title)
+            .blog__title #{title}
+            .blog-meta
+                ul.blog-meta-list
+                    li.blog-meta-item
+                        | By
+                        a(href="#") Admin
+                    li.blog-meta-item
+                        | In
+                        a(href="#") Awesomeness
+                    li.blog-meta-item
+                        | Date
+                        a(href="#") 28 oct 2013
+                    li.blog-meta-item
+                        | 56
+                        a(href="#") comments
+            .blog__content
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu purus sit amet nisl cursus tincidunt. Integer et libero pharetra, fringilla metus vitae, tempor lacus. Nulla vitae est leo. Nam gravida posuere  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu purus sit amet nisl cursus tincidunt. Integer et libero pharetra, fringilla metus vitae, tempor lacus. Nulla vitae est leo. 
+                .title.title_medium A cool subtitle goes here
+                p Nulla vitae est leo. Nam gravida posuere  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu purus sit amet nisl cursus tincidunt. Integer et libero pharetra, fringilla metus vitae, tempor lacus. Nulla vitae est leo.
+            .blog-comments
+                .title.title_large 3 Comments. Get involved
+                ul.blog-comments-list
+                    +blog-comments-item
+                        ul.blog-comments-list
+                            +blog-comments-item
+                                ul.blog-comments-list
+                                    +blog-comments-item
+                form.blog-comments-form
+                    .title-latge Leave a reply
+                        input(type="text" placeholder="Name").form-input
+                        input(type="email" placeholder="Email").form-input
+                        input(type="text" placeholder="Website").form-input
+                        textarea.form-textarea(placeholder="Your comment")
+                        button(type="submit").btn.btn-primary
+        aside.sidebar
+            include ../includes/blog-sidebar.pug

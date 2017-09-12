@@ -6,7 +6,7 @@ block variables
 block content
     +page-nav(title)
     .container
-        main.main
+        main.main.main_bg
             .product__image
             .product-select
             .product-title
@@ -30,11 +30,11 @@ block content
                             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quibusdam, at corrupti dolorem hic repudiandae fugiat necessitatibus amet, esse voluptatem sapiente, cupiditate ducimus delectus dolorum officiis nisi error aperiam officia.
                             p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, eos? Recusandae, enim illo consequuntur iure autem cupiditate quisquam voluptatibus quas, odit eos repellendus incidunt, debitis est tempora repudiandae modi sint!
                         li.product-tabs-item
-                            input(type="text" placeholder="Name").review-input
-                            input(type="email" placeholder="Email").review-input
-                            select.review-input
+                            input(type="text" placeholder="Name").form-input
+                            input(type="email" placeholder="Email").form-input
+                            select.form-input
                                 option(value="rate") Rate
-                            textarea.review-textarea(placeholder="Your review")
+                            textarea.form-textarea(placeholder="Your review")
                             ul.reviews-list
                                 +review-item('John Doe','Not bad', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu purus sit amet nisl cursus tincidunt. Integer et libero pharetra, fringilla metus vitae, tempor lacus. Nulla vitae est leo. Nam gravida posuere')
                                 +review-item('Elizabeth Taylor','Very poor','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu purus sit amet nisl cursus tincidunt. Integer et libero pharetra, fringilla metus vitae, tempor lacus. Nulla vitae est leo. Nam gravida posuere')
