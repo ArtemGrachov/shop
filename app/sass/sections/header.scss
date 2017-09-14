@@ -1,0 +1,82 @@
+.header {
+    &-top {
+        a {
+            color: white;
+        }
+        @extend %clearfix;
+        background: $red;
+        color: white;
+        &-nav {
+            font-size: 12px;
+            &-list {
+                float: left;
+                margin: 0 rem(-11px);
+                padding: 0;
+                list-style: none;
+            }
+            &-item {
+                display: inline-block;
+                padding: rem(11px) rem(15px);
+                .fa {
+                    margin-right: rem(8px);
+                }
+            }
+        }
+        &-right {
+            float: right;
+            padding: rem(11px);
+        }
+    }
+    &-main {
+        padding: rem(36px) 0 rem(20px);
+        .logo {
+            margin-left: rem(-13px);
+            float: left;
+        }
+    }
+    &-bottom {
+        border-top: 1px solid #9a9a9a;
+    }
+    &-contacts {
+        float: right;
+        &-list {
+            margin: 0;
+            padding: rem(6px) 0;
+            list-style: none;
+        }
+        &-item {
+            display: inline-block;
+            margin-left: rem(46px);
+            .fa {
+                font-size: rem(41px);
+                color: $red;
+            }
+        }
+        .contacts-list {
+            border-left: 1px solid #e1e1e1;
+            margin-left: rem(14px);
+            padding-left: rem(14px);
+        }
+    }
+    &-nav-main {
+        &-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 rem(-15px);
+            letter-spacing: rem(-0.9px);
+        }
+        &-item {
+            display: inline-block;
+            font-size: rem(16px);
+            padding: rem(25px) rem(15px);
+        }
+        &__link {
+            color: #565656;
+            &:hover,
+            &_active {
+                color: $red;
+                text-decoration: none;
+            }
+        }
+    }
+}

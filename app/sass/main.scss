@@ -1,19 +1,39 @@
 *,
 *:before,
 *:after {
-    outline: 1px solid blue;
+    // outline: 1px solid blue;
+    box-sizing: border-box;
 }
 
-.header,
-.footer {
-    background: green;
+/////////////////////////////////
+@font-face {
+    font-family: 'MuseoSlab500';
+    src: url('../fonts/museoslab-500.otf');
 }
 
-.page-nav {
-    background: gold;
+@font-face {
+    font-family: 'RalewayLight';
+    src: url('../fonts/raleway.light.ttf');
 }
 
-.container {
-    width: 1440px;
-    margin: auto;
+@font-face {
+    font-family: 'RalewayRegular';
+    src: url('../fonts/raleway.regular.ttf');
 }
+
+@font-face {
+    font-family: 'RalewaySemibold';
+    src: url('../fonts/raleway.semibold.ttf');
+}
+
+$red: #ef5f5f;
+$dark-grey: #747474;
+$medium-grey: #414141;
+$light-grey: #999999;
+$html-font-size: 13px;
+@import "./_misc/mixins.scss";
+@import "./style.scss";
+@import "./tags.scss";
+@import "./sections/header.scss";
+@import "./sections/footer.scss";
+@import "./pages/index.scss";

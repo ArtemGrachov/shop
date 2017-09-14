@@ -1,0 +1,60 @@
+html {
+    font-size: $html-font-size;
+}
+
+body {
+    color: #838383;
+    font-family: 'RalewayRegular';
+}
+
+.container {
+    width: 1144px;
+    padding: 0 rem(28px);
+    margin: auto;
+    @extend %clearfix;
+}
+
+.text_red {
+    color: $red;
+}
+
+.logo {
+    font-family: 'MuseoSlab500';
+    letter-spacing: rem(-1.35px);
+    &__char {
+        background: $red;
+        width: rem(59px);
+        height: rem(59px);
+        font-size: rem(60px);
+        line-height: rem(62px);
+        text-align: center;
+        color: white;
+        border-radius: 50%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &__text {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: rem(40px);
+        margin-left: rem(6px);
+        margin-top: rem(3px);
+    }
+}
+
+.contacts {
+    &-list {
+        display: inline-block;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    &-item {
+        margin: rem(4px);
+        letter-spacing: rem(0.7px);
+    }
+    &_dark {
+        color: $dark-grey;
+        font-weight: bold;
+    }
+}

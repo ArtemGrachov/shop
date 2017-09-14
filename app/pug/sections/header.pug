@@ -1,62 +1,72 @@
 header.header
-    .container
-        .header-top
-            nav.nav-top
-                ul.nav-top-list
-                    li.nav-top-item
-                        a.nav-top__link My account
-                    li.nav-top-item
-                        a.nav-top__link My wishlist
-                    li.nav-top-item
-                        a.nav-top__link Cart
-                    li.nav-top-item
-                        a.nav-top__link Checkout
+    .header-top
+        .container
+            nav.header-top-nav
+                ul.header-top-nav-list
+                    li.header-top-nav-item
+                        a.header-top-nav__link(href="#")
+                            i.fa.fa-briefcase(aria-hidden="true")
+                            | My account
+                    li.header-top-nav-item
+                        a.header-top-nav__link(href="#")
+                            i.fa.fa-briefcase(aria-hidden="true")
+                            | My wishlist
+                    li.header-top-nav-item
+                        a.header-top-nav__link(href="#")
+                            i.fa.fa-shopping-basket(aria-hidden="true")
+                            | Cart
+                    li.header-top-nav-item
+                        a.header-top-nav__link(href="#")
+                            i.fa.fa-shopping-cart(aria-hidden="true")
+                            | Checkout
             .header-top-right
                 .header-greeter Welcome, 
-                    a.header-greeter__link(href="#") visitor
-        .header-main
+                    a.header-greeter__link(href="#") visitor.
+    .header-main
+        .container
             .logo
                 .logo__char S
                 .logo__text
                     | HeroWP
-                    span.logo__text_red .com
+                    span.text_red .com
             .header-contacts
                 ul.header-contacts-list
                     li.header-contacts-item
                         i.fa.fa-phone(aria-hidden="true")
                         ul.contacts-list
                             li.contacts-item
-                                span.contacts__dark +(49)
+                                span.contacts_dark +(49)
                                 |  123 456 789
                             li.contacts-item
-                                span.contacts__dark +(49)
+                                span.contacts_dark +(49)
                                 |  789 654 321
                     li.header-contacts-item
                         i.fa.fa-envelope
                         ul.contacts-list
                             li.contacts-item
-                                span.contacts__dark awesome@
+                                span.contacts_dark awesome@
                                 | email.com
                             li.contacts-item
-                                span.contacts__dark sales@
+                                span.contacts_dark sales@
                                 | email.com
-        .header-bottom
-            nav.nav-main
-                ul.nav-main-list
-                    li.nav-main-item.nav-main-item_active
-                        a(href="#").nav-main__link Mens
-                    li.nav-main-item
-                        a(href="#").nav-main__link Womens
-                    li.nav-main-item
-                        a(href="#").nav-main__link Kids
-                    li.nav-main-item
-                        a(href="#").nav-main__link Accesories
-                    li.nav-main-item
-                        a(href="#").nav-main__link Sports
-                    li.nav-main-item
-                        a(href="#").nav-main__link Brands
-                    li.nav-main-item
-                        a(href="#").nav-main__link Outdoor
+    .header-bottom
+        .container
+            nav.header-nav-main
+                ul.header-nav-main-list
+                    li.header-nav-main-item
+                        a(href="#").header-nav-main__link.header-nav-main__link_active Mens
+                    li.header-nav-main-item
+                        a(href="#").header-nav-main__link Womens
+                    li.header-nav-main-item
+                        a(href="#").header-nav-main__link Kids
+                    li.header-nav-main-item
+                        a(href="#").header-nav-main__link Accesories
+                    li.header-nav-main-item
+                        a(href="#").header-nav-main__link Sports
+                    li.header-nav-main-item
+                        a(href="#").header-nav-main__link Brands
+                    li.header-nav-main-item
+                        a(href="#").header-nav-main__link Outdoor
             .header-bottom-right
                 .cart-info
                     .cart-icon X
