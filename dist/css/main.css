@@ -50,16 +50,16 @@ body {
 }
 
 .text_red {
-    color: #ef5f5f;
+    color: #f06060;
 }
 
 .logo {
     font-family: 'MuseoSlab500';
-    letter-spacing: -0.10385rem;
+    letter-spacing: -0.11538rem;
 }
 
 .logo__char {
-    background: #ef5f5f;
+    background: #f06060;
     width: 4.53846rem;
     height: 4.53846rem;
     font-size: 4.61538rem;
@@ -76,7 +76,7 @@ body {
     vertical-align: middle;
     font-size: 3.07692rem;
     margin-left: 0.46154rem;
-    margin-top: 0.23077rem;
+    margin-top: 0.53846rem;
 }
 
 .contacts-list {
@@ -106,7 +106,7 @@ a:hover {
 }
 
 .header-top {
-    background: #ef5f5f;
+    background: #f06060;
     color: white;
 }
 
@@ -140,7 +140,7 @@ a:hover {
 }
 
 .header-main {
-    padding: 2.76923rem 0 1.53846rem;
+    padding: 2.76923rem 0 1.76923rem;
 }
 
 .header-main .logo {
@@ -149,7 +149,7 @@ a:hover {
 }
 
 .header-bottom {
-    border-top: 1px solid #9a9a9a;
+    border-top: 1px solid #e9e9e9;
 }
 
 .header-contacts {
@@ -169,7 +169,7 @@ a:hover {
 
 .header-contacts-item .fa {
     font-size: 3.15385rem;
-    color: #ef5f5f;
+    color: #f06060;
 }
 
 .header-contacts .contacts-list {
@@ -178,25 +178,69 @@ a:hover {
     padding-left: 1.07692rem;
 }
 
-.header-nav-main-list {
-    list-style: none;
+.header .cat-nav-list {
+    margin: 0;
     padding: 0;
-    margin: 0 -1.15385rem;
-    letter-spacing: -0.06923rem;
-}
-
-.header-nav-main-item {
-    display: inline-block;
+    list-style: none;
     font-size: 1.23077rem;
-    padding: 1.92308rem 1.15385rem;
+    letter-spacing: -0.06538rem;
 }
 
-.header-nav-main__link {
+.header .cat-nav-item {
+    display: inline-block;
+    position: relative;
+}
+
+.header .cat-nav-item:hover .cat-drop-list {
+    position: absolute;
+    display: block;
+    top: 100%;
+}
+
+.header .cat-nav__link {
     color: #565656;
+    display: block;
+    padding: 1.69231rem 2.19231rem 1.69231rem 0;
 }
 
-.header-nav-main__link:hover, .header-nav-main__link_active {
-    color: #ef5f5f;
+.header .cat-nav__link:hover, .header .cat-nav__link_active {
+    color: #f06060;
+    text-decoration: none;
+}
+
+.header .cat-drop-list {
+    width: 12.15385rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: none;
+    border-radius: 0 0 0.76923rem 0.76923rem;
+    overflow: hidden;
+    background: #f06060;
+}
+
+.header .cat-drop-item {
+    border-bottom: 1px solid #b63b3b;
+    border-top: 1px solid #ff8888;
+}
+
+.header .cat-drop-item:last-child {
+    border-bottom-color: transparent;
+}
+
+.header .cat-drop-item:first-child {
+    border-top-color: transparent;
+}
+
+.header .cat-drop__link {
+    padding: 0.84615rem 1.23077rem;
+    display: block;
+    color: white;
+    border-top: 1px solid #f06060;
+}
+
+.header .cat-drop__link_active, .header .cat-drop__link:hover {
+    background: #ff7979;
     text-decoration: none;
 }
 

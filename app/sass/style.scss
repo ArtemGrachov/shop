@@ -20,7 +20,7 @@ body {
 
 .logo {
     font-family: 'MuseoSlab500';
-    letter-spacing: rem(-1.35px);
+    letter-spacing: rem(-1.5px);
     &__char {
         background: $red;
         width: rem(59px);
@@ -38,7 +38,7 @@ body {
         vertical-align: middle;
         font-size: rem(40px);
         margin-left: rem(6px);
-        margin-top: rem(3px);
+        margin-top: rem(7px);
     }
 }
 
