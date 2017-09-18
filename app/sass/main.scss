@@ -28,7 +28,7 @@
 
 @font-face {
     font-family: 'RalewayBold';
-    src: url('../fonts/raleway.semibold.ttf');
+    src: url('../fonts/raleway.bold.ttf');
 }
 
 $red: #f06060;
@@ -43,4 +43,5 @@ $transition: 300ms;
 @import "./tags.scss";
 @import "./sections/header.scss";
 @import "./sections/footer.scss";
+@import "./sections/aside.scss";
 @import "./pages/index.scss";

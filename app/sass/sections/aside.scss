@@ -1,0 +1,80 @@
+.aside {
+    &__header {
+        padding: 0 0 rem(35px);
+        font-size: rem(32px);
+        font-family: 'MuseoSlab500';
+        border-bottom: 4px solid #dddddd;
+        letter-spacing: rem(-1.45px);
+    }
+    &__body {
+        padding: rem(30px) 0;
+    }
+    &-list {
+        padding: 0;
+        margin: 0 rem(-14px);
+        list-style: none;
+        &_inline {
+            .aside-item {
+                width: rem(344px);
+                float: left;
+                margin: 0 rem(14px);
+            }
+        }
+    }
+    &-item {
+        &_dark-bg {
+            .aside {
+                &__header {
+                    border-color: #3b3b3b;
+                }
+            }
+        }
+    }
+    &-products {
+        &-list {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        &-item {
+            border-bottom: rem(1px) solid #3d3d3d;
+            padding: 0 0 rem(24px);
+            margin: 0 0 rem(24px);
+            @extend %clearfix;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        &-descr {
+            width: rem(158px);
+            margin-left: rem(97px);
+            padding: 0 rem(10px);
+            float: left;
+            border-right: rem(1px) solid #3d3d3d;
+            &__header {
+                font-family: 'MuseoSlab500';
+                font-size: rem(15px);
+                margin-bottom: rem(8px);
+                letter-spacing: rem(-0.35px);
+            }
+            &__text {
+                color: #808080;
+            }
+        }
+        &-right {
+            float: left;
+            text-align: center;
+            width: rem(88px);
+        }
+        &__price {
+            color: $red;
+            font-size: rem(32px);
+            font-family: 'MuseoSlab500';
+            line-height: 1.1;
+        }
+        &__currency {
+            color: #999999;
+            font-size: rem(14px);
+        }
+    }
+}

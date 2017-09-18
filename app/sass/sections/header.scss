@@ -35,10 +35,10 @@
         }
     }
     &-greeter {
-        padding: rem(9px) rem(5px);
+        padding: rem(9px) rem(6px);
     }
     &-main {
-        padding: rem(36px) 0 rem(23px);
+        padding: rem(41px) 0 rem(21px);
         .logo {
             margin-left: rem(-13px);
         }
@@ -50,7 +50,6 @@
         &-list {
             margin: 0;
             padding: rem(6px) 0;
-            list-style: none;
         }
         &-item {
             display: inline-block;
@@ -64,6 +63,7 @@
             border-left: 1px solid #e1e1e1;
             margin-left: rem(14px);
             padding-left: rem(14px);
+            display: inline-block;
         }
     }
     .cat {

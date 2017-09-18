@@ -1,0 +1,50 @@
+mixin aside-shopmint(mod)
+    if mod
+        - $class=" aside-item_" + mod
+    else
+        - $class=""
+
+    li(class="aside-item" + $class)
+        .aside__header
+            .logo.logo_block-title
+                .logo__char S
+                | Shopmint
+        .aside__body
+            |  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed viverra, urna quisdignissim.
+            ul.contacts-list.contacts-list_dark.contacts-list_margin
+                li.contacts-item
+                    span.contacts_dark +(49)
+                    |  123 456 789
+                li.contacts-item
+                    span.contacts_dark +(49)
+                    |  789 654 321
+            ul.contacts-list.contacts-list_dark.contacts-list_margin
+                li.contacts-item
+                    span.contacts_dark awesome@
+                    | email.com
+                li.contacts-item
+                    span.contacts_dark sales@
+                    | email.com
+            ul.contacts-list.contacts-list_dark.contacts-list_margin
+                li.contacts-item
+                    span.contacts_dark MONDAY-FRIDAY
+                    |  : 08:00-18:00
+                li.contacts-item
+                    span.contacts_dark SATURDAYSUNDAY
+                    |  : Closed
+            ul.socials-list
+                li.socials-item
+                    a.socials__link(href="#" target="_blank")
+                        i.fa.fa-facebook(aria-hidden="true")
+                li.socials-item
+                    a.socials__link(href="#" target="_blank")
+                        i.fa.fa-twitter(aria-hidden="true")
+                li.socials-item
+                    a.socials__link(href="#" target="_blank")
+                        i.fa.fa-dribbble(aria-hidden="true")
+                li.socials-item
+                    a.socials__link.socials__link_red(href="#" target="_blank")
+                        i.fa.fa-linkedin-square(aria-hidden="true")
+                li.socials-item
+                    a.socials__link(href="#" target="_blank")
+                        i.fa.fa-youtube(aria-hidden="true")

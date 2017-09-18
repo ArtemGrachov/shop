@@ -1,0 +1,15 @@
+mixin aside-just-added(mod)
+    if mod
+        - $class=" aside-item_" + mod
+    else
+        - $class=""
+
+    li(class="aside-item" + $class)
+        .aside__header
+            | Just added
+            span.text_red .
+        .aside__body
+            ul.aside-products-list
+                +aside-products-item('Happy T-Shirt', '289')
+                +aside-products-item('Beetles T-Shirt', '569')
+                +aside-products-item('Captain Awesome T-Shirt', '139')

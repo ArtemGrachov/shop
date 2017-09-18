@@ -2,6 +2,7 @@ a {
     font-family: 'RalewaySemibold';
     text-decoration: none;
     transition: $transition;
+    color: $red;
     &:hover {
         text-decoration: underline;
     }

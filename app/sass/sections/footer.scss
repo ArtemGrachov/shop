@@ -1,6 +1,10 @@
 .footer {
     background: #2f2f2f;
-    &-copyright {
+    color: white;
+    &-bottom {
         background: #262626;
+        font-size: rem(12px);
+        padding: rem(13.5px) 0;
+        letter-spacing: rem(-0.6px);
     }
 }
