@@ -1,0 +1,13 @@
+.userful-info {
+    &-list {
+        padding: 0;
+        margin: 0 rem(-14px);
+        list-style: none;
+        @extend %clearfix;
+    }
+    &-item {
+        width: rem(344px);
+        margin: 0 rem(14px);
+        float: left;
+    }
+}

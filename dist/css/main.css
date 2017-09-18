@@ -30,12 +30,12 @@
   src: url("../fonts/raleway.bold.ttf");
 }
 
-.container:after, .header-top:after, .aside-products-item:after, .container:before, .header-top:before, .aside-products-item:before {
+.container:after, .header-top:after, .aside-products-item:after, .userful-info-list:after, .container:before, .header-top:before, .aside-products-item:before, .userful-info-list:before {
     content: "";
     display: table;
 }
 
-.container:after, .header-top:after, .aside-products-item:after {
+.container:after, .header-top:after, .aside-products-item:after, .userful-info-list:after {
     clear: both;
 }
 
@@ -48,6 +48,10 @@ body {
     font-family: 'RalewayRegular';
     line-height: 1.56;
     letter-spacing: -0.05rem;
+}
+
+.maincontent {
+    padding: 0 0 4.15385rem;
 }
 
 .container {
@@ -114,6 +118,39 @@ body {
     height: 4.23077rem;
     font-size: 4.23077rem;
     line-height: 4.23077rem;
+}
+
+.title {
+    color: #414141;
+    font-family: 'MuseoSlab500';
+    font-size: 2.46154rem;
+}
+
+.title_underline {
+    padding-bottom: 2.15385rem;
+}
+
+.title_underline:after {
+    display: block;
+    content: '';
+    height: 0.61538rem;
+    border-radius: 0.61538rem;
+    background: #d4d4d4;
+    margin-top: 1.92308rem;
+}
+
+.block_bg {
+    background: white;
+    border: 1px solid #e7e7e7;
+    border-radius: 0.76923rem;
+    padding: 0.76923rem;
+    -webkit-box-shadow: 0 0.69231rem 0 -0.38462rem white, 0 0.69231rem 0 -0.30769rem #e7e7e7, 0 1.38462rem 0 -0.69231rem white, 0 1.38462rem 0 -0.61538rem #e7e7e7;
+    box-shadow: 0 0.69231rem 0 -0.38462rem white, 0 0.69231rem 0 -0.30769rem #e7e7e7, 0 1.38462rem 0 -0.69231rem white, 0 1.38462rem 0 -0.61538rem #e7e7e7;
+}
+
+.block_bg-up {
+    -webkit-box-shadow: 0 -0.69231rem 0 -0.38462rem white, 0 -0.69231rem 0 -0.30769rem #e7e7e7, 0 -1.38462rem 0 -0.69231rem white, 0 -1.38462rem 0 -0.61538rem #e7e7e7;
+    box-shadow: 0 -0.69231rem 0 -0.38462rem white, 0 -0.69231rem 0 -0.30769rem #e7e7e7, 0 -1.38462rem 0 -0.69231rem white, 0 -1.38462rem 0 -0.61538rem #e7e7e7;
 }
 
 .contacts-list {
@@ -374,6 +411,7 @@ a:hover {
 .footer {
     background: #2f2f2f;
     color: white;
+    margin-top: 6.30769rem;
 }
 
 .footer-bottom {
@@ -381,6 +419,12 @@ a:hover {
     font-size: 0.92308rem;
     padding: 1.03846rem 0;
     letter-spacing: -0.04615rem;
+}
+
+.footer-search {
+    max-width: 69.38462rem;
+    margin: auto;
+    padding: 1.84615rem;
 }
 
 .aside__header {
@@ -462,4 +506,16 @@ a:hover {
 .aside-products__currency {
     color: #999999;
     font-size: 1.07692rem;
+}
+
+.userful-info-list {
+    padding: 0;
+    margin: 0 -1.07692rem;
+    list-style: none;
+}
+
+.userful-info-item {
+    width: 26.46154rem;
+    margin: 0 1.07692rem;
+    float: left;
 }

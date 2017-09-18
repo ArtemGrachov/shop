@@ -9,6 +9,10 @@ body {
     letter-spacing: rem(-0.65px);
 }
 
+.maincontent {
+    padding: 0 0 rem(54px);
+}
+
 .container {
     width: 1144px;
     padding: 0 rem(28px);
@@ -69,6 +73,36 @@ body {
                 font-size: rem(55px);
                 line-height: rem(55px);
             }
+        }
+    }
+}
+
+.title {
+    color: $medium-grey;
+    font-family: 'MuseoSlab500';
+    font-size: rem(32px);
+    &_underline {
+        padding-bottom: rem(28px);
+        &:after {
+            display: block;
+            content: '';
+            height: rem(8px);
+            border-radius: rem(8px);
+            background: #d4d4d4;
+            margin-top: rem(25px);
+        }
+    }
+}
+
+.block {
+    &_bg {
+        background: white;
+        border: 1px solid #e7e7e7;
+        border-radius: rem(10px);
+        padding: rem(10px); // temp padding!!!
+        box-shadow: 0 rem(9px) 0 rem(-5px) white, 0 rem(9px) 0 rem(-4px) #e7e7e7, 0 rem(18px) 0 rem(-9px) white, 0 rem(18px) 0 rem(-8px) #e7e7e7;
+        &-up {
+            box-shadow: 0 rem(-9px) 0 rem(-5px) white, 0 rem(-9px) 0 rem(-4px) #e7e7e7, 0 rem(-18px) 0 rem(-9px) white, 0 rem(-18px) 0 rem(-8px) #e7e7e7;
         }
     }
 }
