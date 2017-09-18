@@ -53,4 +53,62 @@
             max-height: 100%;
         }
     }
+    &-select {
+        &-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            overflow: hidden;
+        }
+        &-item {
+            display: inline-block;
+            position: relative;
+            padding-right: rem(40px); // ???
+            &:before,
+            &:after {
+                display: block;
+                position: absolute;
+                content: '';
+                height: rem(8px);
+                width: 50%;
+                top: 50%;
+                transform: translateY(-50%);
+                background: #d4d4d4;
+            }
+            &:before {
+                left: rem(-30px);
+            }
+            &:after {
+                right: rem(-30px);
+            }
+        }
+        &__link {
+            font-family: 'MuseoSlab500';
+            font-size: rem(32px);
+            color: #575757;
+            display: block;
+            padding-bottom: rem(80px);
+            &:after {
+                position: absolute;
+                display: block;
+                content: '';
+                width: 100%;
+                height: rem(60px);
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                background-image: url('../img/png-icons/inactive.png');
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+            &_active,
+            &:hover {
+                color: $red;
+                text-decoration: none;
+                &:after {
+                    background-image: url('../img/png-icons/active.png')
+                }
+            }
+        }
+    }
 }

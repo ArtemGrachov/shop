@@ -22,12 +22,15 @@ block content
                 a.slider-btn.slider-btn_right(href="#")
         .proudcts-preview
             ul.products-select-list
-                li.product-select-item
-                    a.product-select__link(href="#") Hot products.
-                li.product-select-item.product-select-item_active
-                    a.product-select__link(href="#") Latest products.
-                li.product-select-item
-                    a.product-select__link(href="#") Best seller.
+                li.products-select-item
+                    a.products-select__link(href="#") Hot products
+                        span.text_red .
+                li.products-select-item
+                    a.products-select__link.products-select__link_active(href="#") Latest products
+                        span.text_red .
+                li.products-select-item
+                    a.products-select__link(href="#") Best seller
+                        span.text_red .
             ul.products-list
                 +products-item('Dope T-Shirt', '799')
                 +products-item('Einstein T-Shirt', '469', '369')

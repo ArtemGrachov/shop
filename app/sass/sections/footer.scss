@@ -12,9 +12,6 @@
         max-width: rem(902px);
         margin: auto;
         padding: rem(24px);
-        &-btn {
-            width: rem(185px);
-            float: right;
-        }
+        transform: translateY(-50%);
     }
 }
