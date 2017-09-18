@@ -1,6 +1,7 @@
 a {
     font-family: 'RalewaySemibold';
     text-decoration: none;
+    transition: $transition;
     &:hover {
         text-decoration: underline;
     }

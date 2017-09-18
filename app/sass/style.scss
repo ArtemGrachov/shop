@@ -18,6 +18,18 @@ body {
     color: $red;
 }
 
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.inline {
+    display: inline-block;
+}
+
 .logo {
     font-family: 'MuseoSlab500';
     letter-spacing: rem(-1.5px);
@@ -50,7 +62,7 @@ body {
         padding: 0;
     }
     &-item {
-        margin: rem(4px);
+        margin: rem(4px) 0 rem(5px);
         letter-spacing: rem(0.7px);
     }
     &_dark {

@@ -26,11 +26,18 @@
     src: url('../fonts/raleway.semibold.ttf');
 }
 
+@font-face {
+    font-family: 'RalewayBold';
+    src: url('../fonts/raleway.semibold.ttf');
+}
+
 $red: #f06060;
+$black: #393939;
 $dark-grey: #747474;
 $medium-grey: #414141;
 $light-grey: #999999;
 $html-font-size: 13px;
+$transition: 300ms;
 @import "./_misc/mixins.scss";
 @import "./style.scss";
 @import "./tags.scss";

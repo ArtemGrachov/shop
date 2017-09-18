@@ -1,7 +1,7 @@
 header.header
     .header-top
         .container
-            nav.header-top-nav
+            nav.header-top-nav.left
                 ul.header-top-nav-list
                     li.header-top-nav-item
                         a.header-top-nav__link(href="#")
@@ -19,17 +19,16 @@ header.header
                         a.header-top-nav__link(href="#")
                             i.fa.fa-shopping-cart(aria-hidden="true")
                             | Checkout
-            .header-top-right
-                .header-greeter Welcome, 
-                    a.header-greeter__link(href="#") visitor.
+            .header-greeter.right Welcome, 
+                a.header-greeter__link(href="#") visitor.
     .header-main
         .container
-            .logo
+            .logo.left
                 .logo__char S
                 .logo__text
                     | HeroWP
                     span.text_red .com
-            .header-contacts
+            .header-contacts.right
                 ul.header-contacts-list
                     li.header-contacts-item
                         i.fa.fa-phone(aria-hidden="true")
@@ -51,14 +50,15 @@ header.header
                                 | email.com
     .header-bottom
         .container
-            nav.header-nav-main
+            nav.cat-nav.left
                 include ../includes/cat-nav.pug
-            .header-bottom-right
-                .cart-info
-                    .cart-icon X
+            .right
+                .cart.inline
+                    .cart-icon
+                        i.fa.fa-shopping-basket(aria-hidden="true")
                     .cart-descr Cart 
-                        span.cart-descr__number 3
+                        span.text_red 3
                         |  items
-                    .cart-price 47,99 $
-                .cart-search
-                    input(type="text" placeholder="Search...").input-header-search
+                    .cart__price 47,99 $
+                .header-search-wrap.inline
+                    input(type="text" placeholder="Search...").header-search-input

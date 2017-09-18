@@ -25,6 +25,11 @@
   src: url("../fonts/raleway.semibold.ttf");
 }
 
+@font-face {
+    font-family: 'RalewayBold';
+  src: url("../fonts/raleway.semibold.ttf");
+}
+
 .container:after, .header-top:after, .container:before, .header-top:before {
     content: "";
     display: table;
@@ -51,6 +56,18 @@ body {
 
 .text_red {
     color: #f06060;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.inline {
+    display: inline-block;
 }
 
 .logo {
@@ -87,7 +104,7 @@ body {
 }
 
 .contacts-item {
-    margin: 0.30769rem;
+    margin: 0.30769rem 0 0.38462rem;
     letter-spacing: 0.05385rem;
 }
 
@@ -99,14 +116,22 @@ body {
 a {
     font-family: 'RalewaySemibold';
     text-decoration: none;
+    -webkit-transition: 300ms;
+    transition: 300ms;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
+.header {
+    position: relative;
+}
+
 .header-top {
+    letter-spacing: -0.04615rem;
     background: #f06060;
+    border-bottom: 1px solid #f38080;
     color: white;
 }
 
@@ -114,29 +139,35 @@ a:hover {
     color: white;
 }
 
-.header-top-nav {
-    font-size: 12px;
-}
-
 .header-top-nav-list {
-    float: left;
-    margin: 0 -0.84615rem;
+    margin: 0 -1.23077rem;
     padding: 0;
     list-style: none;
+    font-size: 0;
 }
 
 .header-top-nav-item {
     display: inline-block;
-    padding: 0.84615rem 1.15385rem;
+    font-size: 12px;
 }
 
 .header-top-nav-item .fa {
     margin-right: 0.61538rem;
 }
 
-.header-top-right {
-    float: right;
-    padding: 0.84615rem;
+.header-top-nav__link {
+    display: block;
+    padding: 0.84615rem 1.53846rem;
+}
+
+.header-top-nav__link:hover {
+    background: white;
+    color: #f06060;
+    text-decoration: none;
+}
+
+.header-greeter {
+    padding: 0.69231rem 0.38462rem;
 }
 
 .header-main {
@@ -145,15 +176,10 @@ a:hover {
 
 .header-main .logo {
     margin-left: -1rem;
-    float: left;
 }
 
 .header-bottom {
     border-top: 1px solid #e9e9e9;
-}
-
-.header-contacts {
-    float: right;
 }
 
 .header-contacts-list {
@@ -164,7 +190,7 @@ a:hover {
 
 .header-contacts-item {
     display: inline-block;
-    margin-left: 3.53846rem;
+    margin-left: 3.69231rem;
 }
 
 .header-contacts-item .fa {
@@ -242,6 +268,54 @@ a:hover {
 .header .cat-drop__link_active, .header .cat-drop__link:hover {
     background: #ff7979;
     text-decoration: none;
+}
+
+.header-search-input {
+    border: 1px solid #e0e0e0;
+    border-radius: 0.15385rem;
+    vertical-align: middle;
+    font-family: 'RalewayBold';
+    font-size: 0.92308rem;
+    padding: 0.76923rem 1.15385rem;
+    width: 12.15385rem;
+    margin: 0.84615rem 0;
+}
+
+.header-search-wrap {
+    position: relative;
+}
+
+.header-search-wrap:after {
+    display: inline-block;
+    position: absolute;
+    font-family: 'FontAwesome';
+    right: 0.76923rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    content: '\f002';
+}
+
+.cart {
+    vertical-align: middle;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.15385rem;
+    margin: 0.92308rem 0.53846rem;
+    padding: 0.57692rem 1.15385rem;
+}
+
+.cart-icon, .cart-descr, .cart__price {
+    display: inline-block;
+}
+
+.cart-descr {
+    font-family: 'RalewayBold';
+}
+
+.cart__price {
+    font-family: 'MuseoSlab500';
+    font-size: 1.23077rem;
+    margin-left: 1.23077rem;
 }
 
 .footer {
