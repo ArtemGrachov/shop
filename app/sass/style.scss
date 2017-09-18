@@ -86,6 +86,12 @@ body {
     padding: rem(10px) rem(15px);
     border-radius: rem(10px);
     display: inline-block;
+    border: 1px solid $red;
+    &:hover {
+        background: white;
+        color: $red;
+        text-decoration: none;
+    }
 }
 
 .title {
