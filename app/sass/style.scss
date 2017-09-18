@@ -7,6 +7,7 @@ body {
     font-family: 'RalewayRegular';
     line-height: 1.56;
     letter-spacing: rem(-0.65px);
+    background: #f2f2f2;
 }
 
 .maincontent {
@@ -77,6 +78,16 @@ body {
     }
 }
 
+.btn {
+    font-family: 'MuseoSlab500';
+    color: white;
+    font-size: rem(18px);
+    background: $red;
+    padding: rem(10px) rem(15px);
+    border-radius: rem(10px);
+    display: inline-block;
+}
+
 .title {
     color: $medium-grey;
     font-family: 'MuseoSlab500';
@@ -98,13 +109,18 @@ body {
     &_bg {
         background: white;
         border: 1px solid #e7e7e7;
-        border-radius: rem(10px);
-        padding: rem(10px); // temp padding!!!
+        border-radius: rem(10px); // padding: rem(10px); // temp padding!!!
         box-shadow: 0 rem(9px) 0 rem(-5px) white, 0 rem(9px) 0 rem(-4px) #e7e7e7, 0 rem(18px) 0 rem(-9px) white, 0 rem(18px) 0 rem(-8px) #e7e7e7;
         &-up {
             box-shadow: 0 rem(-9px) 0 rem(-5px) white, 0 rem(-9px) 0 rem(-4px) #e7e7e7, 0 rem(-18px) 0 rem(-9px) white, 0 rem(-18px) 0 rem(-8px) #e7e7e7;
         }
     }
+}
+
+.divider {
+    border-top: rem(1px) solid #d0d0d0;
+    border-bottom: rem(1px) solid white;
+    margin: rem(40px) 0;
 }
 
 .contacts {

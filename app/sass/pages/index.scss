@@ -8,6 +8,36 @@
     &-item {
         width: rem(344px);
         margin: 0 rem(14px);
+        padding: rem(28px) 0;
         float: left;
+    }
+    &__icon {
+        width: rem(117px);
+        display: inline-block;
+    }
+    &__body {
+        &:before {
+            position: absolute;
+            width: rem(3px);
+            height: 100%;
+            content: '';
+            display: block;
+            border: 1px solid #efefef;
+            top: 0;
+            left: rem(-20px);
+        }
+        margin-left: rem(20px);
+        position: relative;
+        display: inline-block;
+        width: rem(200px);
+    }
+    &__title {
+        font-family: 'MuseoSlab500';
+        font-size: rem(18px);
+        color: #4c4c4c;
+        margin-bottom: rem(20px);
+    }
+    &__link {
+        display: block;
     }
 }

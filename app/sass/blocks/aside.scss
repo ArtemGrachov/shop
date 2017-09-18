@@ -66,15 +66,5 @@
             text-align: center;
             width: rem(88px);
         }
-        &__price {
-            color: $red;
-            font-size: rem(32px);
-            font-family: 'MuseoSlab500';
-            line-height: 1.1;
-        }
-        &__currency {
-            color: #999999;
-            font-size: rem(14px);
-        }
     }
 }

@@ -1,19 +1,19 @@
 mixin products-item(name, price, discount)
     li.products-item.block_bg
         .products-preview
-            .products-preview__img
-                img(src="" alt="Product image")
+            .products-preview__pic
+                img.products-preview__img(src="" alt="Product image")
             if discount
                 .products-preview__price #{price}
                 .products-preview__currency USD
             .products__name #{name}
         .products-bottom
             .products-bottom__left
-                .products-bottom__price
+                .products__price
                     if discount
                         | #{discount}
                     else
                         | #{price}
-                .products-bottom__currency USD
+                .products__currency USD
             .products-bottom__right
                 a.btn.btn-primary(href="#") Add to cart

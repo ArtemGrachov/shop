@@ -1,0 +1,56 @@
+.products {
+    &-list {
+        font-size: 0;
+        padding: 0;
+        margin: 0 rem(-14px) rem(50px);
+        list-style: none;
+    }
+    &-item {
+        display: inline-block;
+        width: rem(250px);
+        margin: 0 rem(14px);
+        vertical-align: top;
+        text-align: center;
+    }
+    &__name {
+        font-size: rem(18px);
+        font-family: 'MuseoSlab500';
+        color: #454545;
+        text-align: center;
+        margin-bottom: rem(14px);
+    }
+    &__price {
+        color: $red;
+        font-size: rem(32px);
+        font-family: 'MuseoSlab500';
+        line-height: 1.1;
+    }
+    &__currency {
+        color: #999999;
+        font-size: rem(14px);
+    }
+    &-bottom {
+        @extend %clearfix;
+        border-top: rem(1px) solid #e3e3e3;
+        padding: rem(18px) 0;
+        &__left {
+            float: left;
+            width: rem(94px);
+            border-right: 1px solid #d8d8d8;
+        }
+        &__right {
+            float: left;
+            width: rem(154px);
+        }
+    }
+    &-preview {
+        &__pic {
+            height: rem(190px);
+            overflow: hidden;
+        }
+        &__img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}

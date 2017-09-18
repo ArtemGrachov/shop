@@ -1,5 +1,6 @@
 .header {
     position: relative;
+    background: white;
     &-top {
         @extend %clearfix;
         letter-spacing: rem(-0.6px);

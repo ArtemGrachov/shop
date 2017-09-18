@@ -30,12 +30,12 @@
   src: url("../fonts/raleway.bold.ttf");
 }
 
-.container:after, .header-top:after, .aside-products-item:after, .userful-info-list:after, .container:before, .header-top:before, .aside-products-item:before, .userful-info-list:before {
+.container:after, .header-top:after, .aside-products-item:after, .products-bottom:after, .userful-info-list:after, .container:before, .header-top:before, .aside-products-item:before, .products-bottom:before, .userful-info-list:before {
     content: "";
     display: table;
 }
 
-.container:after, .header-top:after, .aside-products-item:after, .userful-info-list:after {
+.container:after, .header-top:after, .aside-products-item:after, .products-bottom:after, .userful-info-list:after {
     clear: both;
 }
 
@@ -48,6 +48,7 @@ body {
     font-family: 'RalewayRegular';
     line-height: 1.56;
     letter-spacing: -0.05rem;
+    background: #f2f2f2;
 }
 
 .maincontent {
@@ -120,6 +121,16 @@ body {
     line-height: 4.23077rem;
 }
 
+.btn {
+    font-family: 'MuseoSlab500';
+    color: white;
+    font-size: 1.38462rem;
+    background: #f06060;
+    padding: 0.76923rem 1.15385rem;
+    border-radius: 0.76923rem;
+    display: inline-block;
+}
+
 .title {
     color: #414141;
     font-family: 'MuseoSlab500';
@@ -143,7 +154,6 @@ body {
     background: white;
     border: 1px solid #e7e7e7;
     border-radius: 0.76923rem;
-    padding: 0.76923rem;
     -webkit-box-shadow: 0 0.69231rem 0 -0.38462rem white, 0 0.69231rem 0 -0.30769rem #e7e7e7, 0 1.38462rem 0 -0.69231rem white, 0 1.38462rem 0 -0.61538rem #e7e7e7;
     box-shadow: 0 0.69231rem 0 -0.38462rem white, 0 0.69231rem 0 -0.30769rem #e7e7e7, 0 1.38462rem 0 -0.69231rem white, 0 1.38462rem 0 -0.61538rem #e7e7e7;
 }
@@ -151,6 +161,12 @@ body {
 .block_bg-up {
     -webkit-box-shadow: 0 -0.69231rem 0 -0.38462rem white, 0 -0.69231rem 0 -0.30769rem #e7e7e7, 0 -1.38462rem 0 -0.69231rem white, 0 -1.38462rem 0 -0.61538rem #e7e7e7;
     box-shadow: 0 -0.69231rem 0 -0.38462rem white, 0 -0.69231rem 0 -0.30769rem #e7e7e7, 0 -1.38462rem 0 -0.69231rem white, 0 -1.38462rem 0 -0.61538rem #e7e7e7;
+}
+
+.divider {
+    border-top: 0.07692rem solid #d0d0d0;
+    border-bottom: 0.07692rem solid white;
+    margin: 3.07692rem 0;
 }
 
 .contacts-list {
@@ -216,6 +232,7 @@ a:hover {
 
 .header {
     position: relative;
+    background: white;
 }
 
 .header-top {
@@ -496,16 +513,65 @@ a:hover {
     width: 6.76923rem;
 }
 
-.aside-products__price {
+.products-list {
+    font-size: 0;
+    padding: 0;
+    margin: 0 -1.07692rem 3.84615rem;
+    list-style: none;
+}
+
+.products-item {
+    display: inline-block;
+    width: 19.23077rem;
+    margin: 0 1.07692rem;
+    vertical-align: top;
+    text-align: center;
+}
+
+.products__name {
+    font-size: 1.38462rem;
+    font-family: 'MuseoSlab500';
+    color: #454545;
+    text-align: center;
+    margin-bottom: 1.07692rem;
+}
+
+.products__price {
     color: #f06060;
     font-size: 2.46154rem;
     font-family: 'MuseoSlab500';
     line-height: 1.1;
 }
 
-.aside-products__currency {
+.products__currency {
     color: #999999;
     font-size: 1.07692rem;
+}
+
+.products-bottom {
+    border-top: 0.07692rem solid #e3e3e3;
+    padding: 1.38462rem 0;
+}
+
+.products-bottom__left {
+    float: left;
+    width: 7.23077rem;
+    border-right: 1px solid #d8d8d8;
+}
+
+.products-bottom__right {
+    float: left;
+    width: 11.84615rem;
+}
+
+.products-preview__pic {
+    height: 14.61538rem;
+    overflow: hidden;
+}
+
+.products-preview__img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .userful-info-list {
@@ -517,5 +583,40 @@ a:hover {
 .userful-info-item {
     width: 26.46154rem;
     margin: 0 1.07692rem;
+    padding: 2.15385rem 0;
     float: left;
+}
+
+.userful-info__icon {
+    width: 9rem;
+    display: inline-block;
+}
+
+.userful-info__body {
+    margin-left: 1.53846rem;
+    position: relative;
+    display: inline-block;
+    width: 15.38462rem;
+}
+
+.userful-info__body:before {
+    position: absolute;
+    width: 0.23077rem;
+    height: 100%;
+    content: '';
+    display: block;
+    border: 1px solid #efefef;
+    top: 0;
+    left: -1.53846rem;
+}
+
+.userful-info__title {
+    font-family: 'MuseoSlab500';
+    font-size: 1.38462rem;
+    color: #4c4c4c;
+    margin-bottom: 1.53846rem;
+}
+
+.userful-info__link {
+    display: block;
 }
