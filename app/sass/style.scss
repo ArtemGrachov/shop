@@ -215,3 +215,48 @@ body {
         display: inline-block;
     }
 }
+
+.page-nav {
+    background: $red;
+    color: white;
+    margin-bottom: rem(67px);
+    font-size: rem(18px);
+    &__page-title {
+        float: right;
+        padding: rem(16px) 0;
+    }
+}
+
+.breadcrumbs {
+    &-list {
+        @extend %list;
+        float: left;
+        font-family: 'MuseoSlab500';
+    }
+    &-item {
+        display: inline-block;
+        margin-left: rem(9px);
+        &:first-child {
+            margin-left: 0;
+            &:before {
+                content: none;
+            }
+        }
+        &:before {
+            content: '\f055';
+            margin-right: rem(13px);
+            font-family: 'FontAwesome';
+        }
+    }
+    &__link {
+        color: white;
+        padding: rem(16px) 0 rem(12px) 0;
+        border-bottom: rem(4px) solid transparent;
+        font-family: 'MuseoSlab500';
+        display: block;
+        &:hover {
+            text-decoration: none;
+            border-color: white;
+        }
+    }
+}
