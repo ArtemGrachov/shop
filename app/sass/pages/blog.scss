@@ -1,0 +1,49 @@
+.blog {
+    &-list {
+        @extend %list;
+    }
+    &-item {
+        padding: rem(20px) rem(32px);
+        margin-bottom: rem(50px);
+        border-radius: 0 0 rem(10px) rem(10px);
+    }
+    &__title {
+        color: #454545;
+        font-size: rem(32px);
+        font-family: 'MuseoSlab500';
+        margin: 0 0 rem(5px);
+        letter-spacing: rem(-1.55px);
+    }
+    &__pic {
+        height: rem(365px);
+    }
+    &__img {
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    &-meta {
+        text-transform: uppercase;
+        padding: 0 rem(3px);
+        &-list {
+            @extend %list;
+        }
+        &-item {
+            display: inline-block;
+            &:before {
+                content: '//';
+                letter-spacing: rem(2.6px);
+                margin: 0 rem(13px);
+            }
+            &:first-child {
+                &:before {
+                    content: none;
+                }
+            }
+        }
+        &__link {
+            font-family: 'MyriadProBold';
+            font-weight: bold;
+        }
+    }
+}

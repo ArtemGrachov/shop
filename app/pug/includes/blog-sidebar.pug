@@ -1,29 +1,47 @@
-ul.sidebar-list
-    li.sidebar-item
-        .sidebar__header Search our blog
-        .sidebar__body
-            input(type="text" placeholder="Type search here...").input-sidebar
-            input(type="submit" value="Search!").btn.btn-primary
-    li.sidebar-item
-        .sidebar__header Blog tags
-        .sidebar__body
+ul.aside-list
+    li.aside-item
+        .aside__header Search our blog
+        .aside__body
+            .aside-form-group
+                input(type="text" placeholder="Type search here...").input-rounded
+                input(type="submit" value="Search!").btn.btn-primary
+    li.aside-item
+        .aside__header Categories
+        .aside__body
+            ul.aside-inner-list
+                li.aside-inner-item.aside-inner-item_active
+                    a(href="#") Awesomeness&nbsp;&nbsp;( 24 ) 
+                li.aside-inner-item
+                    a(href="#") SEO Optimization&nbsp;&nbsp;( 35 )
+                li.aside-inner-item
+                    a(href="#") HTML 5 Advices&nbsp;&nbsp;( 47 )
+                li.aside-inner-item
+                    a(href="#") Wordpress Tricks&nbsp;&nbsp;( 55 )
+                li.aside-inner-item
+                    a(href="#") Web Design Tutorials&nbsp;&nbsp;( 48 )
+    li.aside-item
+        .aside__header Blog tags
+        .aside__body
             ul.tags-list
-                li.tags-item entertaiment
-                li.tags-item html5
-                li.tags-item awesome
-    li.sidebar-item
-        .sidebar__header Categories
-        .sidebar__body
-            ul.sidebar-inner-list
-                li.sidebar-inner-item
+                li.tags-item
+                    a(href="#" target="_blank").tags__link entertaiment
+                li.tags-item
+                    a(href="#" target="_blank").tags__link html5
+                li.tags-item
+                    a(href="#" target="_blank").tags__link awesome
+    li.aside-item
+        .aside__header Our latest posts
+        .aside__body
+            ul.aside-inner-list
+                li.aside-inner-item.aside-inner-item_active
                     a(href="#") I am just a super duper awesome blog post
-                li.sidebar-inner-item
+                li.aside-inner-item
                     a(href="#") Yet another cool post in here
-                li.sidebar-inner-item
+                li.aside-inner-item
                     a(href="#") I love the simple and cool design
-                li.sidebar-inner-item
+                li.aside-inner-item
                     a(href="#") Yes sir indeed I love it too
-                li.sidebar-inner-item
+                li.aside-inner-item
                     a(href="#") Yet another cool post here
-                li.sidebar-inner-item
+                li.aside-inner-item
                     a(href="#") I love the simple and cool design

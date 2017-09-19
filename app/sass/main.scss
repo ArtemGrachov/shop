@@ -36,10 +36,17 @@
     src: url('../fonts/raleway.heavy.ttf');
 }
 
+@font-face {
+    font-family: 'MyriadProBold';
+    src: url('../fonts/Myriad_Pro_Black_SemiExt_Bold.ttf');
+}
+
 $red: #f06060;
 $black: #393939;
 $dark-grey: #747474;
 $medium-grey: #414141;
+$medium-grey-l: #565656;
+$border-grey: #e6e6e6;
 $light-grey: #999999;
 $html-font-size: 13px;
 $transition: 300ms;
@@ -51,3 +58,4 @@ $transition: 300ms;
 @import "./blocks/aside.scss";
 @import "./blocks/products.scss";
 @import "./pages/index.scss";
+@import "./pages/blog.scss";

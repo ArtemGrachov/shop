@@ -21,6 +21,17 @@ body {
     @extend %clearfix;
 }
 
+.main {
+    width: rem(716px);
+    float: left;
+    margin-right: rem(28px);
+}
+
+.sidebar {
+    float: left;
+    width: rem(344px);
+}
+
 .text_red {
     color: $red;
 }
@@ -35,6 +46,34 @@ body {
 
 .inline {
     display: inline-block;
+}
+
+.tags {
+    &-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    &-item {
+        display: inline-block;
+    }
+    &__link {
+        background: white;
+        border-radius: rem(8px);
+        border: 1px solid $border-grey;
+        padding: rem(9px) rem(14px);
+        letter-spacing: rem(1px);
+        color: #6c6c6c;
+        display: block;
+        font-family: 'RalewayRegular';
+        font-size: rem(16px);
+        &:hover {
+            text-decoration: none;
+            background: $red;
+            border-color: $red;
+            color: white;
+        }
+    }
 }
 
 .logo {
