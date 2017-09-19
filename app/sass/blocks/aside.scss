@@ -74,22 +74,21 @@
             margin: 0;
             padding: 0 0 0 rem(3px);
             list-style: none;
-            a {
-                font-family: 'RalewayRegular';
-                color: $medium-grey-l;
-                &:hover {
-                    color: $red;
-                }
-            }
         }
         &-item {
             font-size: rem(16px);
-            margin-bottom: rem(8px);
             letter-spacing: rem(-0.8px);
+            margin-bottom: rem(8px);
+        }
+        &__link {
+            font-family: 'RalewayRegular';
+            color: $medium-grey-l;
+            &:hover {
+                text-decoration: none;
+                color: $red;
+            }
             &_active {
-                a {
-                    color: $red;
-                }
+                color: $red;
             }
         }
     }
