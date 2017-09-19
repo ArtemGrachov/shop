@@ -14,10 +14,11 @@
         margin: 0 rem(-14px);
         list-style: none;
         &_inline {
+            display: flex;
+            justify-content: space-between;
             .aside-item {
-                width: rem(344px);
-                float: left;
                 margin: 0 rem(14px);
+                width: rem(344px);
             }
         }
     }
@@ -40,17 +41,17 @@
             border-bottom: rem(1px) solid #3d3d3d;
             padding: 0 0 rem(24px);
             margin: 0 0 rem(24px);
-            @extend %clearfix;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
             &:last-child {
                 border-bottom: none;
             }
         }
         &-descr {
-            width: rem(158px);
-            margin-left: rem(97px);
-            padding: 0 rem(10px);
-            float: left;
             border-right: rem(1px) solid #3d3d3d;
+            padding: 0 rem(18px);
+            margin-left: rem(88px);
             &__header {
                 font-family: 'MuseoSlab500';
                 font-size: rem(15px);
@@ -62,7 +63,6 @@
             }
         }
         &-right {
-            float: left;
             text-align: center;
             width: rem(88px);
         }

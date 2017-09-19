@@ -1,19 +1,18 @@
 .userful-info {
     &-list {
         padding: 0;
-        margin: 0 rem(-14px);
+        margin: 0;
         list-style: none;
-        @extend %clearfix;
+        display: flex;
+        justify-content: space-between;
     }
     &-item {
         width: rem(344px);
-        margin: 0 rem(14px);
-        padding: rem(28px) 0;
-        float: left;
+        padding: rem(21px);
+        display: flex;
     }
     &__icon {
-        width: rem(117px);
-        display: inline-block;
+        width: rem(93px);
     }
     &__body {
         &:before {
@@ -28,8 +27,7 @@
         }
         margin-left: rem(20px);
         position: relative;
-        display: inline-block;
-        width: rem(200px);
+        max-width: rem(194px);
     }
     &__title {
         font-family: 'MuseoSlab500';
@@ -39,5 +37,90 @@
     }
     &__link {
         display: block;
+    }
+}
+
+.slider {
+    position: relative;
+    margin-bottom: rem(62px);
+    &-item {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        height: rem(677px);
+    }
+    &-btn {
+        border-radius: 50%;
+        width: rem(57px);
+        height: rem(57px);
+        display: block;
+        position: absolute;
+        text-align: center;
+        font-size: rem(28px);
+        padding: rem(6px);
+        color: white;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(#b5b5b5, .3);
+        &:hover {
+            background: rgba($red, .3);
+        }
+        &_left {
+            left: rem(33px);
+        }
+        &_right {
+            right: rem(33px);
+        }
+    }
+    &-circle {
+        line-height: 1;
+        height: rem(144px);
+        width: rem(144px);
+        position: absolute;
+        border-radius: 50%;
+        background: white;
+        color: $red;
+        box-shadow: rem(-8px) rem(-8px) 0 rem(8px) rgba(#636363, .2);
+        top: 50%;
+        text-align: center;
+        &_lg {
+            background: $red;
+            color: white;
+            width: rem(304px);
+            height: rem(304px);
+            .slider-circle__text {
+                font-size: rem(24px);
+                &-lg {
+                    font-family: 'RalewayBold';
+                    font-size: rem(75px);
+                }
+            }
+        }
+        &_left {
+            left: rem(93px);
+        }
+        &_right {
+            right: rem(93px);
+        }
+        &_center {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &__text {
+            font-size: rem(18px);
+            &-lg {
+                font-size: rem(48px);
+                font-family: 'RalewayHeavy';
+                &_symbol {
+                    font-size: rem(24px);
+                }
+            }
+        }
+        &-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 }

@@ -4,22 +4,28 @@ block variables
     - var title = "HeroWP.com"
 
 block content
-    .container
-        .slider
-            .slider-list
-                .slider-item
-                    .slider-circle.slider-circle_small
+    .slider
+        .slider-list.container
+            .slider-item
+                .slider-circle.slider-circle_left
+                    .slider-circle-content
                         .slider-circle__text Delivery
-                        .slider-circle__text_large Free
-                    .slider-circle.slider-circle_largr
-                        .slider-circle__text_large Great sale
+                        .slider-circle__text-lg Free
+                .slider-circle.slider-circle_lg.slider-circle_center
+                    .slider-circle-content
+                        .slider-circle__text-lg Great sale
                         .slider-circle__text On all models
-                    .slider-circle.slider-circle_small
+                .slider-circle.slider-circle_right
+                    .slider-circle-content
                         .slider-circle__text Starting from
-                        .slider-circle__text_large 429 $
-            .slider-controls
-                a.slider-btn.slider-btn_left(href="#")
-                a.slider-btn.slider-btn_right(href="#")
+                        .slider-circle__text-lg 429
+                            span.slider-circle__text-lg_symbol $
+        .slider-controls
+            a.slider-btn.slider-btn_left(href="#")
+                i.fa.fa-angle-left(aria-hidden="true")
+            a.slider-btn.slider-btn_right(href="#")
+                i.fa.fa-angle-right(aria-hidden="true")
+    .container
         .proudcts-preview
             ul.products-select-list
                 li.products-select-item

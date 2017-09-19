@@ -2,15 +2,21 @@
     &-list {
         font-size: 0;
         padding: 0;
-        margin: 0 rem(-14px) rem(50px);
+        margin: 0;
         list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
     }
     &-item {
-        display: inline-block;
-        width: rem(250px);
-        margin: 0 rem(14px);
         vertical-align: top;
         text-align: center;
+        max-width: rem(251px);
+        margin-bottom: rem(28px);
+        &:last-child {
+            margin: 0;
+        }
     }
     &__name {
         font-size: rem(18px);
@@ -21,6 +27,7 @@
     }
     &__price {
         color: $red;
+        width: rem(88px);
         font-size: rem(32px);
         font-family: 'MuseoSlab500';
         line-height: 1.1;
