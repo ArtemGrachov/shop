@@ -26,7 +26,8 @@ input {
             color: black;
         }
     }
-    &[type="radio"] {
+    &[type="radio"],
+    &[type="checkbox"] {
         display: none;
         &+label {
             &:before {
@@ -34,7 +35,7 @@ input {
                 height: rem(16px);
                 display: inline-block;
                 text-align: center;
-                padding: rem(1px) rem(4px);
+                padding: rem(1px) rem(3px);
                 background: white;
                 border: 1px solid #e6e6e6;
                 font-family: 'FontAwesome';

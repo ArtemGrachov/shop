@@ -1,0 +1,13 @@
+.register {
+    &-block-wrap {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    &__link-grey {
+        color: inherit;
+        font-family: inherit;
+        margin: 0 rem(10px);
+        color: #838383;
+    }
+}

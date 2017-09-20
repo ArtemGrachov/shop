@@ -6,32 +6,37 @@ block variables
 block content
     +page-nav(title)
     .container
-        .block_half.block.block_bg
-            .title.title_medium.text_red Login to your account
-            | If you already have an account please login.
-            .form-group
-                label(for="login_name") Enter username
-                input(type="text" id="login_name")
-            .form-group
-                label(for="login_password") Enter password
-                input(type="password" id="login_password")
-            .form-group
-                input(type="checkbox" id="remember")
-                label(for="remember") Remember me
-
-        .block_half.block.block_bg
-            .title.title_medium.text_red Sign up for an account
-            | Signing up it's easy and will take only a few moments
-            .form-group
-                label(for="reg_username") Enter username
-                input(type="text" id="reg_username")
-            .form-group
-                label(for="reg_password") Enter password
-                input(type="password" id="reg_password")
-            .form-group
-                label(for="reg_pass_repeat") Re-enter password
-                input(type="password" id="reg_pass_repeat")
-            .form-group
-                label(for="reg_email") Enter your email
-                input(type="email" id="reg_email")
-            a(href="#").btn.btn-primary
+        .register-block-wrap
+            .block_half.block.block_bg
+                form.block__body.clearfix
+                    .title.title_sm.text_red Login to your account
+                    .block__descr If you already have an account please login.
+                    .form-group
+                        label(for="login_name").label_strong Enter username
+                        input(type="text" id="login_name")
+                    .form-group
+                        label(for="login_password").label_strong  Enter password
+                        input(type="password" id="login_password")
+                    .form-group.inline
+                        input(type="checkbox" id="remember")
+                        label(for="remember") Remember me
+                    a(href="#" target="_blank").register__link-grey Forgot my password
+                    input(type="submit" value="Login").btn.btn_sm.right
+            .block_half.block.block_bg
+                form.block__body.clearfix
+                    .title.title_sm.text_red Sign up for an account
+                    .block__descr Signing up it's easy and will take only a few moments
+                    .form-group
+                        label(for="reg_username").label_strong  Enter username
+                        input(type="text" id="reg_username")
+                    .form-group
+                        label(for="reg_password").label_strong  Enter password
+                        input(type="password" id="reg_password")
+                    .form-group
+                        label(for="reg_pass_repeat").label_strong  Re-enter password
+                        input(type="password" id="reg_pass_repeat")
+                    .form-group
+                        label(for="reg_email").label_strong  Enter your email
+                        input(type="email" id="reg_email")
+                    input(type="submit" value="Sign up").btn.btn_sm.right
+                    
