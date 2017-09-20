@@ -6,7 +6,7 @@ block variables
 block content
     +page-nav(title)
     .container
-        table.block_bg
+        table.block.block_bg.table_cart
             thead
                 tr
                     th
@@ -40,11 +40,10 @@ block content
                     td 59,99 USD
                     td 189,99 USD
         include ../includes/discount-coupon.pug
-        .block_trnsp
-            ul.btn-list.btn-list_inline
-                li.btn-list-item
-                    a(href="#").btn.btn_default.btn_lg Shop more
-                li.btn-list-item
-                    a(href="#").btn.btn_default.btn_lg Update cart
-                li.btn-list-item
-                    a(href="#").btn.btn_primary.btn_lg Place order
+        ul.btn-list.btn-list_right
+            li.btn-item
+                a(href="#").btn.btn_lg.btn_black Shop more
+            li.btn-item
+                a(href="#").btn.btn_lg.btn_black Update cart
+            li.btn-item
+                a(href="#").btn.btn_lg Place order

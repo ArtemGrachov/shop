@@ -10,7 +10,36 @@ a {
 
 input {
     padding: rem(18px);
+    transition: $transition;
     border: 1px solid #efefef;
+    &[type="text"],
+    &[type="password"],
+    {
+        display: block;
+        width: 100%;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    background: white;
+    border: 1px solid #e7e7e7;
+    border-radius: rem(10px);
+}
+
+thead {
+    font-family: 'RalewayHeavy';
+    font-size: rem(16px);
+    text-transform: uppercase;
+}
+
+th,
+td {
+    border: 1px solid #eeeeee;
+    padding: rem(20px);
 }
 
 .input-rounded {

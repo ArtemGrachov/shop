@@ -1,0 +1,13 @@
+.table_cart {
+    td,
+    th {
+        &:nth-child(2) {
+            text-align: left;
+        }
+    }
+    td {
+        &:last-child {
+            font-family: 'RalewayHeavy';
+        }
+    }
+}

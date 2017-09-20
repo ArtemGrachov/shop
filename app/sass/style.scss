@@ -32,10 +32,6 @@ body {
     width: rem(344px);
 }
 
-.text_red {
-    color: $red;
-}
-
 .left {
     float: left;
 }
@@ -127,12 +123,27 @@ body {
     display: inline-block;
     border: 1px solid $red;
     &:hover {
-        background: white;
+        background: none;
         color: $red;
         text-decoration: none;
     }
     &_lg {
         padding: rem(13px) rem(29px);
+    }
+    &-list {
+        @extend %list;
+        text-align: right;
+    }
+    &-item {
+        display: inline-block;
+        margin-left: rem(12px);
+    }
+    &_black {
+        background: #3f4044;
+        border-color: #3f4044;
+        &:hover {
+            color: #3f4044;
+        }
     }
 }
 
@@ -151,20 +162,40 @@ body {
             margin-top: rem(25px);
         }
     }
-    &_small {
-        font-size: rem(20px)
+    &_md {
+        font-size: rem(20px);
+    }
+    &_sm {
+        font-size: rem(18px);
     }
 }
 
+.text_red {
+    color: $red;
+}
+
 .block {
+    background: white;
+    border: 1px solid #e7e7e7;
+    border-radius: rem(10px);
+    padding: rem(28px);
     &_bg {
-        background: white;
-        border: 1px solid #e7e7e7;
-        border-radius: rem(10px); // padding: rem(10px); // temp padding!!!
         box-shadow: 0 rem(9px) 0 rem(-5px) white, 0 rem(9px) 0 rem(-4px) #e7e7e7, 0 rem(18px) 0 rem(-9px) white, 0 rem(18px) 0 rem(-8px) #e7e7e7;
         &-up {
             box-shadow: 0 rem(-9px) 0 rem(-5px) white, 0 rem(-9px) 0 rem(-4px) #e7e7e7, 0 rem(-18px) 0 rem(-9px) white, 0 rem(-18px) 0 rem(-8px) #e7e7e7;
         }
+    }
+    &_half {
+        width: rem(530px);
+        margin: rem(28px) 0;
+    }
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+    &__body {
+        margin-bottom: rem(28px);
     }
 }
 
@@ -224,9 +255,21 @@ body {
     color: white;
     margin-bottom: rem(67px);
     font-size: rem(18px);
-    &__page-title {
+    &__right {
         float: right;
         padding: rem(16px) 0;
+    }
+    select {
+        background: #fc7373;
+        color: white;
+        font-family: 'MuseoSlab500';
+        font-size: rem(12px);
+        padding: rem(13px);
+        border: none;
+        appearance: none;
+        margin: rem(-7px) rem(10px) rem(-7px);
+        width: rem(206px);
+        display: inline-block;
     }
 }
 
@@ -256,10 +299,30 @@ body {
         padding: rem(16px) 0 rem(12px) 0;
         border-bottom: rem(4px) solid transparent;
         font-family: 'MuseoSlab500';
-        display: block;
+        display: inline-block;
         &:hover {
             text-decoration: none;
             border-color: white;
         }
     }
+}
+
+.pgn {
+    &-btn {
+        border-radius: 50%;
+        width: rem(57px);
+        height: rem(57px);
+        display: inline-block;
+        background: rgba(#b5b5b5, .3);
+        text-align: center;
+        font-size: rem(28px);
+        padding: rem(6px);
+        color: white;
+        margin: rem(3px);
+        &:hover {
+            background: rgba($red, .3);
+        }
+    }
+    text-align: center;
+    margin-top: rem(30px);
 }

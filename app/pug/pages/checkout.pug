@@ -6,13 +6,13 @@ block variables
 block content
     +page-nav(title)
     .container
-        .block_bg
+        .block.block_bg
             .title.title_medium.text_red Do you already have an account?
             a(href="#").btn.btn-primary Login
-        .block_bg
+        .block.block_bg
             .title.title_medium.text_red Create an accountif you don't have one
             a(href="#").btn.btn-primary Create
-        form.block_bg
+        form.block.block_bg
             .block-header
                 .title.title_medium.text_red Please enter your billing address.
             .block-body
@@ -53,11 +53,11 @@ block content
                     label(for="country") Select country
                     select(id="country")
                         option(value="nd") Netherlands
-        .block_bg
+        .block.block_bg
             .title.title_medium.text_red Please enter your shipping address.
             input(type="checkbox" id="shipping_address")
             label(for="shipping_address") Use my billing address
-        table.block_bg
+        table.block.block_bg
             caption.title.title-medium.text_red.block-header
             thead
                 tr
@@ -87,7 +87,7 @@ block content
                     td 59,99 USD
                     td 189,99 USD
         include ../includes/discount-coupon.pug
-        .block_bg
+        .block.block_bg
             .block-header
                 .title.title_medium.text_red Please select your payment method
             ul.block-body.block-list
