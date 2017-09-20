@@ -1,7 +1,8 @@
 mixin review-item(name, title, body)
-    li.review-item
-        .review-header
-            a(href="#").review__name #{name}
-            | says
-            span.review__title #{title}
-        .review__body #{body}
+    li.product-review-item
+        .product-review-wrap
+            .product-review-header.title.title_sm
+                a(href="#").product-review__link #{name}
+                span.product-review-small  says 
+                span.product-review__title #{title}
+            .product-review__body #{body}
