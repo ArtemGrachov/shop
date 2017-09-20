@@ -113,17 +113,21 @@
     &-form-group {
         display: flex;
         align-items: center;
-        input {
-            width: 100%;
-            margin-right: rem(-10px);
-            padding-right: rem(15px);
-        }
-        .btn,
-        input[type="submit"],
-        input[type="button"] {
-            width: auto;
-            flex-shrink: 0;
-            flex-grow: 0;
-        }
+    }
+    &-btn {
+        width: auto;
+        flex-shrink: 0;
+        flex-grow: 0;
+        margin: 0;
+    }
+    &-input {
+        font-size: rem(16px);
+        padding: rem(13px);
+        padding-right: rem(18px);
+        margin: 0;
+        margin-right: rem(-10px);
+        font-family: 'RalewayRegular';
+        border-radius: rem(10px);
+        color: #6c6c6c;
     }
 }
