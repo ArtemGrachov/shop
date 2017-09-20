@@ -7,15 +7,16 @@ block content
     +page-nav(title)
     .container
         main.main.block.block_bg
-            .title.title-large Drop us a line.
-            hr
-            form
-                .form-group.from-group_sm
-                    input(type="text" placeholder="Name").form-input
-                    input(type="email" placeholder="Email").form-input
-                    input(type="text" placeholder="Subject").form-input
-                .from-group.from-group_lg
-                    textarea.form-textarea(placeholder="Your comment")
-                button(type="submit").btn.btn-primary
+            .title.block__header Drop us a line.
+            form.block__body.clearfix
+                .form_two-groups
+                    .form-group.form-group_sm
+                        input(type="text" placeholder="Name").form-input
+                        input(type="email" placeholder="Email").form-input
+                        input(type="text" placeholder="Subject").form-input
+                    .from-group.form-group_lg
+                        textarea.form-textarea(placeholder="Your comment")
+                button(type="submit").btn.right Submit
         aside.sidebar
-            //- include ../includes/shopmint.pug
+            ul.aside-list
+                +aside-shopmint()

@@ -11,9 +11,7 @@
         padding: rem(23px) 0 0;
     }
     &-list {
-        padding: 0;
-        margin: 0;
-        list-style: none;
+        @extend %list;
         &_inline {
             display: flex;
             justify-content: space-between;
@@ -29,6 +27,18 @@
             .aside {
                 &__header {
                     border-color: #3b3b3b;
+                }
+            }
+            .socials__link {
+                color: white;
+                &:hover {
+                    color: $red;
+                }
+                &_red {
+                    color: $red;
+                    &:hover {
+                        color: white;
+                    }
                 }
             }
         }

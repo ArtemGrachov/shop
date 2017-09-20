@@ -7,98 +7,103 @@ block content
     +page-nav(title)
     .container
         .block.block_bg
-            .title.title_medium.text_red Do you already have an account?
-            a(href="#").btn.btn-primary Login
+            .block__body.clearfix
+                .title.title_sm.text_red.left Do you already have an account?
+                a(href="#").btn.btn_sm.right Login
         .block.block_bg
-            .title.title_medium.text_red Create an accountif you don't have one
-            a(href="#").btn.btn-primary Create
+            .block__body.clearfix
+                .title.title_sm.text_red.left Create an accountif you don't have one
+                a(href="#").btn.btn_sm.right Create
         form.block.block_bg
-            .block-header
-                .title.title_medium.text_red Please enter your billing address.
-            .block-body
-                .form-group.block_third
-                    label(for="first_name") First name
+            .block__header
+                .title.title_sm.text_red Please enter your billing address.
+            .block__body.flex
+                .form-group.form-third
+                    label(for="first_name").label_strong First name 
                         span.text_red *
                     input(type="text" id="first_name")
-                .form-group.block_two-thirds
-                    label(for="first_name") Last name
+                .form-group.form-two-thirds
+                    label(for="first_name").label_strong Last name 
                         span.text_red *
                     input(type="text" id="last_name")
-                .form-group.block_third
-                    label(for="email") Email
+                .form-group.form-third
+                    label(for="email").label_strong Email 
                         span.text_red *
                     input(type="email" id="email")
-                .form-group.block_two-thirds
-                    label(for="phone") Phone number
+                .form-group.form-two-thirds
+                    label(for="phone").label_strong Phone number 
                         span.text_red *
                     input(type="text" id="phone")
-                .form-group.block_third
-                    label(for="address1") Address line 1
+                .form-group.form-third
+                    label(for="address1").label_strong Address line 1 
                         span.text_red *
                     input(type="text" id="address1")
-                .form-group.block_third
-                    label(for="address2") Address line 2
+                .form-group.form-third
+                    label(for="address2").label_strong Address line 2
                     input(type="text" id="address2")
-                .form-group.block_third
-                    label(for="phone2") Phone number
+                .form-group.form-third
+                    label(for="phone2").label_strong Phone number
                     input(type="text" id="phone2")
-                .form-group.block_third
-                    label(for="city") City / Town
+                .form-group.form-third
+                    label(for="city").label_strong City / Town 
                         span.text_red *
                     input(type="text" id="city")
-                .form-group.block_third
-                    label(for="zip") Zip code
+                .form-group.form-third
+                    label(for="zip").label_strong Zip code
                     input(type="text" id="zip")
-                .form-group.block_third
-                    label(for="country") Select country
+                .form-group.form-third
+                    label(for="country").label_strong Select country
                     select(id="country")
                         option(value="nd") Netherlands
         .block.block_bg
-            .title.title_medium.text_red Please enter your shipping address.
-            input(type="checkbox" id="shipping_address")
-            label(for="shipping_address") Use my billing address
-        table.block.block_bg
-            caption.title.title-medium.text_red.block-header
-            thead
-                tr
-                    td Item
-                    td Quantity
-                    td Unit price
-                    td Total
-            tbody
-                tr
-                    td Adidas Commander TD3 Code G48794
-                    td 12
-                    td 29,99 USD
-                    td 159,99 USD
-                tr
-                    td Adidas Axz 1 Code V21609
-                    td 2
-                    td 39,99 USD
-                    td 169,99 USD
-                tr
-                    td Adidas Barricade 6 Andy Murray Code G40436
-                    td 15
-                    td 49,99 USD
-                    td 179,99 USD
-                tr
-                    td Adidas Galaxy Arriba II Code G60635
-                    td 20
-                    td 59,99 USD
-                    td 189,99 USD
+            .block__body.clearfix
+                .title.title_sm.text_red.left Please enter your shipping address.
+                .right
+                    input(type="checkbox" id="shipping_address")
+                    label(for="shipping_address") Use my billing address
+        .block.block_bg
+            .title.title_sm.text_red.block__header Your order
+            table
+                thead
+                    tr
+                        td Item
+                        td Quantity
+                        td Unit price
+                        td Total
+                tbody
+                    tr
+                        td Adidas Commander TD3 Code G48794
+                        td 12
+                        td 29,99 USD
+                        td 159,99 USD
+                    tr
+                        td Adidas Axz 1 Code V21609
+                        td 2
+                        td 39,99 USD
+                        td 169,99 USD
+                    tr
+                        td Adidas Barricade 6 Andy Murray Code G40436
+                        td 15
+                        td 49,99 USD
+                        td 179,99 USD
+                    tr
+                        td Adidas Galaxy Arriba II Code G60635
+                        td 20
+                        td 59,99 USD
+                        td 189,99 USD
         include ../includes/discount-coupon.pug
         .block.block_bg
-            .block-header
-                .title.title_medium.text_red Please select your payment method
-            ul.block-body.block-list
+            .block__header
+                .title.title_sm.text_red Please select your payment method
+            ul.block-list
                 li.block-item
-                    input(type="radio" id="direct_bank")
+                    input(type="radio" id="direct_bank" name="bank")
                     label(for="direct_bank") Pay by Direct Bank Transfer
                 li.block-item
-                    input(type="radio" id="cheque")
+                    input(type="radio" id="cheque" name="bank")
                     label(for="cheque") Pay by Cheque
                 li.block-item
-                    input(type="radio" id="paypal" checked)
+                    input(type="radio" id="paypal" name="bank" checked)
                     label(for="paypal") Pay by PayPal
-        .block_trnsp
+        .right
             a(href="#").btn.btn_primary.btn_lg Place order

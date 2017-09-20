@@ -9,25 +9,81 @@ a {
 }
 
 input {
-    padding: rem(18px);
+    padding: rem(13px) rem(22px);
+    font-family: 'MuseoSlab500';
+    font-size: rem(12px);
     transition: $transition;
     border: 1px solid #efefef;
     &[type="text"],
     &[type="password"],
+    &[type="email"],
     {
         display: block;
         width: 100%;
+        &:focus {
+            color: black;
+        }
     }
+    &[type="radio"] {
+        display: none;
+        &+label {
+            &:before {
+                width: rem(16px);
+                height: rem(16px);
+                display: inline-block;
+                text-align: center;
+                padding: rem(1px) rem(4px);
+                background: white;
+                border: 1px solid #e6e6e6;
+                font-family: 'FontAwesome';
+                color: white;
+                margin: rem(-10px) rem(10px) 0 0;
+                font-size: rem(8px);
+                content: '\f00c';
+            }
+        }
+        &:checked+label:before {
+            color: black;
+        }
+    }
+}
+
+.input {
+    &_rounded {
+        font-size: rem(16px);
+        font-family: 'RalewayRegular';
+        border-radius: rem(10px);
+        color: #6c6c6c;
+    }
+}
+
+select {
+    font-family: 'MuseoSlab500';
+    font-size: rem(12px);
+    padding: rem(13px);
+    appearance: none;
+    width: 100%;
+    background: none;
+    border: 1px solid #efefef;
 }
 
 table {
     border-collapse: collapse;
-    overflow: hidden;
     width: 100%;
     text-align: center;
     background: white;
     border: 1px solid #e7e7e7;
     border-radius: rem(10px);
+}
+
+.label {
+    &_strong {
+        font-family: 'RalewayBold';
+        font-size: rem(14px);
+        color: #696969;
+        display: block;
+        margin-bottom: rem(10px);
+    }
 }
 
 thead {
@@ -60,6 +116,7 @@ td {
         &_lg {
             width: rem(452px);
         }
+        margin-bottom: rem(28px);
     }
     &-input {
         display: block;
@@ -68,5 +125,11 @@ td {
     &__footer {
         padding-top: rem(18px);
         text-align: right;
+    }
+    &-third {
+        width: rem(329px);
+    }
+    &-two-thirds {
+        width: rem(683px);
     }
 }

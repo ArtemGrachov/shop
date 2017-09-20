@@ -44,6 +44,16 @@ body {
     display: inline-block;
 }
 
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.clearfix {
+    @extend %clearfix;
+}
+
 .tags {
     &-list {
         margin: 0;
@@ -122,10 +132,15 @@ body {
     border-radius: rem(10px);
     display: inline-block;
     border: 1px solid $red;
+    cursor: pointer;
     &:hover {
         background: none;
         color: $red;
         text-decoration: none;
+    }
+    &_sm {
+        padding: rem(5px) rem(30px);
+        font-size: rem(14px);
     }
     &_lg {
         padding: rem(13px) rem(29px);
@@ -178,7 +193,7 @@ body {
     background: white;
     border: 1px solid #e7e7e7;
     border-radius: rem(10px);
-    padding: rem(28px);
+    margin-bottom: rem(40px);
     &_bg {
         box-shadow: 0 rem(9px) 0 rem(-5px) white, 0 rem(9px) 0 rem(-4px) #e7e7e7, 0 rem(18px) 0 rem(-9px) white, 0 rem(18px) 0 rem(-8px) #e7e7e7;
         &-up {
@@ -187,15 +202,32 @@ body {
     }
     &_half {
         width: rem(530px);
-        margin: rem(28px) 0;
     }
     &-wrap {
         display: flex;
         justify-content: space-between;
         align-items: stretch;
     }
+    &__header {
+        padding: 0 0 rem(25px);
+        border-bottom: 1px solid #eeeeee;
+        padding: rem(28px);
+    }
     &__body {
+        padding: rem(28px);
+    }
+    &__descr {
         margin-bottom: rem(28px);
+    }
+    &-list {
+        @extend %list;
+    }
+    &-item {
+        padding: rem(10px) rem(28px);
+        border-bottom: 1px solid #efefef;
+        &:last-child {
+            border: none;
+        }
     }
 }
 
@@ -227,7 +259,7 @@ body {
 
 .socials {
     &__link {
-        color: white;
+        color: #4b4b4b;
         &:hover {
             text-decoration: none;
             color: $red;
@@ -235,14 +267,12 @@ body {
         &_red {
             color: $red;
             &:hover {
-                color: white;
+                color: #4b4b4b;
             }
         }
     }
     &-list {
-        margin: 0;
-        padding: 0;
-        list-style: none;
+        @extend %list;
         font-size: rem(28px);
     }
     &-item {
@@ -261,15 +291,11 @@ body {
     }
     select {
         background: #fc7373;
-        color: white;
-        font-family: 'MuseoSlab500';
-        font-size: rem(12px);
-        padding: rem(13px);
         border: none;
-        appearance: none;
         margin: rem(-7px) rem(10px) rem(-7px);
         width: rem(206px);
         display: inline-block;
+        color: white;
     }
 }
 

@@ -37,6 +37,11 @@
 }
 
 @font-face {
+    font-family: 'MyriadProRegular';
+    src: url('../fonts/MyriadPro-Regular.otf');
+}
+
+@font-face {
     font-family: 'MyriadProBold';
     src: url('../fonts/Myriad_Pro_Black_SemiExt_Bold.ttf');
 }
@@ -51,8 +56,8 @@ $light-grey: #999999;
 $html-font-size: 13px;
 $transition: 300ms;
 @import "./_misc/mixins.scss";
-@import "./style.scss";
 @import "./tags.scss";
+@import "./style.scss";
 @import "./sections/header.scss";
 @import "./sections/footer.scss";
 @import "./blocks/aside.scss";
