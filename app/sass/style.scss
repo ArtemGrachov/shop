@@ -103,6 +103,7 @@ body {
     position: relative;
     font-size: rem(40px);
     padding-lefT: rem(66px);
+    line-height: 1;
     &__char {
         position: absolute;
         left: 0;
@@ -246,9 +247,11 @@ body {
         @extend %list;
         color: $text-grey-lg;
         font-family: 'MuseoSlab500';
+        line-height: 1;
     }
     &-item {
         letter-spacing: rem(0.4px);
+        margin-bottom: rem(6px);
     }
     &_dark {
         color: #747474;
@@ -282,6 +285,8 @@ body {
     background: $red;
     color: white;
     font-size: rem(18px);
+    padding: rem(16px) 0 rem(11px);
+    font-family: 'MuseoSlab500';
     &__right {
         float: right;
     }
@@ -298,7 +303,7 @@ body {
     &-list {
         @extend %list;
         float: left;
-        font-family: 'MuseoSlab500';
+        margin-left: rem(8px);
     }
     &-item {
         display: inline-block;

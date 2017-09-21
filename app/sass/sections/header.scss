@@ -14,7 +14,7 @@
             }
             &-item {
                 display: inline-block;
-                margin-right: rem(34px);
+                margin-right: rem(14px);
                 .fa {
                     margin-right: rem(10px);
                 }
@@ -22,6 +22,7 @@
             &__link {
                 display: block;
                 color: white;
+                padding: rem(9px) rem(10px) rem(7px);
                 &:hover {
                     background: white;
                     color: $red;
@@ -32,27 +33,36 @@
     }
     &-greeter {
         letter-spacing: rem(-0.65px);
+        margin: rem(5px) 0;
         &__link {
             color: white;
         }
     }
     &-main {
-        .logo {}
+        padding: rem(29px) 0 rem(17px);
+        .logo {
+            margin: rem(16px) 0 0 rem(-5px);
+        }
     }
     &-bottom {
         border-top: 1px solid $border-grey-md;
     }
     &-contacts {
-        &-list {}
-        &-item {
-            display: inline-block;
-            .fa {
-                color: $red;
+        &-list {
+            &-inner {
+                border-left: 1px solid $border-grey-md;
+                padding-left: rem(18px);
+                margin-left: rem(18px);
+                display: inline-block;
             }
         }
-        .contacts-list {
-            border-left: 1px solid $border-grey-md;
+        &-item {
             display: inline-block;
+            margin-left: rem(50px);
+            .fa {
+                color: $red;
+                font-size: rem(44px);
+            }
         }
     }
     &-search {
@@ -84,6 +94,7 @@
             @extend %list;
             letter-spacing: rem(-0.8px);
             font-size: rem(16px);
+            margin-left: rem(8px);
         }
         &-item {
             z-index: 1;
@@ -100,6 +111,7 @@
         }
         &__link {
             color: $text-grey-md;
+            padding: rem(18px) 0;
             display: block;
             &:hover,
             &_active {
@@ -145,17 +157,21 @@
 }
 
 .cart {
+    padding: rem(3.5px) rem(13px);
+    letter-spacing: rem(-0.1px);
     &-icon,
     &-descr,
     &__price {
         display: inline-block;
-        font-size: rem(16px);
     }
     &-descr {
         font-family: 'RalewayBold';
+        margin: 0 rem(16px) 0 rem(6px);
     }
     &__price {
         font-family: 'MuseoSlab500';
+        font-size: rem(16px);
+        letter-spacing: rem(0.3px);
     }
     vertical-align: middle;
     border: 1px solid $border-grey-dk;
