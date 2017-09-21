@@ -6,7 +6,7 @@ mixin products-item(name, price, discount)
             if discount
                 .products-preview__price #{price}
                 .products-preview__currency USD
-            .products__name #{name}
+            .products__name.title.title_md #{name}
         .products-bottom
             .products-bottom__left
                 .products__price
@@ -16,4 +16,4 @@ mixin products-item(name, price, discount)
                         | #{price}
                 .products__currency USD
             .products-bottom__right
-                a.btn.btn-primary(href="#") Add to cart
+                a.btn.btn_sm(href="#") Add to cart

@@ -6,7 +6,7 @@ block variables
 block content
     +page-nav(title)
     .container
-        table.block.block_bg.table_cart
+        table.block.block_bg.cart-table
             thead
                 tr
                     th
@@ -18,32 +18,36 @@ block content
                 tr
                     td
                     td Adidas Commander TD3 Code G48794
-                    td 12
+                    td
+                        input(type="number" value="12").cart-input-number
                     td 29,99 USD
                     td 159,99 USD
                 tr
                     td
-                    td Adidas Axz 1 Code V21609
-                    td 2
+                    td Adidas Ax 1 Code V21609
+                    td
+                        input(type="number" value="2").cart-input-number
                     td 39,99 USD
                     td 169,99 USD
                 tr
                     td
                     td Adidas Barricade 6 Andy Murray Code G40436
-                    td 15
+                    td
+                        input(type="number" value="15").cart-input-number
                     td 49,99 USD
                     td 179,99 USD
                 tr
                     td
                     td Adidas Galaxy Arriba II Code G60635
-                    td 20
+                    td
+                        input(type="number" value="20").cart-input-number
                     td 59,99 USD
                     td 189,99 USD
         include ../includes/discount-coupon.pug
         ul.btn-list
             li.btn-item
-                a(href="#").btn.btn_lg.btn_black Shop more
+                a(href="#").btn.btn_black Shop more
             li.btn-item
-                a(href="#").btn.btn_lg.btn_black Update cart
+                a(href="#").btn.btn_black Update cart
             li.btn-item
-                a(href="#").btn.btn_lg Place order
+                a(href="#").btn Place order

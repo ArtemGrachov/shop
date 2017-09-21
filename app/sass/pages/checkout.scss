@@ -1,0 +1,16 @@
+.checkout {
+    &-table {
+        td {
+            &:nth-child(1) {
+                text-align: left;
+            }
+            &:nth-child(3) {
+                font-size: rem(14px);
+                font-family: 'RalewayBold';
+            }
+            &:nth-child(4) {
+                font-size: rem(14px);
+            }
+        }
+    }
+}

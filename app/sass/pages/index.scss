@@ -18,12 +18,13 @@
             height: 100%;
             content: '';
             display: block;
-            border: 1px solid border-grey-lg;
+            border: 1px solid $border-grey-lg;
             top: 0;
             left: rem(-20px);
         }
         position: relative;
         max-width: rem(194px);
+        letter-spacing: rem(-0.55px);
     }
     &__title {
         font-family: 'MuseoSlab500';
@@ -64,13 +65,18 @@
         top: 50%;
         text-align: center;
         &_lg {
+            box-shadow: rem(-12px) rem(-12px) 0 rem(12px) rgba(#636363, .2);
             background: $red;
             color: white;
             width: rem(304px);
             height: rem(304px);
             .slider-circle__text {
+                font-size: rem(24px);
                 &-lg {
+                    line-height: 0.87;
+                    font-size: rem(75px);
                     font-family: 'RalewayBold';
+                    letter-spacing: rem(-4px);
                 }
             }
         }
@@ -85,9 +91,15 @@
             transform: translateX(-50%);
         }
         &__text {
+            font-size: rem(18px);
+            letter-spacing: rem(-1.1px);
             &-lg {
+                font-size: rem(48px);
                 font-family: 'RalewayHeavy';
-                &_symbol {}
+                letter-spacing: rem(-2.4px);
+                &_symbol {
+                    font-size: rem(24px);
+                }
             }
         }
         &-content {

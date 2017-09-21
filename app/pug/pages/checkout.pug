@@ -8,15 +8,15 @@ block content
     .container
         .block.block_bg
             .block__body.clearfix
-                .title.title_sm.text_red.left Do you already have an account?
+                .title.title_md.text_red.left Do you already have an account?
                 a(href="#").btn.btn_sm.right Login
         .block.block_bg
             .block__body.clearfix
-                .title.title_sm.text_red.left Create an accountif you don't have one
+                .title.title_md.text_red.left Create an accountif you don't have one
                 a(href="#").btn.btn_sm.right Create
         form.block.block_bg
             .block__header
-                .title.title_sm.text_red Please enter your billing address.
+                .title.title_md.text_red Please enter your billing address.
             .block__body.flex
                 .form-group.form-third
                     label(for="first_name").label_strong First name 
@@ -57,13 +57,13 @@ block content
                         option(value="nd") Netherlands
         .block.block_bg
             .block__body.clearfix
-                .title.title_sm.text_red.left Please enter your shipping address.
+                .title.title_md.text_red.left Please enter your shipping address.
                 .right
                     input(type="checkbox" id="shipping_address")
                     label(for="shipping_address") Use my billing address
         .block.block_bg
-            .title.title_sm.text_red.block__header Your order
-            table
+            .title.title_md.text_red.block__header Your order
+            table.checkout-table
                 thead
                     tr
                         td Item
@@ -75,26 +75,26 @@ block content
                         td Adidas Commander TD3 Code G48794
                         td 12
                         td 29,99 USD
-                        td 159,99 USD
+                        td.text_strong 159,99 USD
                     tr
                         td Adidas Axz 1 Code V21609
                         td 2
                         td 39,99 USD
-                        td 169,99 USD
+                        td.text_strong 169,99 USD
                     tr
                         td Adidas Barricade 6 Andy Murray Code G40436
                         td 15
                         td 49,99 USD
-                        td 179,99 USD
+                        td.text_strong 179,99 USD
                     tr
                         td Adidas Galaxy Arriba II Code G60635
                         td 20
                         td 59,99 USD
-                        td 189,99 USD
+                        td.text_strong 189,99 USD
         include ../includes/discount-coupon.pug
         .block.block_bg
             .block__header
-                .title.title_sm.text_red Please select your payment method
+                .title.title_md.text_red Please select your payment method
             ul.block-list
                 li.block-item
                     input(type="radio" id="direct_bank" name="bank")
@@ -106,4 +106,4 @@ block content
                     input(type="radio" id="paypal" name="bank" checked)
                     label(for="paypal") Pay by PayPal
         .right
-            a(href="#").btn.btn_primary.btn_lg Place order
+            a(href="#").btn.btn_primary Place order

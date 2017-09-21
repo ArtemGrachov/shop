@@ -7,19 +7,21 @@
         background: $red;
         border-bottom: 1px solid #f38080;
         color: white;
-        a {
-            color: white;
-        }
         &-nav {
             &-list {
-                list-style: none;
+                @extend %list;
+                font-size: rem(12px);
             }
             &-item {
                 display: inline-block;
-                .fa {}
+                margin-right: rem(34px);
+                .fa {
+                    margin-right: rem(10px);
+                }
             }
             &__link {
                 display: block;
+                color: white;
                 &:hover {
                     background: white;
                     color: $red;
@@ -28,7 +30,12 @@
             }
         }
     }
-    &-greeter {}
+    &-greeter {
+        letter-spacing: rem(-0.65px);
+        &__link {
+            color: white;
+        }
+    }
     &-main {
         .logo {}
     }
@@ -46,67 +53,6 @@
         .contacts-list {
             border-left: 1px solid $border-grey-md;
             display: inline-block;
-        }
-    }
-    .cat {
-        &-nav {
-            &-list {
-                @extend %list;
-                letter-spacing: rem(-0.85px);
-            }
-            &-item {
-                z-index: 1;
-                display: inline-block;
-                position: relative;
-                &:hover {
-                    .cat-drop-list {
-                        position: absolute;
-                        display: block;
-                        top: 100%;
-                    }
-                }
-            }
-            &__link {
-                color: $text-grey-md;
-                display: block;
-                &:hover,
-                &_active {
-                    color: $red;
-                    text-decoration: none;
-                }
-            }
-        }
-        &-drop {
-            &-list {
-                @extend %list;
-                width: rem(158px);
-                display: none;
-                border-radius: 0 0 rem(10px) rem(10px);
-                overflow: hidden;
-                background: $red;
-                box-shadow: rem(5px) rem(5px) rem(5px) rem(5px) rgba(#cacaca, .25);
-            }
-            &-item {
-                z-index: 1;
-                border-bottom: 1px solid #b63b3b;
-                border-top: 1px solid #ff8888;
-                &:last-child {
-                    border-bottom-color: transparent;
-                }
-                &:first-child {
-                    border-top-color: transparent;
-                }
-            }
-            &__link {
-                display: block;
-                color: white;
-                border-top: 1px solid $red;
-                &_active,
-                &:hover {
-                    background: #ff7979;
-                    text-decoration: none;
-                }
-            }
         }
     }
     &-search {
@@ -132,11 +78,78 @@
     }
 }
 
+.cat {
+    &-nav {
+        &-list {
+            @extend %list;
+            letter-spacing: rem(-0.8px);
+            font-size: rem(16px);
+        }
+        &-item {
+            z-index: 1;
+            display: inline-block;
+            position: relative;
+            margin-right: rem(28px);
+            &:hover {
+                .cat-drop-list {
+                    position: absolute;
+                    display: block;
+                    top: 100%;
+                }
+            }
+        }
+        &__link {
+            color: $text-grey-md;
+            display: block;
+            &:hover,
+            &_active {
+                color: $red;
+                text-decoration: none;
+            }
+        }
+    }
+    &-drop {
+        &-list {
+            @extend %list;
+            font-size: rem(16px);
+            letter-spacing: rem(-0.8px);
+            width: rem(158px);
+            display: none;
+            border-radius: 0 0 rem(10px) rem(10px);
+            overflow: hidden;
+            background: $red;
+            box-shadow: rem(5px) rem(5px) rem(5px) rem(5px) rgba(#cacaca, .25);
+        }
+        &-item {
+            z-index: 1;
+            border-bottom: 1px solid #b63b3b;
+            border-top: 1px solid #ff8888;
+            &:last-child {
+                border-bottom-color: transparent;
+            }
+            &:first-child {
+                border-top-color: transparent;
+            }
+        }
+        &__link {
+            display: block;
+            color: white;
+            border-top: 1px solid $red;
+            &_active,
+            &:hover {
+                background: #ff7979;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
 .cart {
     &-icon,
     &-descr,
     &__price {
         display: inline-block;
+        font-size: rem(16px);
     }
     &-descr {
         font-family: 'RalewayBold';

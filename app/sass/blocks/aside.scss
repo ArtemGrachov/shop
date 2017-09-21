@@ -1,6 +1,7 @@
 .aside {
     &__header {
         font-family: 'MuseoSlab500';
+        font-size: rem(32px);
         border-bottom: 4px solid #dddddd;
         letter-spacing: rem(-1.45px);
     }
@@ -59,9 +60,11 @@
         }
         &-descr {
             border-right: rem(1px) solid #cdcdcd;
+            margin-left: rem(110px);
             &__header {
                 font-family: 'MuseoSlab500';
-                letter-spacing: rem(-0.35px);
+                letter-spacing: rem(-0.56px);
+                font-size: rem(15px);
             }
             &__text {
                 color: #808080;
@@ -75,6 +78,7 @@
     &-inner {
         &-list {
             @extend %list;
+            font-size: rem(16px);
         }
         &-item {
             letter-spacing: rem(-0.8px);
@@ -103,5 +107,7 @@
     &-input {
         font-family: 'RalewayRegular';
         border-radius: rem(10px);
+        font-size: rem(16px);
+        letter-spacing: rem(0.5px);
     }
 }

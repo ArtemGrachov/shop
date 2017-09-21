@@ -28,10 +28,10 @@ block content
                     ul.product-category-list
                         li.product-category-item
                             | Added in category 
-                            a.product-category__link(href="#") Mens⟶
+                            a.product-category__link(href="#") Mens🡒
                         li.product-category-item
                             | Browse all the products inside the 
-                            a.product-category__link(href="#") Mens⟶
+                            a.product-category__link(href="#") Mens🡒
                             | category.
                 .product-cart
                     .product__price
@@ -80,7 +80,9 @@ block content
                     .aside__header Search our shop
                         span.text_red .
                     .aside__body
-                        input(type="text" placeholder="Search product...")
+                        .aside-form-group
+                            input(type="text" placeholder="Search product...").aside-input
+                            input(type="submit" value="Search!").btn.aside-btn
                 li.aside-item
                     .aside__header Shop tags
                         span.text_red .

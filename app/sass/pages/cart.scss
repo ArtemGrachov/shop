@@ -1,13 +1,29 @@
-.table_cart {
-    td,
-    th {
-        &:nth-child(2) {
-            text-align: left;
+.cart {
+    &-table {
+        td,
+        th {
+            &:nth-child(2) {
+                text-align: left;
+            }
         }
-    }
-    td {
-        &:last-child {
-            font-family: 'RalewayHeavy';
+        td {
+            &:nth-child(4) {
+                font-size: rem(14px);
+                font-family: 'MuseoSlab500';
+            }
+            &:nth-child(5) {
+                font-size: rem(14px);
+            }
+        }
+        td {
+            &:last-child {
+                font-family: 'RalewayHeavy';
+            }
+        }
+        input[type="number"] {
+            width: auto;
+            text-align: center;
+            display: inline-block;
         }
     }
 }

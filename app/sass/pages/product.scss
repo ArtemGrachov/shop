@@ -18,8 +18,8 @@
         font-family: 'RalewayBold';
         color: #2e2e2e;
         display: block;
+        font-size: rem(16px);
     }
-    &__input {}
     &-title {
         border-top: rem(1px) solid #e3e3e3;
         border-bottom: rem(1px) solid #e3e3e3;
@@ -29,6 +29,7 @@
             text-transform: uppercase;
             @extend %list;
             font-family: 'RalewayLight';
+            letter-spacing: rem(-0.15px);
         }
         &-item {
             display: inline-block;
@@ -41,6 +42,8 @@
         font-family: 'MuseoSlab500';
         vertical-align: middle;
         border-right: rem(1px) solid #e3e3e3;
+        font-size: rem(50px);
+        color: $red;
         &_old {
             color: #b5b5b5;
             text-decoration: line-through;
@@ -49,6 +52,7 @@
     &__currency {
         vertical-align: middle;
         color: $text-grey-lg;
+        font-size: rem(14px);
     }
     &-tabs {
         @extend %list;
@@ -69,13 +73,15 @@
             }
             &-list {
                 @extend %list;
-                font-family: 'MuseoSlab500';
+                font-size: rem(18px);
+                letter-spacing: rem(-0.85px);
             }
             &__link {
                 color: #4c4c4c;
                 border-radius: rem(15px);
                 display: inline-block;
                 border: rem(1px) solid transparent;
+                font-family: 'MuseoSlab500';
                 &:hover {
                     background: $red;
                     color: white;
@@ -97,6 +103,9 @@
         }
         &-header {
             width: 100%;
+            font-size: rem(16px);
+            font-family: 'MuseoSlab500';
+            letter-spacing: rem(-0.7px);
         }
         &-item {
             border-top: rem(1px) solid #e3e3e3;
@@ -122,6 +131,11 @@
         }
         &-small {
             color: #696969;
+            font-size: rem(12px);
+            margin: rem(8px);
+        }
+        &__title {
+            color: #3c3c3c;
         }
     }
 }

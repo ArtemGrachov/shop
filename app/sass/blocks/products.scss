@@ -13,17 +13,19 @@
         &:last-child {}
     }
     &__name {
-        font-family: 'MuseoSlab500';
-        color: $text-grey-dk;
         text-align: center;
+        letter-spacing: rem(-0.8px);
     }
     &__price {
         color: $red;
         width: rem(88px);
         font-family: 'MuseoSlab500';
+        font-size: rem(32px);
+        line-height: 1;
     }
     &__currency {
         color: #999999;
+        font-size: rem(14px);
     }
     &-bottom {
         @extend %clearfix;
@@ -47,15 +49,27 @@
             max-width: 100%;
             max-height: 100%;
         }
+        &__price {
+            font-size: rem(18px);
+            color: $red;
+            text-decoration: line-through;
+            font-family: 'MuseoSlab500';
+        }
+        &__currency {
+            font-size: rem(10px);
+        }
     }
     &-select {
         &-list {
             @extend %list;
             overflow: hidden;
+            font-size: rem(32px);
         }
         &-item {
             display: inline-block;
             position: relative;
+            margin-right: rem(75px);
+            letter-spacing: rem(-1.45px);
             &:before,
             &:after {
                 display: block;

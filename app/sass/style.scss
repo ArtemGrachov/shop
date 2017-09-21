@@ -15,16 +15,16 @@ body {
     letter-spacing: rem(-0.65px);
     background: #f2f2f2;
     height: 100%;
+    line-height: 1.65;
 }
 
 .wrapper {
     min-height: 100%;
     overflow: hidden;
-    position: relative;
+    padding-bottom: $footer-height;
 }
 
 .maincontent {
-    padding-bottom: $footer-height;
     width: 100%;
     height: 100%;
 }
@@ -58,6 +58,10 @@ body {
     display: inline-block;
 }
 
+.text-left {
+    text-align: left;
+}
+
 .flex {
     display: flex;
     flex-wrap: wrap;
@@ -71,6 +75,7 @@ body {
 .tags {
     &-list {
         @extend %list;
+        font-size: rem(16px);
     }
     &-item {
         display: inline-block;
@@ -96,6 +101,8 @@ body {
     font-family: 'MuseoSlab500';
     letter-spacing: rem(-1.5px);
     position: relative;
+    font-size: rem(40px);
+    padding-lefT: rem(66px);
     &__char {
         position: absolute;
         left: 0;
@@ -109,16 +116,21 @@ body {
         border-radius: 50%;
         display: inline-block;
         vertical-align: middle;
+        font-size: rem(60px);
+        line-height: 1;
     }
     &__text {
         display: inline-block;
         vertical-align: middle;
     }
     &_block-title {
+        font-size: rem(32px);
+        padding-left: rem(70px);
         .logo {
             &__char {
                 width: rem(55px);
                 height: rem(55px);
+                font-size: rem(55px);
             }
         }
     }
@@ -131,14 +143,19 @@ body {
     border-radius: rem(10px);
     display: inline-block;
     border: 1px solid $red;
+    font-size: rem(18px);
     cursor: pointer;
     &:hover {
         background: none;
         color: $red;
         text-decoration: none;
     }
-    &_sm {}
-    &_lg {}
+    &_sm {
+        font-size: rem(14px);
+    }
+    &_lg {
+        font-size: rem(32px);
+    }
     &-list {
         @extend %list;
         text-align: right;
@@ -158,6 +175,7 @@ body {
 .title {
     color: $text-grey-dk;
     font-family: 'MuseoSlab500';
+    font-size: rem(32px);
     &_underline {
         &:after {
             display: block;
@@ -167,12 +185,19 @@ body {
             background: #d4d4d4;
         }
     }
-    &_md {}
-    &_sm {}
+    &_md {
+        font-size: rem(18px);
+        letter-spacing: rem(-0.38px);
+    }
 }
 
-.text_red {
-    color: $red;
+.text {
+    &_red {
+        color: $red;
+    }
+    &_strong {
+        font-family: 'RalewayHeavy';
+    }
 }
 
 .block {
@@ -197,7 +222,9 @@ body {
         border-bottom: 1px solid $border-grey-lg;
     }
     &__body {}
-    &__descr {}
+    &__descr {
+        letter-spacing: rem(-0.5px);
+    }
     &-list {
         @extend %list;
     }
@@ -221,7 +248,7 @@ body {
         font-family: 'MuseoSlab500';
     }
     &-item {
-        letter-spacing: rem(0.5px);
+        letter-spacing: rem(0.4px);
     }
     &_dark {
         color: #747474;
@@ -254,6 +281,7 @@ body {
 .page-nav {
     background: $red;
     color: white;
+    font-size: rem(18px);
     &__right {
         float: right;
     }
@@ -274,6 +302,7 @@ body {
     }
     &-item {
         display: inline-block;
+        margin-right: rem(8px);
         &:first-child {
             &:before {
                 content: none;
@@ -281,6 +310,7 @@ body {
         }
         &:before {
             content: '\f055';
+            margin-right: rem(15px);
             font-family: 'FontAwesome';
         }
     }
@@ -304,7 +334,10 @@ body {
         display: inline-block;
         background: rgba(#b5b5b5, .3);
         text-align: center;
+        padding: rem(2px);
         color: white;
+        font-size: rem(50px);
+        line-height: 1;
         &:hover {
             background: rgba($red, .3);
         }

@@ -36,6 +36,7 @@ input {
                 font-family: 'FontAwesome';
                 color: white;
                 content: '\f00c';
+                line-height: 1;
             }
         }
         &:checked+label:before {
@@ -50,12 +51,15 @@ select {
     font-family: 'MuseoSlab500';
     border: rem(1px) solid $border-grey-lg;
     border-radius: rem(2px);
+    font-size: rem(12px);
+    line-height: 1;
 }
 
 .input {
     &_rounded {
         font-family: 'RalewayRegular';
         border-radius: rem(10px);
+        font-size: rem(16px);
     }
 }
 
@@ -64,6 +68,7 @@ textarea {
     height: 100%;
     display: block;
     resize: none;
+    line-height: 1.65;
 }
 
 select {
@@ -83,6 +88,10 @@ table {
     background: white;
     border: 1px solid $border-grey-md;
     border-radius: rem(10px);
+    font-family: 'MuseoSlab500';
+    color: $text-grey-dk;
+    font-size: rem(12px);
+    letter-spacing: 0;
 }
 
 .label {
@@ -90,12 +99,20 @@ table {
         font-family: 'RalewayBold';
         color: $grey-input;
         display: block;
+        font-size: rem(14px);
+        letter-spacing: (-0.4px);
     }
+}
+
+table {
+    font-size: rem(12px);
 }
 
 thead {
     font-family: 'RalewayHeavy';
     text-transform: uppercase;
+    font-size: rem(16px);
+    letter-spacing: rem(-0.45px);
 }
 
 th,
