@@ -1,60 +1,46 @@
-*,
-*:before,
-*:after {
-    // outline: 1px solid blue;
-    box-sizing: border-box;
-}
-
-/////////////////////////////////
 @font-face {
     font-family: 'MuseoSlab500';
-    src: url('../fonts/museoslab-500.otf');
+    src: url('../fonts/MuseoSlab500.otf');
 }
 
 @font-face {
     font-family: 'RalewayLight';
-    src: url('../fonts/raleway.light.ttf');
+    src: url('../fonts/Raleway-Light.ttf');
 }
 
 @font-face {
     font-family: 'RalewayRegular';
-    src: url('../fonts/raleway.regular.ttf');
+    src: url('../fonts/Raleway-Regular.ttf');
 }
 
 @font-face {
     font-family: 'RalewaySemibold';
-    src: url('../fonts/raleway.semibold.ttf');
+    src: url('../fonts/Raleway-Semibold.ttf');
 }
 
 @font-face {
     font-family: 'RalewayBold';
-    src: url('../fonts/raleway.bold.ttf');
+    src: url('../fonts/Raleway-Bold.ttf');
 }
 
 @font-face {
     font-family: 'RalewayHeavy';
-    src: url('../fonts/raleway.heavy.ttf');
-}
-
-@font-face {
-    font-family: 'MyriadProRegular';
-    src: url('../fonts/MyriadPro-Regular.otf');
-}
-
-@font-face {
-    font-family: 'MyriadProBold';
-    src: url('../fonts/Myriad_Pro_Black_SemiExt_Bold.ttf');
+    src: url('../fonts/Raleway-Heavy.ttf');
 }
 
 $red: #f06060;
-$black: #393939;
 $dark-grey: #747474;
-$medium-grey: #414141;
-$medium-grey-l: #565656;
-$border-grey: #e6e6e6;
-$light-grey: #999999;
+$text-grey-dk: #454545;
+$text-grey-md: #565656;
+$text-grey-lg: #999999;
+$border-grey-lg: #efefef;
+$border-grey-md: #e7e7e7;
+$border-grey-dk: #e0e0e0;
+$border-grey-bl: #393939;
+$grey-input: #696969;
 $html-font-size: 13px;
 $transition: 300ms;
+$footer-height: 659px;
 @import "./_misc/mixins.scss";
 @import "./tags.scss";
 @import "./style.scss";

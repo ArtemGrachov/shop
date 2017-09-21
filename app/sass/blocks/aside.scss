@@ -1,39 +1,32 @@
 .aside {
     &__header {
-        padding: 0 0 rem(37px);
-        line-height: 1;
-        font-size: rem(32px);
         font-family: 'MuseoSlab500';
         border-bottom: 4px solid #dddddd;
         letter-spacing: rem(-1.45px);
     }
-    &__body {
-        padding: rem(23px) 0 0;
-    }
+    &__body {}
     &-list {
         @extend %list;
         &_inline {
             display: flex;
             justify-content: space-between;
             .aside-item {
-                margin: 0 rem(14px);
                 width: rem(344px);
             }
         }
     }
     &-item {
-        margin-bottom: rem(41px);
         &_dark-bg {
             .aside {
                 &__header {
-                    border-color: #3b3b3b;
+                    border-color: $border-grey-bl;
                 }
                 &-products {
                     &-item {
-                        border-color: #3d3d3d;
+                        border-color: $border-grey-bl;
                     }
                     &-descr {
-                        border-color: #3d3d3d;
+                        border-color: $border-grey-bl;
                     }
                 }
             }
@@ -53,14 +46,10 @@
     }
     &-products {
         &-list {
-            padding: 0;
-            margin: 0;
-            list-style: none;
+            @extend %list;
         }
         &-item {
             border-bottom: rem(1px) solid #cdcdcd;
-            padding: 0 0 rem(24px);
-            margin: 0 0 rem(24px);
             display: flex;
             justify-content: flex-end;
             align-items: center;
@@ -70,12 +59,8 @@
         }
         &-descr {
             border-right: rem(1px) solid #cdcdcd;
-            padding: 0 rem(18px);
-            margin-left: rem(88px);
             &__header {
                 font-family: 'MuseoSlab500';
-                font-size: rem(15px);
-                margin-bottom: rem(8px);
                 letter-spacing: rem(-0.35px);
             }
             &__text {
@@ -89,18 +74,14 @@
     }
     &-inner {
         &-list {
-            margin: 0;
-            padding: 0 0 0 rem(3px);
-            list-style: none;
+            @extend %list;
         }
         &-item {
-            font-size: rem(16px);
             letter-spacing: rem(-0.8px);
-            margin-bottom: rem(8px);
         }
         &__link {
             font-family: 'RalewayRegular';
-            color: $medium-grey-l;
+            color: $text-grey-md;
             &:hover {
                 text-decoration: none;
                 color: $red;
@@ -118,16 +99,9 @@
         width: auto;
         flex-shrink: 0;
         flex-grow: 0;
-        margin: 0;
     }
     &-input {
-        font-size: rem(16px);
-        padding: rem(13px);
-        padding-right: rem(18px);
-        margin: 0;
-        margin-right: rem(-10px);
         font-family: 'RalewayRegular';
         border-radius: rem(10px);
-        color: #6c6c6c;
     }
 }

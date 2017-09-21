@@ -3,14 +3,12 @@
         width: rem(370px);
         height: rem(324px);
         float: left;
-        margin: 0 rem(32px) rem(30px) 0;
         border-right: 1px solid #e3e3e3;
     }
     &__img {
         display: block;
         max-width: 100%;
         max-height: 100%;
-        margin: auto;
     }
     &-select {
         width: rem(255px);
@@ -19,23 +17,17 @@
     &__label {
         font-family: 'RalewayBold';
         color: #2e2e2e;
-        margin-bottom: rem(12px);
         display: block;
-        font-size: rem(16px);
     }
-    &__input {
-        margin-bottom: rem(26px);
-    }
+    &__input {}
     &-title {
         border-top: rem(1px) solid #e3e3e3;
         border-bottom: rem(1px) solid #e3e3e3;
-        padding: rem(30px) 0;
     }
     &-category {
         &-list {
             text-transform: uppercase;
             @extend %list;
-            font-size: rem(13px);
             font-family: 'RalewayLight';
         }
         &-item {
@@ -44,26 +36,19 @@
     }
     &-cart {
         display: flex;
-        padding: rem(32px) 0;
     }
     &__price {
-        font-size: rem(50px);
         font-family: 'MuseoSlab500';
         vertical-align: middle;
-        padding-right: rem(20px);
         border-right: rem(1px) solid #e3e3e3;
-        margin-right: rem(25px);
-        line-height: 1;
         &_old {
             color: #b5b5b5;
             text-decoration: line-through;
         }
     }
     &__currency {
-        font-size: rem(14px);
         vertical-align: middle;
-        color: #999999;
-        margin-left: rem(5px);
+        color: $text-grey-lg;
     }
     &-tabs {
         @extend %list;
@@ -84,13 +69,10 @@
             }
             &-list {
                 @extend %list;
-                font-size: rem(18px);
                 font-family: 'MuseoSlab500';
-                margin-bottom: rem(25px);
             }
             &__link {
                 color: #4c4c4c;
-                padding: rem(15px);
                 border-radius: rem(15px);
                 display: inline-block;
                 border: rem(1px) solid transparent;
@@ -118,16 +100,13 @@
         }
         &-item {
             border-top: rem(1px) solid #e3e3e3;
-            padding: rem(20px) 0 rem(32px) 0;
         }
         &-wrap {
             position: relative;
-            padding-right: rem(86px);
             &:after {
                 content: counter(review-counter, decimal-leading-zero);
                 counter-increment: review-counter;
                 border-left: rem(1px) solid #e3e3e3;
-                font-size: rem(50px);
                 font-family: 'MuseoSlab500';
                 color: #e2e2e2;
                 position: absolute;
@@ -142,9 +121,7 @@
             font-family: 'MuseoSlab500';
         }
         &-small {
-            font-size: rem(12px);
             color: #696969;
-            margin: 0 rem(10px);
         }
     }
 }

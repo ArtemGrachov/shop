@@ -10,14 +10,14 @@ a {
 
 input {
     transition: $transition;
-    border: 1px solid #efefef;
+    border: 1px solid $border-grey-dk;
     &[type="text"],
     &[type="password"],
     &[type="email"],
     &[type="number"] {
         display: block;
         width: 100%;
-        color: #696969; // margin-bottom: rem(13px);
+        color: $grey-input;
         &:focus {
             color: black;
         }
@@ -31,13 +31,10 @@ input {
                 height: rem(16px);
                 display: inline-block;
                 text-align: center;
-                padding: rem(1px) rem(3px);
                 background: white;
-                border: 1px solid #e6e6e6;
+                border: 1px solid $border-grey-md;
                 font-family: 'FontAwesome';
                 color: white;
-                margin: rem(-10px) rem(10px) 0 0;
-                font-size: rem(8px);
                 content: '\f00c';
             }
         }
@@ -50,23 +47,15 @@ input {
 input,
 textarea,
 select {
-    line-height: 1;
-    padding: rem(13px);
     font-family: 'MuseoSlab500';
-    font-size: rem(12px);
-    border: rem(1px) solid #eeeeee;
+    border: rem(1px) solid $border-grey-lg;
     border-radius: rem(2px);
-    margin-bottom: rem(13px);
 }
 
 .input {
     &_rounded {
-        font-size: rem(16px);
-        padding: rem(16px);
-        margin: 0;
         font-family: 'RalewayRegular';
         border-radius: rem(10px);
-        color: #6c6c6c;
     }
 }
 
@@ -75,14 +64,13 @@ textarea {
     height: 100%;
     display: block;
     resize: none;
-    line-height: 1.6;
 }
 
 select {
     appearance: none;
     width: 100%;
     background: none;
-    color: #696969;
+    color: $grey-input;
     &:focus {
         color: black;
     }
@@ -93,30 +81,26 @@ table {
     width: 100%;
     text-align: center;
     background: white;
-    border: 1px solid #e7e7e7;
+    border: 1px solid $border-grey-md;
     border-radius: rem(10px);
 }
 
 .label {
     &_strong {
         font-family: 'RalewayBold';
-        font-size: rem(14px);
-        color: #696969;
+        color: $grey-input;
         display: block;
-        margin-bottom: rem(10px);
     }
 }
 
 thead {
     font-family: 'RalewayHeavy';
-    font-size: rem(16px);
     text-transform: uppercase;
 }
 
 th,
 td {
-    border: 1px solid #eeeeee;
-    padding: rem(20px);
+    border: 1px solid $border-grey-lg;
 }
 
 .input-rounded {
@@ -125,11 +109,10 @@ td {
 
 .form {
     &_two-groups {
-        @extend .flex;
+        display: flex;
         textarea {
             height: 100%;
         }
-        margin-bottom: rem(28px);
     }
     &-group {
         &_sm {
@@ -140,7 +123,6 @@ td {
         }
     }
     &__footer {
-        padding-top: rem(18px);
         text-align: right;
     }
     &-third {

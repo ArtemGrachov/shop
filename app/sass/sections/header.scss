@@ -12,21 +12,14 @@
         }
         &-nav {
             &-list {
-                margin: 0 rem(-16px);
-                padding: 0;
                 list-style: none;
-                font-size: 0;
             }
             &-item {
                 display: inline-block;
-                .fa {
-                    margin-right: rem(8px);
-                }
-                font-size: 12px;
+                .fa {}
             }
             &__link {
                 display: block;
-                padding: rem(11px) rem(20px);
                 &:hover {
                     background: white;
                     color: $red;
@@ -35,45 +28,30 @@
             }
         }
     }
-    &-greeter {
-        padding: rem(9px) rem(6px);
-    }
+    &-greeter {}
     &-main {
-        padding: rem(41px) 0 rem(21px);
-        .logo {
-            margin-left: rem(-13px);
-        }
+        .logo {}
     }
     &-bottom {
-        border-top: 1px solid #e9e9e9;
+        border-top: 1px solid $border-grey-md;
     }
     &-contacts {
-        &-list {
-            margin: 0;
-            padding: rem(6px) 0;
-        }
+        &-list {}
         &-item {
             display: inline-block;
-            margin-left: rem(48px);
             .fa {
-                font-size: rem(41px);
                 color: $red;
             }
         }
         .contacts-list {
-            border-left: 1px solid #e1e1e1;
-            margin-left: rem(14px);
-            padding-left: rem(14px);
+            border-left: 1px solid $border-grey-md;
             display: inline-block;
         }
     }
     .cat {
         &-nav {
             &-list {
-                margin: 0;
-                padding: 0;
-                list-style: none;
-                font-size: rem(16px);
+                @extend %list;
                 letter-spacing: rem(-0.85px);
             }
             &-item {
@@ -89,9 +67,8 @@
                 }
             }
             &__link {
-                color: $medium-grey-l;
+                color: $text-grey-md;
                 display: block;
-                padding: rem(22px) rem(28.5px) rem(22px) 0;
                 &:hover,
                 &_active {
                     color: $red;
@@ -101,10 +78,8 @@
         }
         &-drop {
             &-list {
+                @extend %list;
                 width: rem(158px);
-                margin: 0;
-                padding: 0;
-                list-style: none;
                 display: none;
                 border-radius: 0 0 rem(10px) rem(10px);
                 overflow: hidden;
@@ -123,7 +98,6 @@
                 }
             }
             &__link {
-                padding: rem(11px) rem(16px);
                 display: block;
                 color: white;
                 border-top: 1px solid $red;
@@ -137,14 +111,11 @@
     }
     &-search {
         &-input {
-            border: 1px solid #e0e0e0;
+            border: 1px solid $border-grey-dk;
             border-radius: rem(2px);
             vertical-align: middle;
             font-family: 'RalewayBold';
-            font-size: rem(12px);
-            padding: rem(10px) rem(15px);
             width: rem(158px);
-            margin: rem(11px) 0;
         }
         &-wrap {
             position: relative;
@@ -172,12 +143,8 @@
     }
     &__price {
         font-family: 'MuseoSlab500';
-        font-size: rem(16px);
-        margin-left: rem(16px);
     }
     vertical-align: middle;
-    border: 1px solid #e0e0e0;
+    border: 1px solid $border-grey-dk;
     border-radius: rem(2px);
-    margin: rem(12px) rem(7px);
-    padding: rem(7.5px) rem(15px);
 }

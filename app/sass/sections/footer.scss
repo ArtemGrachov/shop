@@ -1,24 +1,20 @@
 .footer {
     background: #2f2f2f;
+    height: $footer-height;
+    margin-top: -$footer-height;
     color: white;
-    margin-top: rem(82px);
     &-bottom {
         background: #262626;
-        font-size: rem(12px);
-        padding: rem(13.5px) 0;
         letter-spacing: rem(-0.6px);
     }
     &-search {
         max-width: rem(902px);
-        margin: auto;
-        padding: rem(24px);
         transform: translateY(-50%);
         display: flex;
         align-items: center;
         justify-content: space-between;
         &__input {
             width: 100%;
-            margin-right: rem(20px);
         }
         .btn {
             flex-shrink: 0;

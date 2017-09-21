@@ -3,29 +3,22 @@
         @extend %list;
     }
     &-item {
-        padding: rem(20px) rem(32px);
-        margin-bottom: rem(50px);
         border-radius: 0 0 rem(10px) rem(10px);
     }
     &__title {
-        color: #454545;
-        font-size: rem(32px);
+        color: $text-grey-dk;
         font-family: 'MuseoSlab500';
-        margin: 0 0 rem(5px);
         letter-spacing: rem(-1.55px);
     }
     &__pic {
         height: rem(365px);
     }
     &__img {
-        margin: auto;
         max-width: 100%;
         max-height: 100%;
     }
     &-meta {
         text-transform: uppercase;
-        padding: 0 rem(3px);
-        margin-bottom: rem(17px);
         font-family: 'RalewayRegular';
         &-list {
             @extend %list;
@@ -35,7 +28,6 @@
             &:before {
                 content: '//';
                 letter-spacing: rem(2.6px);
-                margin: 0 rem(13px);
             }
             &:first-child {
                 &:before {
@@ -48,15 +40,13 @@
         }
     }
     &__content {
-        border-top: rem(1px) solid #efefef;
-        padding: rem(8px) 0 0;
+        border-top: rem(1px) solid $border-grey-lg;
     }
     &-comments {
         &-list {
             @extend %list;
         }
         &-item {
-            padding: rem(30px) 0;
             display: flex;
         }
         &-user {
@@ -72,30 +62,24 @@
         &__img {
             max-width: 100%;
             max-height: 100%;
-            margin: auto;
             display: block;
         }
         &__name {
-            font-size: rem(12px);
             font-family: 'RalewayBold';
             text-transform: uppercase;
             text-align: center;
         }
         &-meta {
             @extend %list;
-            margin-bottom: rem(8px);
             &-item {
                 display: inline-block;
                 font-family: 'RalewayBold';
-                font-size: rem(12px);
                 letter-spacing: rem(-0.13px);
-                margin-right: rem(28px);
             }
             &__link {
                 color: #2a2a2a;
                 .fa {
                     color: $red;
-                    margin-left: rem(12px);
                 }
                 &:hover {
                     color: $red;

@@ -1,9 +1,6 @@
 .products {
     &-list {
-        font-size: 0;
-        padding: 0;
-        margin: 0;
-        list-style: none;
+        @extend %list;
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
@@ -13,37 +10,28 @@
         vertical-align: top;
         text-align: center;
         max-width: rem(251px);
-        margin-bottom: rem(28px);
-        &:last-child {
-            margin: 0;
-        }
+        &:last-child {}
     }
     &__name {
-        font-size: rem(18px);
         font-family: 'MuseoSlab500';
-        color: #454545;
+        color: $text-grey-dk;
         text-align: center;
-        margin-bottom: rem(14px);
     }
     &__price {
         color: $red;
         width: rem(88px);
-        font-size: rem(32px);
         font-family: 'MuseoSlab500';
-        line-height: 1.1;
     }
     &__currency {
         color: #999999;
-        font-size: rem(14px);
     }
     &-bottom {
         @extend %clearfix;
-        border-top: rem(1px) solid #e3e3e3;
-        padding: rem(18px) 0;
+        border-top: rem(1px) solid $border-grey-md;
         &__left {
             float: left;
             width: rem(94px);
-            border-right: 1px solid #d8d8d8;
+            border-right: 1px solid $border-grey-md;
         }
         &__right {
             float: left;
@@ -62,15 +50,12 @@
     }
     &-select {
         &-list {
-            margin: 0;
-            padding: 0;
-            list-style: none;
+            @extend %list;
             overflow: hidden;
         }
         &-item {
             display: inline-block;
             position: relative;
-            padding-right: rem(40px); // ???
             &:before,
             &:after {
                 display: block;
@@ -91,10 +76,8 @@
         }
         &__link {
             font-family: 'MuseoSlab500';
-            font-size: rem(32px);
-            color: #575757;
+            color: $text-grey-md;
             display: block;
-            padding-bottom: rem(80px);
             &:after {
                 position: absolute;
                 display: block;

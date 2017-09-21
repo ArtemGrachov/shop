@@ -1,30 +1,44 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
 html {
     font-size: $html-font-size;
+    height: 100%;
 }
 
 body {
     color: #838383;
     font-family: 'RalewayRegular';
-    line-height: 1.6;
     letter-spacing: rem(-0.65px);
     background: #f2f2f2;
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
 .maincontent {
-    padding: 0 0 rem(54px);
+    padding-bottom: $footer-height;
+    width: 100%;
+    height: 100%;
 }
 
 .container {
-    width: 1144px;
-    padding: 0 rem(28px);
     margin: auto;
+    padding: 0 rem(28px);
+    max-width: 1144px;
     @extend %clearfix;
 }
 
 .main {
     width: rem(716px);
     float: left;
-    margin-right: rem(28px);
 }
 
 .sidebar {
@@ -56,9 +70,7 @@ body {
 
 .tags {
     &-list {
-        margin: 0;
-        padding: 0;
-        list-style: none;
+        @extend %list;
     }
     &-item {
         display: inline-block;
@@ -66,13 +78,11 @@ body {
     &__link {
         background: white;
         border-radius: rem(8px);
-        border: 1px solid $border-grey;
-        padding: rem(9px) rem(14px);
+        border: 1px solid $border-grey-lg;
         letter-spacing: rem(1px);
         color: #6c6c6c;
         display: block;
         font-family: 'RalewayRegular';
-        font-size: rem(16px);
         &:hover {
             text-decoration: none;
             background: $red;
@@ -86,7 +96,6 @@ body {
     font-family: 'MuseoSlab500';
     letter-spacing: rem(-1.5px);
     position: relative;
-    padding-left: rem(61px);
     &__char {
         position: absolute;
         left: 0;
@@ -95,8 +104,6 @@ body {
         background: $red;
         width: rem(59px);
         height: rem(59px);
-        font-size: rem(60px);
-        line-height: rem(62px);
         text-align: center;
         color: white;
         border-radius: 50%;
@@ -106,18 +113,12 @@ body {
     &__text {
         display: inline-block;
         vertical-align: middle;
-        font-size: rem(40px);
-        margin-left: rem(6px);
-        margin-top: rem(7px);
     }
     &_block-title {
-        padding-left: rem(69px);
         .logo {
             &__char {
                 width: rem(55px);
                 height: rem(55px);
-                font-size: rem(55px);
-                line-height: rem(55px);
             }
         }
     }
@@ -126,9 +127,7 @@ body {
 .btn {
     font-family: 'MuseoSlab500';
     color: white;
-    font-size: rem(18px);
     background: $red;
-    padding: rem(10px) rem(15px);
     border-radius: rem(10px);
     display: inline-block;
     border: 1px solid $red;
@@ -138,20 +137,14 @@ body {
         color: $red;
         text-decoration: none;
     }
-    &_sm {
-        padding: rem(5px) rem(30px);
-        font-size: rem(14px);
-    }
-    &_lg {
-        padding: rem(13px) rem(29px);
-    }
+    &_sm {}
+    &_lg {}
     &-list {
         @extend %list;
         text-align: right;
     }
     &-item {
         display: inline-block;
-        margin-left: rem(12px);
     }
     &_black {
         background: #3f4044;
@@ -163,26 +156,19 @@ body {
 }
 
 .title {
-    color: $medium-grey;
+    color: $text-grey-dk;
     font-family: 'MuseoSlab500';
-    font-size: rem(32px);
     &_underline {
-        padding-bottom: rem(28px);
         &:after {
             display: block;
             content: '';
             height: rem(8px);
             border-radius: rem(8px);
             background: #d4d4d4;
-            margin-top: rem(25px);
         }
     }
-    &_md {
-        font-size: rem(20px);
-    }
-    &_sm {
-        font-size: rem(18px);
-    }
+    &_md {}
+    &_sm {}
 }
 
 .text_red {
@@ -191,13 +177,12 @@ body {
 
 .block {
     background: white;
-    border: 1px solid #e7e7e7;
+    border: 1px solid $border-grey-md;
     border-radius: rem(10px);
-    margin-bottom: rem(40px);
     &_bg {
-        box-shadow: 0 rem(9px) 0 rem(-5px) white, 0 rem(9px) 0 rem(-4px) #e7e7e7, 0 rem(18px) 0 rem(-9px) white, 0 rem(18px) 0 rem(-8px) #e7e7e7;
+        box-shadow: 0 rem(9px) 0 rem(-5px) white, 0 rem(9px) 0 rem(-4px) $border-grey-md, 0 rem(18px) 0 rem(-9px) white, 0 rem(18px) 0 rem(-8px) $border-grey-md;
         &-up {
-            box-shadow: 0 rem(-9px) 0 rem(-5px) white, 0 rem(-9px) 0 rem(-4px) #e7e7e7, 0 rem(-18px) 0 rem(-9px) white, 0 rem(-18px) 0 rem(-8px) #e7e7e7;
+            box-shadow: 0 rem(-9px) 0 rem(-5px) white, 0 rem(-9px) 0 rem(-4px) $border-grey-md, 0 rem(-18px) 0 rem(-9px) white, 0 rem(-18px) 0 rem(-8px) $border-grey-md;
         }
     }
     &_half {
@@ -209,22 +194,15 @@ body {
         align-items: stretch;
     }
     &__header {
-        padding: 0 0 rem(25px);
-        border-bottom: 1px solid #eeeeee;
-        padding: rem(28px);
+        border-bottom: 1px solid $border-grey-lg;
     }
-    &__body {
-        padding: rem(28px);
-    }
-    &__descr {
-        margin-bottom: rem(28px);
-    }
+    &__body {}
+    &__descr {}
     &-list {
         @extend %list;
     }
     &-item {
-        padding: rem(10px) rem(28px);
-        border-bottom: 1px solid #efefef;
+        border-bottom: 1px solid $border-grey-lg;
         &:last-child {
             border: none;
         }
@@ -234,32 +212,26 @@ body {
 .divider {
     border-top: rem(1px) solid #d0d0d0;
     border-bottom: rem(1px) solid white;
-    margin: rem(40px) 0;
 }
 
 .contacts {
     &-list {
-        color: $light-grey;
-        list-style: none;
-        margin: 0;
-        padding: 0;
+        @extend %list;
+        color: $text-grey-lg;
         font-family: 'MuseoSlab500';
-        &_margin {
-            margin: rem(16px) 0;
-        }
     }
     &-item {
         letter-spacing: rem(0.5px);
     }
     &_dark {
-        color: $dark-grey;
+        color: #747474;
         font-weight: bold;
     }
 }
 
 .socials {
     &__link {
-        color: #4b4b4b;
+        color: $text-grey-dk;
         &:hover {
             text-decoration: none;
             color: $red;
@@ -267,13 +239,12 @@ body {
         &_red {
             color: $red;
             &:hover {
-                color: #4b4b4b;
+                color: $text-grey-dk;
             }
         }
     }
     &-list {
         @extend %list;
-        font-size: rem(28px);
     }
     &-item {
         display: inline-block;
@@ -283,16 +254,12 @@ body {
 .page-nav {
     background: $red;
     color: white;
-    margin-bottom: rem(67px);
-    font-size: rem(18px);
     &__right {
         float: right;
-        padding: rem(16px) 0;
     }
     select {
         background: #fc7373;
         border: none;
-        margin: rem(-7px) rem(10px) rem(-7px);
         width: rem(206px);
         display: inline-block;
         color: white;
@@ -307,22 +274,18 @@ body {
     }
     &-item {
         display: inline-block;
-        margin-left: rem(9px);
         &:first-child {
-            margin-left: 0;
             &:before {
                 content: none;
             }
         }
         &:before {
             content: '\f055';
-            margin-right: rem(13px);
             font-family: 'FontAwesome';
         }
     }
     &__link {
         color: white;
-        padding: rem(16px) 0 rem(12px) 0;
         border-bottom: rem(4px) solid transparent;
         font-family: 'MuseoSlab500';
         display: inline-block;
@@ -341,14 +304,10 @@ body {
         display: inline-block;
         background: rgba(#b5b5b5, .3);
         text-align: center;
-        font-size: rem(28px);
-        padding: rem(6px);
         color: white;
-        margin: rem(3px);
         &:hover {
             background: rgba($red, .3);
         }
     }
     text-align: center;
-    margin-top: rem(30px);
 }

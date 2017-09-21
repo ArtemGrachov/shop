@@ -1,14 +1,11 @@
 .userful-info {
     &-list {
-        padding: 0;
-        margin: 0;
-        list-style: none;
+        @extend %list;
         display: flex;
         justify-content: space-between;
     }
     &-item {
         width: rem(344px);
-        padding: rem(21px);
         display: flex;
     }
     &__icon {
@@ -21,19 +18,16 @@
             height: 100%;
             content: '';
             display: block;
-            border: 1px solid #efefef;
+            border: 1px solid border-grey-lg;
             top: 0;
             left: rem(-20px);
         }
-        margin-left: rem(20px);
         position: relative;
         max-width: rem(194px);
     }
     &__title {
         font-family: 'MuseoSlab500';
-        font-size: rem(18px);
-        color: #4c4c4c;
-        margin-bottom: rem(20px);
+        color: $text-grey-dk;
     }
     &__link {
         display: block;
@@ -42,7 +36,6 @@
 
 .slider {
     position: relative;
-    margin-bottom: rem(62px);
     &-item {
         position: relative;
         width: 100%;
@@ -61,7 +54,6 @@
         }
     }
     &-circle {
-        line-height: 1;
         height: rem(144px);
         width: rem(144px);
         position: absolute;
@@ -77,10 +69,8 @@
             width: rem(304px);
             height: rem(304px);
             .slider-circle__text {
-                font-size: rem(24px);
                 &-lg {
                     font-family: 'RalewayBold';
-                    font-size: rem(75px);
                 }
             }
         }
@@ -95,13 +85,9 @@
             transform: translateX(-50%);
         }
         &__text {
-            font-size: rem(18px);
             &-lg {
-                font-size: rem(48px);
                 font-family: 'RalewayHeavy';
-                &_symbol {
-                    font-size: rem(24px);
-                }
+                &_symbol {}
             }
         }
         &-content {

@@ -15,13 +15,11 @@
 }
 
 %list {
-    padding: 0;
-    margin: 0;
     list-style: none;
 }
 
 @function rem($px) {
-    @return $px / $html-font-size+0rem;
+    @return $px / $html-font-size;
 }
 
 @mixin desktop {
