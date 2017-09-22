@@ -14,7 +14,7 @@
             }
             &-item {
                 display: inline-block;
-                margin-right: rem(14px);
+                margin-right: rem(30px);
                 .fa {
                     margin-right: rem(10px);
                 }
@@ -22,18 +22,18 @@
             &__link {
                 display: block;
                 color: white;
-                padding: rem(9px) rem(10px) rem(7px);
+                padding: rem(9px) rem(2px) rem(5px);
+                border-bottom: rem(2px) solid transparent;
                 &:hover {
-                    background: white;
-                    color: $red;
                     text-decoration: none;
+                    border-color: white;
                 }
             }
         }
     }
     &-greeter {
         letter-spacing: rem(-0.65px);
-        margin: rem(5px) 0;
+        margin: rem(5px) rem(7px) 0 0;
         &__link {
             color: white;
         }
@@ -41,18 +41,23 @@
     &-main {
         padding: rem(29px) 0 rem(17px);
         .logo {
-            margin: rem(16px) 0 0 rem(-5px);
+            margin-top: rem(16px);
+            margin-left: rem(-13px);
         }
     }
     &-bottom {
         border-top: 1px solid $border-grey-md;
+        &-right {
+            padding-top: rem(12px);
+        }
     }
     &-contacts {
         &-list {
             &-inner {
                 border-left: 1px solid $border-grey-md;
                 padding-left: rem(18px);
-                margin-left: rem(18px);
+                margin-left: rem(16px);
+                padding-right: rem(1px);
                 display: inline-block;
             }
         }
@@ -75,6 +80,7 @@
         }
         &-wrap {
             position: relative;
+            margin-left: rem(8px);
             &:after {
                 display: inline-block;
                 position: absolute;
@@ -94,7 +100,6 @@
             @extend %list;
             letter-spacing: rem(-0.8px);
             font-size: rem(16px);
-            margin-left: rem(8px);
         }
         &-item {
             z-index: 1;
@@ -157,7 +162,7 @@
 }
 
 .cart {
-    padding: rem(3.5px) rem(13px);
+    padding: rem(4px) rem(13px);
     letter-spacing: rem(-0.1px);
     &-icon,
     &-descr,
