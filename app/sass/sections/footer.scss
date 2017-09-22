@@ -1,24 +1,37 @@
 .footer {
     background: #2f2f2f;
     height: $footer-height;
-    margin-top: -$footer-height;
+    margin-top: -$footer-height + 90px;
+    position: relative;
+    padding-bottom: rem(45px);
     color: white;
     &-bottom {
-        background: #262626;
-        letter-spacing: rem(-0.45px);
+        background: #262626; // letter-spacing: rem(-0.45px);
         color: #505050;
+        padding: rem(13px) 0 0;
+        height: rem(45px);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        font-size: rem(12px);
     }
     &-search {
         max-width: rem(902px);
         transform: translateY(-50%);
         display: flex;
-        align-items: center;
+        align-items: flex-end;
+        margin: 0 auto;
+        padding: rem(30px) rem(22px) rem(38px);
         justify-content: space-between;
         &__input {
             width: 100%;
         }
-        .btn {
+        &__btn {
             flex-shrink: 0;
+            flex-grow: 0;
+            padding: rem(14px) rem(26px) rem(12px);
+            letter-spacing: rem(-0.3px);
+            margin-left: rem(18px);
         }
     }
 }

@@ -18,10 +18,10 @@
     }
     &__price {
         color: $red;
-        width: rem(88px);
         font-family: 'MuseoSlab500';
         font-size: rem(32px);
         line-height: 1;
+        letter-spacing: rem(-1.5px);
     }
     &__currency {
         color: #999999;

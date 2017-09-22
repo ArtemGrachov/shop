@@ -4,8 +4,14 @@
         font-size: rem(32px);
         border-bottom: 4px solid #dddddd;
         letter-spacing: rem(-1.45px);
+        padding-bottom: rem(27px);
     }
-    &__body {}
+    &__body {
+        padding: rem(23px) 0;
+    }
+    &__text-block {
+        margin: rem(4px) 0 rem(28px);
+    }
     &-list {
         @extend %list;
         &_inline {
@@ -51,6 +57,8 @@
         }
         &-item {
             border-bottom: rem(1px) solid #cdcdcd;
+            padding: 0 0 rem(24px);
+            margin: 0 0 rem(24px);
             display: flex;
             justify-content: flex-end;
             align-items: center;
@@ -60,11 +68,13 @@
         }
         &-descr {
             border-right: rem(1px) solid #cdcdcd;
-            margin-left: rem(110px);
+            margin: 0 0 0 rem(96px);
+            padding: 0 rem(14px);
             &__header {
                 font-family: 'MuseoSlab500';
-                letter-spacing: rem(-0.56px);
+                letter-spacing: rem(-0.7px);
                 font-size: rem(15px);
+                margin-bottom: rem(6px);
             }
             &__text {
                 color: #808080;
@@ -72,7 +82,10 @@
         }
         &-right {
             text-align: center;
+            padding: rem(6px) 0 0;
             width: rem(88px);
+            flex-shrink: 0;
+            flex-grow: 0;
         }
     }
     &-inner {

@@ -19,6 +19,7 @@ input {
         width: 100%;
         color: $grey-input;
         padding: rem(9.5px);
+        line-height: 1;
         &:focus {
             color: black;
         }
@@ -61,6 +62,13 @@ select {
         font-family: 'RalewayRegular';
         border-radius: rem(10px);
         font-size: rem(16px);
+        letter-spacing: rem(0.4px);
+        &[type="text"],
+        &[type="password"],
+        &[type="email"],
+        &[type="number"] {
+            padding: rem(16px) rem(20px);
+        }
     }
 }
 
