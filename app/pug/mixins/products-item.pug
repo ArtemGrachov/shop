@@ -1,5 +1,5 @@
 mixin products-item(name, price, discount)
-    li.products-item.block.block_bg
+    li.products-item.block.block_bg.block_bg-hover
         .products-preview
             .products-preview__pic
                 img.products-preview__img(src="" alt="Product image")
@@ -16,4 +16,4 @@ mixin products-item(name, price, discount)
                         | #{price}
                 .products__currency USD
             .products-bottom__right
-                a.btn.btn_sm(href="#") Add to cart
+                a.btn.btn_sm.products-btn(href="#") Add to cart

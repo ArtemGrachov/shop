@@ -2,17 +2,19 @@
     &-list {
         @extend %list;
         display: flex;
+        align-items: stretch;
         justify-content: space-between;
     }
     &-item {
         width: rem(344px);
-        display: flex;
     }
     &__icon {
-        width: rem(93px);
-    }
-    &__body {
-        &:before {
+        width: rem(85px);
+        position: relative;
+        margin-right: rem(20px);
+        flex-shrink: 0;
+        flex-grow: 0;
+        &:after {
             position: absolute;
             width: rem(3px);
             height: 100%;
@@ -20,28 +22,43 @@
             display: block;
             border: 1px solid $border-grey-lg;
             top: 0;
-            left: rem(-20px);
+            right: 0;
+            margin-left: rem(21px);
         }
-        position: relative;
-        max-width: rem(194px);
+    }
+    &__body {
         letter-spacing: rem(-0.55px);
     }
     &__title {
         font-family: 'MuseoSlab500';
         color: $text-grey-dk;
+        letter-spacing: rem(-1px);
+        line-height: 1;
+        margin-bottom: rem(10px);
     }
     &__link {
         display: block;
+        font-family: 'RalewayBold';
     }
 }
 
 .slider {
     position: relative;
+    background: white;
+    background-image: url('../img/backgrounds/slider-bg.png');
+    background-repeat: repeat no-repeat;
+    margin-bottom: rem(46px);
+    &:after {
+        display: block;
+        height: rem(33px);
+        width: 100%;
+        content: '';
+        background: url('../img/patterns/round-border.png');
+    }
     &-item {
         position: relative;
         width: 100%;
-        height: 100%;
-        height: rem(677px);
+        height: rem(646px);
     }
     &-btn {
         position: absolute;
@@ -62,8 +79,9 @@
         background: white;
         color: $red;
         box-shadow: rem(-8px) rem(-8px) 0 rem(8px) rgba(#636363, .2);
-        top: 50%;
+        top: 45.5%;
         text-align: center;
+        line-height: 1;
         &_lg {
             box-shadow: rem(-12px) rem(-12px) 0 rem(12px) rgba(#636363, .2);
             background: $red;
@@ -77,6 +95,7 @@
                     font-size: rem(75px);
                     font-family: 'RalewayBold';
                     letter-spacing: rem(-4px);
+                    margin-bottom: rem(14px);
                 }
             }
         }
@@ -106,6 +125,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
+            width: 100%;
             transform: translate(-50%, -50%);
         }
     }

@@ -1,16 +1,21 @@
 .products {
+    &-btn {
+        font-size: rem(18px);
+    }
     &-list {
         @extend %list;
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
         justify-content: space-between;
+        margin-bottom: rem(37px);
     }
     &-item {
         vertical-align: top;
         text-align: center;
-        max-width: rem(251px);
-        &:last-child {}
+        width: rem(251px);
+        flex-shrink: 0;
+        flex-grow: 0;
     }
     &__name {
         text-align: center;
@@ -28,21 +33,24 @@
         font-size: rem(14px);
     }
     &-bottom {
-        @extend %clearfix;
+        padding: rem(17px) 0;
         border-top: rem(1px) solid $border-grey-md;
+        display: flex;
         &__left {
-            float: left;
-            width: rem(94px);
+            width: rem(97px);
             border-right: 1px solid $border-grey-md;
+            flex-grow: 0;
+            flex-shrink: 0;
         }
         &__right {
-            float: left;
-            width: rem(154px);
+            margin-left: rem(4px);
+            width: 100%;
         }
     }
     &-preview {
+        padding: 0 0 rem(9px);
         &__pic {
-            height: rem(190px);
+            height: rem(192px);
             overflow: hidden;
         }
         &__img {
@@ -51,12 +59,15 @@
         }
         &__price {
             font-size: rem(18px);
+            line-height: 1;
             color: $red;
             text-decoration: line-through;
             font-family: 'MuseoSlab500';
+            margin: 0 0 rem(2px);
         }
         &__currency {
             font-size: rem(10px);
+            line-height: 1;
         }
     }
     &-select {
@@ -64,43 +75,42 @@
             @extend %list;
             overflow: hidden;
             font-size: rem(32px);
+            position: relative;
+            &:after {
+                display: block;
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                margin-top: rem(14px);
+                content: '';
+                height: rem(8px);
+                border-radius: rem(8px);
+                background: #d4d4d4;
+            }
         }
         &-item {
             display: inline-block;
             position: relative;
-            margin-right: rem(75px);
             letter-spacing: rem(-1.45px);
-            &:before,
-            &:after {
-                display: block;
-                position: absolute;
-                content: '';
-                height: rem(8px);
-                width: 50%;
-                top: 50%;
-                transform: translateY(-50%);
-                background: #d4d4d4;
-            }
-            &:before {
-                left: rem(-30px);
-            }
-            &:after {
-                right: rem(-30px);
-            }
+            margin-right: rem(74px);
         }
         &__link {
             font-family: 'MuseoSlab500';
             color: $text-grey-md;
             display: block;
+            padding-bottom: rem(94px);
             &:after {
                 position: absolute;
+                z-index: 1;
                 display: block;
                 content: '';
-                width: 100%;
+                width: rem(52px);
+                background: $body-bg;
                 height: rem(60px);
+                margin-top: rem(14px);
                 top: 50%;
-                transform: translateY(-50%);
-                left: 0;
+                left: 50%;
+                transform: translate(-50%, -50%);
                 background-image: url('../img/png-icons/inactive.png');
                 background-position: center center;
                 background-repeat: no-repeat;
