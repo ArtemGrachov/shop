@@ -13,8 +13,8 @@
             height: 100%;
             width: rem(1144px);
             transform: translateX(-50%);
-            z-index: -1;
             border-radius: 25%;
+            clip: rect(64px auto 500px auto);
         }
     }
     &-top {

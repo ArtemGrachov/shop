@@ -43,11 +43,14 @@
 }
 
 .slider {
-    position: relative;
     background: white;
     background-image: url('../img/backgrounds/slider-bg.png');
     background-repeat: repeat no-repeat;
     margin-bottom: rem(46px);
+    &-list {
+        @extend %list;
+        position: relative;
+    }
     &:after {
         display: block;
         height: rem(33px);
