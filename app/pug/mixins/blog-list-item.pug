@@ -1,19 +1,20 @@
 mixin blog-list-item(title)
     li.blog-item.block.block_bg
-        .blog__pic
-            img.blog__img(src="" alt=title)
-        .blog__title.title.title_lg #{title}
-        .blog-meta
-            ul.blog-meta-list
-                li.blog-meta-item
-                    | By 
-                    a.blog-meta__link(href="#") Admin
-                li.blog-meta-item
-                    | In 
-                    a.blog-meta__link(href="#") Awesomeness
-                li.blog-meta-item
-                    | Date 
-                    a.blog-meta__link(href="#") 28 oct 2013
-                li.blog-meta-item
-                    | 56 
-                    a.blog-meta__link(href="#") comments
+        .block__body
+            .blog__pic
+                img.blog__img(src="" alt=title)
+            .blog__title.title.title_lg #{title}
+            .blog-meta
+                ul.blog-meta-list
+                    li.blog-meta-item
+                        | By 
+                        a.blog-meta__link(href="#") Admin
+                    li.blog-meta-item
+                        | In 
+                        a.blog-meta__link(href="#") Awesomeness
+                    li.blog-meta-item
+                        | Date 
+                        a.blog-meta__link(href="#") 28 oct 2013
+                    li.blog-meta-item
+                        | 56 
+                        a.blog-meta__link(href="#") comments

@@ -11,18 +11,13 @@ a {
 input {
     transition: $transition;
     border: 1px solid $border-grey-dk;
-    &[type="text"],
-    &[type="password"],
-    &[type="email"],
-    &[type="number"] {
-        display: block;
-        width: 100%;
-        color: $grey-input;
-        padding: rem(9.5px);
-        line-height: 1;
-        &:focus {
-            color: black;
-        }
+    display: block;
+    width: 100%;
+    color: $grey-input;
+    padding: rem(9.5px);
+    line-height: 1;
+    &:focus {
+        color: black;
     }
     &[type="radio"],
     &[type="checkbox"] {
@@ -63,12 +58,7 @@ select {
         border-radius: rem(10px);
         font-size: rem(16px);
         letter-spacing: rem(0.4px);
-        &[type="text"],
-        &[type="password"],
-        &[type="email"],
-        &[type="number"] {
-            padding: rem(16px) rem(20px);
-        }
+        padding: rem(16px) rem(20px);
     }
 }
 

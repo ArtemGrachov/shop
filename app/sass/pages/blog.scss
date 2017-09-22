@@ -1,18 +1,21 @@
 .blog {
     &-list {
         @extend %list;
+        padding: rem(10px) 0 0;
     }
     &-item {
         border-radius: 0 0 rem(10px) rem(10px);
+        margin-bottom: rem(41px);
     }
     &__title {
         color: $text-grey-dk;
         font-size: rem(32px);
         font-family: 'MuseoSlab500';
         letter-spacing: rem(-1.55px);
+        margin-bottom: rem(4px);
     }
     &__pic {
-        height: rem(365px);
+        height: rem(357px);
     }
     &__img {
         max-width: 100%;

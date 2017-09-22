@@ -38,13 +38,14 @@ body {
 }
 
 .main {
-    width: rem(716px);
+    width: rem(718px);
     float: left;
 }
 
 .sidebar {
     float: left;
-    width: rem(344px);
+    width: rem(341px);
+    margin-left: rem(28px);
 }
 
 .left {
@@ -76,6 +77,7 @@ body {
     &-list {
         @extend %list;
         font-size: rem(16px);
+        margin: rem(5px) 0 rem(3px);
     }
     &-item {
         display: inline-block;
@@ -88,6 +90,7 @@ body {
         color: #6c6c6c;
         display: block;
         font-family: 'RalewayRegular';
+        padding: rem(8px) rem(13px);
         &:hover {
             text-decoration: none;
             background: $red;
@@ -303,6 +306,7 @@ body {
     color: white;
     font-size: rem(18px);
     padding: rem(16px) 0 rem(11px);
+    margin-bottom: rem(55px);
     font-family: 'MuseoSlab500';
     &__right {
         float: right;
@@ -320,7 +324,6 @@ body {
     &-list {
         @extend %list;
         float: left;
-        margin-left: rem(8px);
     }
     &-item {
         display: inline-block;
@@ -360,6 +363,7 @@ body {
         color: white;
         font-size: rem(50px);
         line-height: 1;
+        margin: rem(2px);
         &:hover {
             background: rgba($red, .3);
         }
