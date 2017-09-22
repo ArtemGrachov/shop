@@ -1,6 +1,22 @@
 .header {
     position: relative;
     background: white;
+    &-shadow {
+        position: relative;
+        &:after {
+            box-shadow: 0 rem(10px) rem(10px) rem(-5px) rgba(0, 0, 0, 0.15);
+            position: absolute;
+            display: block;
+            content: '';
+            top: 0;
+            left: 50%;
+            height: 100%;
+            width: rem(1144px);
+            transform: translateX(-50%);
+            z-index: -1;
+            border-radius: 25%;
+        }
+    }
     &-top {
         @extend %clearfix;
         letter-spacing: rem(-0.6px);
@@ -152,6 +168,7 @@
             display: block;
             color: white;
             border-top: 1px solid $red;
+            padding: rem(9px) rem(17px) rem(7px);
             &_active,
             &:hover {
                 background: #ff7979;
