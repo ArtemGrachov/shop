@@ -12,15 +12,15 @@ block content
                     .product__pic
                         img(src="" alt=title).product__img
                     .product-select
-                        .from-group
+                        .product-form-group
                             label(for="size").product__label Pick your desired size
                             +dropdown(['Medium (M)', 'Small (S)', 'Large (L)'],'size')
-                        .from-group
+                        .product-form-group
                             label(for="color").product__label Pick your desired color
                             +dropdown(['Yellow','Green','Blue','Red'],'color')
-                        .from-group
+                        .product-form-group
                             label(for="quantity").product__label Select a quantity
-                            input(type="number" id="quantity" value="12").product__input
+                            input(type="number" id="quantity" value="12").input.product__input
                 .product-title
                     .title.title_lg Chuck Norris Was Here T-Shirt
                     ul.product-category-list
@@ -60,12 +60,11 @@ block content
                             li.product-tabs-item.product-tabs-item_active
                                 .form-group.form_two-groups
                                     .form-group.form-group_sm
-                                        input(type="text" placeholder="Name")
-                                        input(type="email" placeholder="Email")
-                                        select.input-inline.input-inline_sm
-                                            option(value="rate") Rate
+                                        input(type="text" placeholder="Name").input.input_msg-form
+                                        input(type="email" placeholder="Email").input.input_msg-form
+                                        +dropdown(['Rate'],'rate')
                                     .form-group.form-group_lg
-                                        textarea(placeholder="Your review")
+                                        textarea(placeholder="Your review").textarea
                                 ul.product-review-list
                                     +review-item('John Doe','Not bad', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu purus sit amet nisl cursus tincidunt. Integer et libero pharetra, fringilla metus vitae, tempor lacus. Nulla vitae est leo. Nam gravida posuere')
                                     +review-item('Elizabeth Taylor','Very poor','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu purus sit amet nisl cursus tincidunt. Integer et libero pharetra, fringilla metus vitae, tempor lacus. Nulla vitae est leo. Nam gravida posuere')

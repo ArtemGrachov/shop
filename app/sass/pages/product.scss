@@ -14,15 +14,21 @@
         width: rem(255px);
         float: right;
     }
+    &-form-group {
+        margin: rem(10px) 0 rem(20px);
+    }
     &__label {
         font-family: 'RalewayBold';
         color: #2e2e2e;
         display: block;
         font-size: rem(16px);
+        margin-bottom: rem(11px);
     }
     &-title {
         border-top: rem(1px) solid #e3e3e3;
         border-bottom: rem(1px) solid #e3e3e3;
+        margin-top: rem(30px);
+        padding: rem(16px) 0 rem(19px);
     }
     &-category {
         &-list {
@@ -37,6 +43,8 @@
     }
     &-cart {
         display: flex;
+        line-height: 1;
+        margin: rem(27px) 0 rem(32px);
     }
     &__price {
         font-family: 'MuseoSlab500';
@@ -44,6 +52,8 @@
         border-right: rem(1px) solid #e3e3e3;
         font-size: rem(50px);
         color: $red;
+        margin-right: rem(18px);
+        padding: rem(11.5px) rem(21px) rem(11.5px) 0;
         &_old {
             color: #b5b5b5;
             text-decoration: line-through;
@@ -53,16 +63,25 @@
         vertical-align: middle;
         color: $text-grey-lg;
         font-size: rem(14px);
+        margin-left: rem(7px);
+    }
+    &-info {
+        border-top: rem(1px) solid #e3e3e3;
+        padding-top: rem(27px);
     }
     &-tabs {
         @extend %list;
         &-nav {
             &-item {
                 display: inline-block;
+                margin-right: rem(33px);
                 &_active {
                     .product-tabs-nav__link {
                         background: $red;
                         color: white;
+                        .text_red {
+                            color: white;
+                        }
                         &:hover {
                             background: none;
                             border-color: $red;
@@ -75,13 +94,15 @@
                 @extend %list;
                 font-size: rem(18px);
                 letter-spacing: rem(-0.85px);
+                margin-bottom: rem(26px);
             }
             &__link {
                 color: #4c4c4c;
-                border-radius: rem(15px);
+                border-radius: rem(10px);
                 display: inline-block;
                 border: rem(1px) solid transparent;
                 font-family: 'MuseoSlab500';
+                padding: rem(11px) rem(14px);
                 &:hover {
                     background: $red;
                     color: white;
@@ -109,9 +130,11 @@
         }
         &-item {
             border-top: rem(1px) solid #e3e3e3;
+            padding: rem(20px) 0 rem(26px);
         }
         &-wrap {
             position: relative;
+            padding-right: rem(86px);
             &:after {
                 content: counter(review-counter, decimal-leading-zero);
                 counter-increment: review-counter;
@@ -122,6 +145,7 @@
                 width: rem(76px);
                 text-align: center;
                 right: 0;
+                font-size: rem(50px);
                 top: 0;
                 height: 100%;
             }

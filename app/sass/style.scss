@@ -172,6 +172,7 @@ body {
     }
     &_lg {
         font-size: rem(32px);
+        padding: rem(18.5px) rem(37px);
     }
     &-list {
         @extend %list;
