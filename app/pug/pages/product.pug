@@ -14,12 +14,10 @@ block content
                     .product-select
                         .from-group
                             label(for="size").product__label Pick your desired size
-                            select(id="side").product__input
-                                option(value="medium") Medium (M)
+                            +dropdown(['Medium (M)', 'Small (S)', 'Large (L)'],'size')
                         .from-group
                             label(for="color").product__label Pick your desired color
-                            select(id="color").product__input
-                                option(value="yellow") Yellow
+                            +dropdown(['Yellow','Green','Blue','Red'],'color')
                         .from-group
                             label(for="quantity").product__label Select a quantity
                             input(type="number" id="quantity" value="12").product__input
@@ -81,7 +79,7 @@ block content
                         span.text_red .
                     .aside__body
                         .aside-form-group
-                            input(type="text" placeholder="Search product...").aside-input
+                            input(type="text" placeholder="Search product...").input.aside-input
                             input(type="submit" value="Search!").btn.aside-btn
                 li.aside-item
                     .aside__header Shop tags

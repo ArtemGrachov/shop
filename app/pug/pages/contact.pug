@@ -11,12 +11,13 @@ block content
             form.block__body.clearfix
                 .form_two-groups
                     .form-group.form-group_sm
-                        input(type="text" placeholder="Name").form-input
-                        input(type="email" placeholder="Email").form-input
-                        input(type="text" placeholder="Subject").form-input
-                    .from-group.form-group_lg
-                        textarea.form-textarea(placeholder="Your comment")
-                button(type="submit").btn.right Submit
+                        input(type="text" placeholder="Name").input.input_msg-form
+                        input(type="email" placeholder="Email").input.input_msg-form
+                        input(type="text" placeholder="Subject").input.input_msg-form
+                    .form-group.form-group_lg
+                        textarea.textarea(placeholder="Your comment")
+                .form__footer
+                    button(type="submit").btn.btn_md Submit
         aside.sidebar
             ul.aside-list
                 +aside-shopmint()

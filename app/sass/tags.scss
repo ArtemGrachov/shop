@@ -58,14 +58,26 @@ a {
             color: black;
         }
     }
+    &_msg-form {
+        margin-bottom: rem(13px);
+        padding: rem(14px) rem(10px);
+        &:last-child {
+            margin: 0;
+        }
+    }
 }
 
-textarea {
+.textarea {
+    color: $grey-input;
+    padding: rem(10px);
+    font-family: 'MuseoSlab500';
     width: 100%;
     height: 100%;
     display: block;
     resize: none;
     line-height: 1.65;
+    color: $grey-input;
+    border: rem(1px) solid $border-grey-lg;
 }
 
 table {
@@ -94,10 +106,6 @@ table {
         font-size: rem(12px);
         margin: 0;
     }
-}
-
-table {
-    font-size: rem(12px);
 }
 
 .table {
@@ -143,9 +151,7 @@ td {
 .form {
     &_two-groups {
         display: flex;
-        textarea {
-            height: 100%;
-        }
+        justify-content: space-between;
     }
     &-group {
         &_sm {
@@ -157,7 +163,6 @@ td {
         margin-bottom: rem(30px);
     }
     &__footer {
-        margin-top: rem(27px);
         text-align: right;
     }
     &-third {
