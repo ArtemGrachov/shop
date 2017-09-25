@@ -1,0 +1,6 @@
+mixin dropdown(list, id)
+    .dropdown
+        button(id=id).dropdown-btn #{list[0]}
+        ul.dropdown-list
+            each item in list
+                li.dropdown-item #{item}

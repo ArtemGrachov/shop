@@ -7,10 +7,10 @@ block content
     +page-nav("Blog")
     .container
         main.main.block.block_bg.blog-item
-            .blog__pic
-                img.blog__img(src="" alt=title)
-            .blog__title #{title}
-            .blog-meta
+            .block__body
+                .blog__pic
+                    img.blog__img(src="" alt=title)
+                .blog__title #{title}
                 ul.blog-meta-list
                     li.blog-meta-item
                         | By 
@@ -24,28 +24,28 @@ block content
                     li.blog-meta-item
                         | 56 
                         a.blog-meta__link(href="#") comments
-            .blog__content
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu purus sit amet nisl cursus tincidunt. Integer et libero pharetra, fringilla metus vitae, tempor lacus. Nulla vitae est leo. Nam gravida posuere  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu purus sit amet nisl cursus tincidunt. Integer et libero pharetra, fringilla metus vitae, tempor lacus. Nulla vitae est leo. 
-                .title.title_md A cool subtitle goes here
-                p Nulla vitae est leo. Nam gravida posuere  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu purus sit amet nisl cursus tincidunt. Integer et libero pharetra, fringilla metus vitae, tempor lacus. Nulla vitae est leo.
-            .blog-comments
-                .title.title_large 3 Comments. Get involved
-                ul.blog-comments-list
-                    +blog-comments-item
-                        ul.blog-comments-list
-                            +blog-comments-item
-                                ul.blog-comments-list
-                                    +blog-comments-item
-                form
-                    .title.form__title Leave a reply
-                    .form_two-groups
-                        .form-group.form-group_sm
-                            input(type="text" placeholder="Name").form-input
-                            input(type="email" placeholder="Email").form-input
-                            input(type="text" placeholder="Website").form-input
-                        .from-group.form-group_lg
-                            textarea.form-input(placeholder="Your comment")
-                    .form__footer
-                        button(type="submit").btn Submit
+                .blog__content
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu purus sit amet nisl cursus tincidunt. Integer et libero pharetra, fringilla metus vitae, tempor lacus. Nulla vitae est leo. Nam gravida posuere  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu purus sit amet nisl cursus tincidunt. Integer et libero pharetra, fringilla metus vitae, tempor lacus. Nulla vitae est leo. 
+                    .title.title_md A cool subtitle goes here
+                    p Nulla vitae est leo. Nam gravida posuere  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu purus sit amet nisl cursus tincidunt. Integer et libero pharetra, fringilla metus vitae, tempor lacus. Nulla vitae est leo.
+                .blog-comments
+                    .title.title_large 3 Comments. Get involved
+                    ul.blog-comments-list
+                        +blog-comments-item
+                            ul.blog-comments-list
+                                +blog-comments-item
+                                    ul.blog-comments-list
+                                        +blog-comments-item
+                    form
+                        .title.form__title Leave a reply
+                        .form_two-groups
+                            .form-group.form-group_sm
+                                input(type="text" placeholder="Name").form-input
+                                input(type="email" placeholder="Email").form-input
+                                input(type="text" placeholder="Website").form-input
+                            .from-group.form-group_lg
+                                textarea.form-input(placeholder="Your comment")
+                        .form__footer
+                            button(type="submit").btn Submit
         aside.sidebar
             include ../includes/blog-sidebar.pug

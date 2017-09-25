@@ -8,25 +8,42 @@ a {
     }
 }
 
-input {
+.input {
     transition: $transition;
-    border: 1px solid $border-grey-dk;
     display: block;
     width: 100%;
     color: $grey-input;
-    padding: rem(9.5px);
+    padding: rem(10px);
+    line-height: 1;
+    font-family: 'MuseoSlab500';
+    border: rem(1px) solid $border-grey-lg;
+    border-radius: rem(2px);
+    font-size: rem(12px);
     line-height: 1;
     &:focus {
         color: black;
     }
-    &[type="radio"],
-    &[type="checkbox"] {
+    &_rounded {
+        font-family: 'RalewayRegular';
+        border-radius: rem(10px);
+        font-size: rem(16px);
+        letter-spacing: rem(0.4px);
+        padding: rem(16px) rem(20px);
+    }
+    &_iconed {
+        padding-right: rem(28px);
+    }
+    &_width {
+        width: rem(329px);
+    }
+    &_check {
         display: none;
         &+label {
             &:before {
                 width: rem(16px);
                 height: rem(16px);
                 display: inline-block;
+                margin-right: rem(12px);
                 text-align: center;
                 background: white;
                 border: 1px solid $border-grey-md;
@@ -34,31 +51,12 @@ input {
                 color: white;
                 content: '\f00c';
                 line-height: 1;
+                transition: $transition;
             }
         }
         &:checked+label:before {
             color: black;
         }
-    }
-}
-
-input,
-textarea,
-select {
-    font-family: 'MuseoSlab500';
-    border: rem(1px) solid $border-grey-lg;
-    border-radius: rem(2px);
-    font-size: rem(12px);
-    line-height: 1;
-}
-
-.input {
-    &_rounded {
-        font-family: 'RalewayRegular';
-        border-radius: rem(10px);
-        font-size: rem(16px);
-        letter-spacing: rem(0.4px);
-        padding: rem(16px) rem(20px);
     }
 }
 
@@ -68,16 +66,6 @@ textarea {
     display: block;
     resize: none;
     line-height: 1.65;
-}
-
-select {
-    appearance: none;
-    width: 100%;
-    background: none;
-    color: $grey-input;
-    &:focus {
-        color: black;
-    }
 }
 
 table {
@@ -100,11 +88,36 @@ table {
         display: block;
         font-size: rem(14px);
         letter-spacing: (-0.4px);
+        margin-bottom: rem(7px);
+    }
+    &_sm {
+        font-size: rem(12px);
+        margin: 0;
     }
 }
 
 table {
     font-size: rem(12px);
+}
+
+.table {
+    &__img {
+        max-width: rem(36px);
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: rem(13px);
+    }
+    &__btn {
+        color: #ababab;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    &__input-number {
+        width: rem(95px);
+        text-align: center;
+        display: inline-block;
+    }
 }
 
 thead {
@@ -119,8 +132,12 @@ td {
     border: 1px solid $border-grey-lg;
 }
 
-.input-rounded {
-    border-radius: rem(10px);
+th {
+    padding: rem(17px) rem(25px) rem(15px);
+}
+
+td {
+    padding: rem(12px) rem(25px) rem(8px);
 }
 
 .form {
@@ -137,8 +154,10 @@ td {
         &_lg {
             width: rem(452px);
         }
+        margin-bottom: rem(30px);
     }
     &__footer {
+        margin-top: rem(27px);
         text-align: right;
     }
     &-third {

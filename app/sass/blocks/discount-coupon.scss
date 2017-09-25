@@ -1,0 +1,12 @@
+.coupon {
+    &-table {
+        td,
+        th {
+            padding: rem(23px) rem(33px);
+            &:nth-child(1) {
+                text-align: left;
+                width: 50%;
+            }
+        }
+    }
+}

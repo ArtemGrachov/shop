@@ -1,7 +1,7 @@
 .blog {
     &-list {
         @extend %list;
-        padding: rem(10px) 0 0;
+        padding: rem(10px) 0 rem(3px);
     }
     &-item {
         border-radius: 0 0 rem(10px) rem(10px);
@@ -22,11 +22,12 @@
         max-height: 100%;
     }
     &-meta {
-        text-transform: uppercase;
-        font-family: 'RalewayRegular';
         &-list {
             @extend %list;
             letter-spacing: rem(0.05px);
+            text-transform: uppercase;
+            font-family: 'RalewayRegular';
+            margin-bottom: rem(14px);
         }
         &-item {
             display: inline-block;
@@ -48,6 +49,7 @@
     }
     &__content {
         border-top: rem(1px) solid $border-grey-lg;
+        padding: rem(10px) 0 0;
     }
     &-comments {
         &-list {

@@ -2,10 +2,11 @@ mixin products-item(name, price, discount)
     li.products-item.block.block_bg.block_bg-hover
         .products-preview
             .products-preview__pic
-                img.products-preview__img(src="" alt="Product image")
+                img.products-preview__img(src="https://www.customink.com/mms/images/catalog/styles/297300/catalog_detail_image_large.jpg" alt=name)
             if discount
-                .products-preview__price #{price}
-                .products-preview__currency USD
+                .products-preview-price-wrap
+                    .products-preview__price #{price}
+                    .products-preview__currency USD
             .products__name.title.title_md #{name}
         .products-bottom
             .products-bottom__left

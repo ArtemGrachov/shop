@@ -1,5 +1,10 @@
 .checkout {
     &-table {
+        th {
+            &:nth-child(1) {
+                text-align: left;
+            }
+        }
         td {
             &:nth-child(1) {
                 text-align: left;
@@ -12,5 +17,10 @@
                 font-size: rem(14px);
             }
         }
+    }
+    &-form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 }

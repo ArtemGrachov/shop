@@ -14,8 +14,13 @@ block content
                 li.breadcrumbs-item Mens
             .page-nav__right
                 label(for="sort") Sort by
-                select(id="sort")
-                    option(value="price") Price (Low to High)
+                ul(id="sort").dropdown-list.dropdown-list_red
+                    li.dropdown-item.dropdown-item_red Price (Low to High)
+                    li.dropdown-item.dropdown-item_red Price (Hight to Low)
+                    li.dropdown-item.dropdown-item_red Name (A-Z)
+                    li.dropdown-item.dropdown-item_red Name (Z-A)
+                    li.dropdown-item.dropdown-item_red Quantity (Low to High)
+                    li.dropdown-item.dropdown-item_red Quantity (High to Low)
     .container
         ul.products-list
             +products-item('Dope T-Shirt', '799')
