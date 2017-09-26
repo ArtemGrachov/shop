@@ -11,13 +11,13 @@ block content
                 form.block__body.clearfix
                     .title.title_md.text_red Login to your account
                     .block__descr If you already have an account please login.
-                    .form-group
+                    .register-form-group
                         label(for="login_name").label_strong Enter username
-                        input(type="text" id="login_name")
+                        input(type="text" id="login_name").input
                     .form-group
                         label(for="login_password").label_strong  Enter password
-                        input(type="password" id="login_password")
-                    .form-group.inline
+                        input(type="password" id="login_password").input
+                    .register-form-group.inline
                         input(type="checkbox" id="remember").input_check
                         label(for="remember") Remember me
                     a(href="#" target="_blank").register__link-grey Forgot my password
@@ -26,17 +26,17 @@ block content
                 form.block__body.clearfix
                     .title.title_md.text_red Sign up for an account
                     .block__descr Signing up it's easy and will take only a few moments
-                    .form-group
+                    .register-form-group
                         label(for="reg_username").label_strong  Enter username
-                        input(type="text" id="reg_username")
-                    .form-group
+                        input(type="text" id="reg_username").input
+                    .register-form-group
                         label(for="reg_password").label_strong  Enter password
-                        input(type="password" id="reg_password")
-                    .form-group
+                        input(type="password" id="reg_password").input
+                    .register-form-group
                         label(for="reg_pass_repeat").label_strong  Re-enter password
-                        input(type="password" id="reg_pass_repeat")
-                    .form-group
+                        input(type="password" id="reg_pass_repeat").input
+                    .register-form-group
                         label(for="reg_email").label_strong  Enter your email
-                        input(type="email" id="reg_email")
+                        input(type="email" id="reg_email").input
                     input(type="submit" value="Sign up").btn.btn_sm.right
                     

@@ -1,6 +1,8 @@
 .products {
     &-btn {
         font-size: rem(18px);
+        padding: rem(8px) rem(13px);
+        border-radius: rem
     }
     &-list {
         @extend %list;
