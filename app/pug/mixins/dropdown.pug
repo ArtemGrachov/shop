@@ -1,6 +1,11 @@
-mixin dropdown(list, id)
+mixin dropdown(list, id, cls)
+    if mod
+        - $class="dropdown-btn " + cls
+    else
+        - $class="dropdown-btn"
+
     .dropdown
-        button(id=id).dropdown-btn #{list[0]}
+        button(id=id class=$class) #{list[0]}
         ul.dropdown-list
             each item in list
                 li.dropdown-item #{item}
