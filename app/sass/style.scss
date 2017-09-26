@@ -397,16 +397,49 @@ body {
 
 .dropdown {
     position: relative;
+    &_active {
+        .dropdown {
+            &-list {
+                display: block;
+            }
+            &-btn {
+                color: black;
+                &:after {
+                    background: $text-grey-lg;
+                }
+            }
+        }
+    }
     &-btn {
         background: white;
         border: rem(1px) solid $border-grey-lg;
         border-radius: rem(2px);
         font-size: rem(12px);
+        font-family: 'RalewayBold';
         line-height: 1;
-        padding: rem(11px) rem(21px);
+        padding: rem(15px) rem(10px);
         text-align: left;
         width: 100%;
         display: block;
+        color: $grey-input;
+        transition: $transition;
+        &:focus {
+            color: black;
+        }
+        position: relative;
+        &:after {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: rem(48px);
+            content: '\f0d7';
+            height: 100%;
+            text-align: center;
+            padding: rem(15px) 0;
+            border-left: 1px solid $border-grey-lg;
+            font-family: 'FontAwesome';
+            display: block;
+        }
     }
     &-list {
         position: absolute;
@@ -414,10 +447,8 @@ body {
         background: white;
         @extend %list;
         width: 100%;
+        z-index: 1;
         box-shadow: 0 0 rem(15px) 0 $border-grey-lg;
-    }
-    &-list_active {
-        display: block;
     }
     &-item {
         padding: rem(13px) rem(21px);
