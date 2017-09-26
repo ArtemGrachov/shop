@@ -122,6 +122,12 @@
             display: inline-block;
             position: relative;
             margin-right: rem(28px);
+            &_active {
+                .cat-nav__link {
+                    color: $red;
+                    text-decoration: none;
+                }
+            }
             &:hover {
                 .cat-drop-list {
                     position: absolute;
@@ -134,8 +140,7 @@
             color: $text-grey-md;
             padding: rem(18px) 0 rem(19px);
             display: block;
-            &:hover,
-            &_active {
+            &:hover {
                 color: $red;
                 text-decoration: none;
             }

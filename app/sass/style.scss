@@ -415,7 +415,7 @@ body {
         border: rem(1px) solid $border-grey-lg;
         border-radius: rem(2px);
         font-size: rem(12px);
-        font-family: 'RalewayBold';
+        font-family: 'MuseoSlab500';
         line-height: 1;
         padding: rem(15px) rem(10px);
         text-align: left;
@@ -445,12 +445,19 @@ body {
         position: absolute;
         display: none;
         background: white;
+        color: black;
+        font-size: rem(12px);
         @extend %list;
         width: 100%;
         z-index: 1;
-        box-shadow: 0 0 rem(15px) 0 $border-grey-lg;
+        box-shadow: 0 rem(5px) rem(15px) 0 $border-grey-lg;
     }
     &-item {
         padding: rem(13px) rem(21px);
+        transition: $transition;
+        &:hover {
+            background: $red;
+            color: white;
+        }
     }
 }

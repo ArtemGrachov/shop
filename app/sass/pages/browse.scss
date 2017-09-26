@@ -1,0 +1,22 @@
+.browse {
+    &-sort-wrap {
+        float: right;
+        padding: rem(8px) 0;
+    }
+    &-select {
+        display: inline-block;
+        margin-left: rem(6px);
+        width: rem(255px);
+        .dropdown {
+            &-btn {
+                color: white;
+                background: #fc7373;
+                border: none;
+                &:after {
+                    background: white;
+                    color: $red;
+                }
+            }
+        }
+    }
+}
