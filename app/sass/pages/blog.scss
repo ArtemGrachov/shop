@@ -9,13 +9,11 @@
     }
     &__title {
         color: $text-grey-dk;
-        font-size: rem(32px);
         font-family: 'MuseoSlab500';
         letter-spacing: rem(-1.55px);
         margin-bottom: rem(4px);
     }
     &__pic {
-        min-height: rem(357px);
         overflow: hidden;
         border-radius: rem(10px);
     }
