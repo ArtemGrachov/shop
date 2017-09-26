@@ -140,6 +140,9 @@ body {
             }
         }
     }
+    @include mediaMax(375px) {
+        font-size: rem(30px);
+    }
 }
 
 .btn {

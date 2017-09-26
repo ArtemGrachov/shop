@@ -47,9 +47,9 @@
     background-image: url('../img/backgrounds/slider-bg.png');
     background-repeat: repeat no-repeat;
     margin-bottom: rem(46px);
+    position: relative;
     &-list {
         @extend %list;
-        position: relative;
     }
     &:after {
         display: block;

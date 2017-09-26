@@ -15,6 +15,9 @@
             transform: translateX(-50%);
             border-radius: 25%;
             clip: rect(64px auto 500px auto);
+            @include mediaMax(1032px) {
+                content: none;
+            }
         }
     }
     &-top {
@@ -23,16 +26,27 @@
         background: $red;
         border-bottom: 1px solid #f38080;
         color: white;
+        @include mediaMax(840px) {
+            text-align: center;
+        }
         &-nav {
+            float: left;
             &-list {
                 @extend %list;
                 font-size: rem(12px);
+                @include mediaMax(500px) {
+                    margin-bottom: rem(25px);
+                }
             }
             &-item {
                 display: inline-block;
                 margin-right: rem(30px);
                 .fa {
                     margin-right: rem(10px);
+                }
+                @include mediaMax(500px) {
+                    display: block;
+                    margin: 0;
                 }
             }
             &__link {
@@ -45,36 +59,74 @@
                     border-color: white;
                 }
             }
+            @include mediaMax(840px) {
+                float: none;
+            }
+        }
+    }
+    &-main {
+        padding: rem(29px) 0 rem(30px);
+        @include mediaMax(890px) {
+            text-align: center;
+        }
+    }
+    &-logo {
+        float: left;
+        margin-top: rem(16px);
+        margin-left: rem(-13px);
+        @include mediaMax(890px) {
+            float: none;
+            margin: 0 auto rem(30px);
+            display: inline-block;
         }
     }
     &-greeter {
         letter-spacing: rem(-0.65px);
-        margin: rem(5px) rem(6px) 0 0;
+        float: right;
+        margin: rem(5px);
         &__link {
             color: white;
         }
-    }
-    &-main {
-        padding: rem(29px) 0 rem(17px);
-        .logo {
-            margin-top: rem(16px);
-            margin-left: rem(-13px);
+        @include mediaMax(840px) {
+            float: none;
         }
     }
     &-bottom {
         border-top: 1px solid $border-grey-md;
         &-right {
-            padding-top: rem(12px);
+            padding: rem(12px) 0;
+            float: right;
+            @include mediaMax(1020px) {
+                float: none;
+                text-align: center
+            }
         }
     }
     &-contacts {
+        float: right;
+        @include mediaMax(890px) {
+            float: none;
+            margin: auto;
+        }
         &-list {
+            @extend %list;
+            margin: rem(13px) 0 rem(10px);
+            @include mediaMax(890px) {
+                display: inline-block;
+            }
             &-inner {
                 border-left: 1px solid $border-grey-md;
                 padding-left: rem(18px);
                 padding-right: rem(1px);
                 margin: 0 0 0 rem(16px);
                 display: inline-block;
+                @include mediaMax(600px) {
+                    border-left: none;
+                    display: block;
+                    margin: rem(15px) rem(20px) 0;
+                    padding: rem(15px) 0 0;
+                    border-top: 1px solid $border-grey-md;
+                }
             }
         }
         &-item {
@@ -83,6 +135,9 @@
             .fa {
                 color: $red;
                 font-size: rem(44px);
+            }
+            @include mediaMax(600px) {
+                margin: 0;
             }
         }
     }
@@ -93,9 +148,14 @@
             vertical-align: middle;
             font-family: 'RalewayBold';
             width: rem(158px);
+            @include mediaMax(450px) {
+                width: 100%;
+                text-align: center;
+            }
         }
         &-wrap {
             position: relative;
+            display: inline-block;
             margin-left: rem(8px);
             &:after {
                 display: inline-block;
@@ -106,12 +166,22 @@
                 transform: translateY(-50%);
                 content: '\f002';
             }
+            @include mediaMax(450px) {
+                display: block;
+                width: 100%;
+                margin: 0;
+            }
         }
     }
 }
 
 .cat {
     &-nav {
+        float: left;
+        @include mediaMax(1020px) {
+            float: none;
+            text-align: center;
+        }
         &-list {
             @extend %list;
             letter-spacing: rem(-0.8px);
@@ -122,6 +192,10 @@
             display: inline-block;
             position: relative;
             margin-right: rem(28px);
+            @include mediaMax(640px) {
+                display: block;
+                margin: 0;
+            }
             &_active {
                 .cat-nav__link {
                     color: $red;
@@ -130,9 +204,7 @@
             }
             &:hover {
                 .cat-drop-list {
-                    position: absolute;
                     display: block;
-                    top: 100%;
                 }
             }
         }
@@ -149,14 +221,23 @@
     &-drop {
         &-list {
             @extend %list;
+            position: absolute;
+            top: 100%;
             font-size: rem(16px);
             letter-spacing: rem(-0.8px);
+            transition: $transition;
             width: rem(158px);
             display: none;
             border-radius: 0 0 rem(10px) rem(10px);
             overflow: hidden;
             background: $red;
             box-shadow: rem(5px) rem(5px) rem(5px) rem(5px) rgba(#cacaca, .25);
+            @include mediaMax(640px) {
+                position: static;
+                width: 100%;
+                border-radius: 0;
+                box-shadow: none;
+            }
         }
         &-item {
             z-index: 1;
@@ -185,6 +266,7 @@
 
 .cart {
     padding: rem(4px) rem(13px);
+    display: inline-block;
     letter-spacing: rem(-0.1px);
     &-icon,
     &-descr,
@@ -203,4 +285,8 @@
     vertical-align: middle;
     border: 1px solid $border-grey-dk;
     border-radius: rem(2px);
+    @include mediaMax(450px) {
+        display: block;
+        margin-bottom: rem(12px);
+    }
 }

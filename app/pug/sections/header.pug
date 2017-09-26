@@ -1,7 +1,7 @@
 header.header
     .header-top
         .container
-            nav.header-top-nav.left
+            nav.header-top-nav
                 ul.header-top-nav-list
                     li.header-top-nav-item
                         a.header-top-nav__link(href="#")
@@ -19,16 +19,16 @@ header.header
                         a.header-top-nav__link(href="#")
                             i.fa.fa-shopping-cart(aria-hidden="true")
                             | Checkout
-            .header-greeter.right Welcome, 
+            .header-greeter Welcome, 
                 a.header-greeter__link(href="#") visitor.
     .header-main
         .container
-            .logo.left
+            .logo.header-logo
                 .logo__char S
                 .logo__text
                     | HeroWP
                     span.text_red .com
-            .header-contacts.right
+            .header-contacts
                 ul.header-contacts-list
                     li.header-contacts-item
                         i.fa.fa-phone(aria-hidden="true")
@@ -50,15 +50,15 @@ header.header
                                 | email.com
     .header-bottom.header-shadow
         .container
-            nav.cat-nav.left
+            nav.cat-nav
                 include ../includes/cat-nav.pug
-            .header-bottom-right.right
-                .cart.inline
+            .header-bottom-right
+                .cart
                     .cart-icon
                         i.fa.fa-shopping-basket(aria-hidden="true")
                     .cart-descr Cart 
                         span.text_red 3
                         |  items
                     .cart__price 47,99 $
-                .header-search-wrap.inline
+                .header-search-wrap
                     input(type="text" placeholder="Search...").input.input_iconed.header-search-input
