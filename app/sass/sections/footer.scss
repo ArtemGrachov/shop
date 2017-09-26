@@ -5,8 +5,11 @@
     position: relative;
     padding-bottom: rem(45px);
     color: white;
+    @include mediaMax(720px) {
+        padding-bottom: rem(70px);
+    }
     &-bottom {
-        background: #262626; // letter-spacing: rem(-0.45px);
+        background: #262626;
         color: #505050;
         padding: rem(13px) 0 0;
         height: rem(45px);
@@ -14,6 +17,11 @@
         bottom: 0;
         width: 100%;
         font-size: rem(12px);
+        @include mediaMax(720px) {
+            height: rem(70px);
+            padding: rem(13px) rem(40px);
+            text-align: center;
+        }
     }
     &-search {
         max-width: rem(902px);
@@ -32,6 +40,15 @@
             padding: rem(14px) rem(26px) rem(12px);
             letter-spacing: rem(-0.3px);
             margin-left: rem(18px);
+        }
+        @include mediaMax(670px) {
+            display: block;
+            &__btn {
+                display: block;
+                width: rem(200px);
+                text-align: center;
+                margin: rem(20px) auto 0;
+            }
         }
     }
 }

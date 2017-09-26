@@ -12,6 +12,11 @@
     &__text-block {
         margin: rem(4px) 0 rem(28px);
     }
+    &-media-none {
+        @include mediaMax(1100px) {
+            display: none;
+        }
+    }
     &-list {
         @extend %list;
         &_inline {
@@ -19,6 +24,12 @@
             justify-content: space-between;
             .aside-item {
                 width: rem(344px);
+            }
+            @include mediaMax(1100px) {
+                display: block;
+                .aside-item {
+                    width: 100%;
+                }
             }
         }
     }
