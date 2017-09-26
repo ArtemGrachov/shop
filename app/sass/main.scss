@@ -42,6 +42,7 @@ $body-bg: #f2f2f2;
 $html-font-size: 13px;
 $transition: 300ms;
 $footer-height: 659px;
+$footer-height-mobile: 700px;
 @import "./_misc/mixins.scss";
 @import "./tags.scss";
 @import "./style.scss";

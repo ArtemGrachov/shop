@@ -1,12 +1,19 @@
-.userful-info {
+.useful-info {
     &-list {
         @extend %list;
         display: flex;
         align-items: stretch;
         justify-content: space-between;
+        margin: 0 rem(-14px);
+        @include mediaMax(830px) {
+            display: block;
+        }
     }
     &-item {
-        width: rem(344px);
+        margin: 0 rem(14px);
+        @include mediaMax(830px) {
+            margin-bottom: rem(30px);
+        }
     }
     &__icon {
         width: rem(85px);
@@ -24,6 +31,20 @@
             top: 0;
             right: 0;
             margin-left: rem(21px);
+        }
+        @include mediaMax(1145px) {
+            height: rem(128px);
+            &:after {
+                display: none;
+                content: none;
+            }
+        }
+    }
+    &-block {
+        display: flex;
+        justify-content: space-between;
+        @include mediaMax(1145px) {
+            display: block;
         }
     }
     &__body {
@@ -85,6 +106,10 @@
         top: 45.5%;
         text-align: center;
         line-height: 1;
+        @include mediaMax(560px) {
+            width: rem(110px);
+            height: rem(110px);
+        }
         &_lg {
             box-shadow: rem(-12px) rem(-12px) 0 rem(12px) rgba(#636363, .2);
             background: $red;
@@ -99,18 +124,37 @@
                     font-family: 'RalewayBold';
                     letter-spacing: rem(-4px);
                     margin-bottom: rem(14px);
+                    @include mediaMax(420px) {
+                        font-size: rem(45px);
+                    }
                 }
+            }
+            @include mediaMax(420px) {
+                width: rem(220px);
+                height: rem(220px);
             }
         }
         &_left {
             left: rem(93px);
+            @include mediaMax(875px) {
+                left: rem(30px);
+                top: 30%;
+            }
         }
         &_right {
             right: rem(93px);
+            @include mediaMax(875px) {
+                right: rem(30px);
+                top: 10%;
+            }
         }
         &_center {
             left: 50%;
             transform: translateX(-50%);
+            @include mediaMax(630px) {
+                left: 60%;
+                top: 52%;
+            }
         }
         &__text {
             font-size: rem(18px);
@@ -121,6 +165,12 @@
                 letter-spacing: rem(-2.4px);
                 &_symbol {
                     font-size: rem(24px);
+                }
+            }
+            @include mediaMax(560px) {
+                font-size: rem(16px);
+                &-lg {
+                    font-size: rem(32px);
                 }
             }
         }

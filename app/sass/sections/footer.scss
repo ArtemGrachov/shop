@@ -6,7 +6,8 @@
     padding-bottom: rem(45px);
     color: white;
     @include mediaMax(720px) {
-        padding-bottom: rem(70px);
+        height: $footer-height-mobile;
+        padding-bottom: rem(120px);
     }
     &-bottom {
         background: #262626;
@@ -21,6 +22,12 @@
             height: rem(70px);
             padding: rem(13px) rem(40px);
             text-align: center;
+        }
+        @include mediaMax(720px) {
+            height: rem(90px);
+        }
+        @include mediaMax(400px) {
+            height: rem(120px);
         }
     }
     &-search {
