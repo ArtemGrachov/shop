@@ -4,6 +4,7 @@ a {
     transition: $transition;
     color: $red;
     &:hover {
+        color: red;
         text-decoration: underline;
     }
 }
@@ -13,7 +14,7 @@ a {
     display: block;
     width: 100%;
     color: $grey-input;
-    padding: rem(10px);
+    padding: rem(10px) rem(12px);
     line-height: 1;
     font-family: 'MuseoSlab500';
     border: rem(1px) solid $border-grey-lg;
@@ -170,5 +171,10 @@ td {
     }
     &-two-thirds {
         width: rem(683px);
+    }
+    &__title {
+        padding-bottom: rem(21px);
+        margin-bottom: rem(40px);
+        border-bottom: rem(1px) solid $border-grey-lg;
     }
 }

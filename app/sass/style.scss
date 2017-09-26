@@ -166,9 +166,11 @@ body {
         padding: rem(7.5px) rem(35px);
         border-radius: rem(5px);
     }
+    &_sb {
+        padding: rem(12px) rem(16px);
+    }
     &_md {
         padding: rem(9px) rem(30px);
-        font-size: rem(18px);
     }
     &_lg {
         font-size: rem(32px);

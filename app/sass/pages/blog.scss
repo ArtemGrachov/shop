@@ -15,10 +15,14 @@
         margin-bottom: rem(4px);
     }
     &__pic {
-        height: rem(357px);
+        min-height: rem(357px);
+        overflow: hidden;
+        border-radius: rem(10px);
     }
     &__img {
         max-width: 100%;
+        display: block;
+        margin: auto;
         max-height: 100%;
     }
     &-meta {
@@ -54,23 +58,34 @@
     &-comments {
         &-list {
             @extend %list;
+            .blog-comments-list {
+                margin-left: rem(30px);
+            }
         }
         &-item {
             display: flex;
+            padding-bottom: rem(33px);
+            margin-bottom: rem(25px);
         }
         &-user {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-content: center;
+            padding: 0 rem(10px);
+            border-right: 1px solid $border-grey-lg;
+            flex-grow: 0;
+            flex-shrink: 0;
+            width: rem(180px);
+            margin-right: rem(24px);
         }
         &__avatar {
-            width: rem(178px);
             flex-shrink: 0;
         }
         &__img {
             max-width: 100%;
             max-height: 100%;
+            margin: auto;
             display: block;
         }
         &__name {
@@ -81,16 +96,19 @@
         }
         &-meta {
             @extend %list;
+            margin-bottom: rem(7px);
             &-item {
                 display: inline-block;
                 font-family: 'RalewayBold';
                 font-size: rem(12px);
                 letter-spacing: rem(-0.13px);
+                margin-right: rem(26px);
             }
             &__link {
                 color: #2a2a2a;
                 .fa {
                     color: $red;
+                    margin-left: rem(12px);
                 }
                 &:hover {
                     color: $red;

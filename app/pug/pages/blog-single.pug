@@ -9,7 +9,7 @@ block content
         main.main.block.block_bg.blog-item
             .block__body
                 .blog__pic
-                    img.blog__img(src="" alt=title)
+                    img.blog__img(src="http://lorempixel.com/1024/768/nature" alt=title)
                 .blog__title #{title}
                 ul.blog-meta-list
                     li.blog-meta-item
@@ -29,7 +29,7 @@ block content
                     .title.title_md A cool subtitle goes here
                     p Nulla vitae est leo. Nam gravida posuere  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu purus sit amet nisl cursus tincidunt. Integer et libero pharetra, fringilla metus vitae, tempor lacus. Nulla vitae est leo.
                 .blog-comments
-                    .title.title_large 3 Comments. Get involved
+                    .title.title_large.form__title 3 Comments. Get involved
                     ul.blog-comments-list
                         +blog-comments-item
                             ul.blog-comments-list
@@ -37,8 +37,7 @@ block content
                                     ul.blog-comments-list
                                         +blog-comments-item
                     form
-                        .title.form__title Leave a reply
-                        .divider
+                        .title.title_large.form__title Leave a reply
                         .form_two-groups
                             .form-group.form-group_sm
                                 input(type="text" placeholder="Name").input.input_msg-form
@@ -47,6 +46,6 @@ block content
                             .form-group.form-group_lg
                                 textarea.textarea(placeholder="Your comment")
                         .form__footer
-                            button(type="submit").btn.btn-md Submit
+                            button(type="submit").btn.btn_sb Submit
         aside.sidebar
             include ../includes/blog-sidebar.pug
