@@ -5,21 +5,25 @@ block variables
 
 block content
     .slider
-        ul.slider-list.container
+        ul.slider-list
             li.slider-item
-                .slider-circle.slider-circle_left
-                    .slider-circle-content
-                        .slider-circle__text Delivery
-                        .slider-circle__text-lg Free
-                .slider-circle.slider-circle_lg.slider-circle_center
-                    .slider-circle-content
-                        .slider-circle__text-lg Great sale
-                        .slider-circle__text On all models
-                .slider-circle.slider-circle_right
-                    .slider-circle-content
-                        .slider-circle__text Starting from
-                        .slider-circle__text-lg 429
-                            span.slider-circle__text-lg_symbol $
+                .container.slider-container
+                    .slider-circle.slider-circle_left
+                        .slider-circle-content
+                            .slider-circle__text Delivery
+                            .slider-circle__text-lg Free
+                    .slider-circle.slider-circle_lg.slider-circle_center
+                        .slider-circle-content
+                            .slider-circle__text-lg Great sale
+                            .slider-circle__text On all models
+                    .slider-circle.slider-circle_right
+                        .slider-circle-content
+                            .slider-circle__text Starting from
+                            .slider-circle__text-lg 429
+                                span.slider-circle__text-lg_symbol $
+            +slider-item('Slide 2','Duis elit reprehenderit reprehenderit exercitation nostrud veniam irure mollit ut enim aliquip.')
+            +slider-item('Third slide','Exercitation cillum duis ea pariatur occaecat velit officia eu dolore nulla tempor consequat cillum. Mollit do exercitation duis do voluptate ea anim esse magna mollit sunt sit sunt aliquip. Esse laborum incididunt nostrud esse eu velit consequat eiusmod.')
+            +slider-item('4th slide!', 'Nisi ad commodo cillum pariatur officia fugiat eu. Incididunt irure tempor aute nostrud aliqua nulla magna et adipisicing aliqua enim. Sint aliqua voluptate aliquip qui est consectetur Lorem labore aute do id consequat dolore. Lorem cupidatat irure exercitation do adipisicing eiusmod ad reprehenderit. Laborum sit mollit veniam mollit non excepteur ad ullamco est mollit amet eu.')
         .slider-controls
             a.pgn-btn.slider-btn.slider-btn_left(href="#")
                 i.fa.fa-angle-left(aria-hidden="true")
