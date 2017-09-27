@@ -71,27 +71,6 @@ body {
     }
 }
 
-.left {
-    float: left;
-}
-
-.right {
-    float: right;
-}
-
-.inline {
-    display: inline-block;
-}
-
-.text-left {
-    text-align: left;
-}
-
-.flex {
-    display: flex;
-    justify-content: space-between;
-}
-
 .clearfix {
     @extend %clearfix;
 }
@@ -203,6 +182,10 @@ body {
         font-size: rem(32px);
         padding: rem(18.5px) rem(37px);
     }
+    @include mediaMax(560px) {
+        display: block;
+        width: 100%;
+    }
     &-list {
         @extend %list;
         text-align: right;
@@ -223,6 +206,12 @@ body {
         border-color: #3f4044;
         &:hover {
             color: #3f4044;
+        }
+    }
+    &-bottom-group {
+        float: right;
+        @include mediaMax(560px) {
+            float: none;
         }
     }
 }

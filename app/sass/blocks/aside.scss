@@ -24,6 +24,13 @@
             justify-content: space-between;
             .aside-item {
                 width: rem(344px);
+                margin: 0 rem(10px);
+                &:first-child {
+                    margin-left: 0;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
             }
             @include mediaMax(940px) {
                 display: block;
@@ -39,7 +46,7 @@
                 &__header {
                     border-color: $border-grey-bl;
                 }
-                &-products {
+                &-thumbs {
                     &-item {
                         border-color: $border-grey-bl;
                     }
@@ -62,7 +69,7 @@
             }
         }
     }
-    &-products {
+    &-thumbs {
         &-list {
             @extend %list;
         }
@@ -82,6 +89,9 @@
             padding: 0 rem(10px);
             flex-shrink: 0;
             flex-grow: 0;
+            @include mediaMax(1080px) {
+                display: none;
+            }
         }
         &__img {
             max-width: 100%;

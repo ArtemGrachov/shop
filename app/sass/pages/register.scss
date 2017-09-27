@@ -11,5 +11,12 @@
     }
     &-form-group {
         margin-bottom: rem(16px);
+        display: inline-block;
+        @include mediaMax(490px) {
+            display: block;
+        }
+    }
+    &__sub-btn {
+        float: right;
     }
 }

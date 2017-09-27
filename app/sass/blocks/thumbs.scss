@@ -1,4 +1,4 @@
-.products {
+.thumbs {
     &-btn {
         font-size: rem(18px);
         padding: rem(8px) rem(13px);
@@ -53,12 +53,14 @@
             border-right: 1px solid $border-grey-md;
             flex-grow: 0;
             flex-shrink: 0;
+            padding: 0 rem(5px);
             @include mediaMax(710px) {
                 width: 50%;
             }
         }
         &__right {
             margin-left: rem(4px);
+            padding: 0 rem(5px);
             width: 100%;
             @include mediaMax(710px) {
                 width: 50%;
