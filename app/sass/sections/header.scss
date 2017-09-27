@@ -46,6 +46,9 @@
                     margin-bottom: rem(25px);
                     font-size: rem(14px);
                     display: none;
+                    &_active {
+                        display: block;
+                    }
                 }
             }
             &-item {
@@ -212,6 +215,9 @@
             font-size: rem(16px);
             @include mediaMax(640px) {
                 display: none;
+                &_active {
+                    display: block;
+                }
             }
         }
         &-item {

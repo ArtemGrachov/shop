@@ -4,13 +4,11 @@ const menuToggle = function (classBlock) {
 
     btn.on('click', (e) => {
         e.preventDefault();
-        list.slideToggle();
-    })
-    $(window).resize(() => {
-        if (btn.css('display') === 'none') {
+        list.slideToggle(500, function () {
+            list.toggleClass(`${classBlock}-list_active`);
             list.css({
                 display: ''
             })
-        }
+        });
     })
 }
