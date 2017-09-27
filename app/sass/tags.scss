@@ -78,6 +78,9 @@ a {
     line-height: 1.65;
     color: $grey-input;
     border: rem(1px) solid $border-grey-lg;
+    @include mediaMax(650px) {
+        min-height: rem(150px);
+    }
 }
 
 table {
@@ -152,13 +155,28 @@ td {
     &_two-groups {
         display: flex;
         justify-content: space-between;
+        @include mediaMax(650px) {
+            display: block;
+        }
     }
     &-group {
         &_sm {
             width: rem(197px);
+            @include mediaMax(1100px) {
+                width: 29%;
+            }
+            @include mediaMax(650px) {
+                width: 100%;
+            }
         }
         &_lg {
             width: rem(452px);
+            @include mediaMax(1100px) {
+                width: 69%;
+            }
+            @include mediaMax(650px) {
+                width: 100%;
+            }
         }
         margin-bottom: rem(30px);
     }
@@ -167,9 +185,15 @@ td {
     }
     &-third {
         width: rem(329px);
+        @include mediaMax(780px) {
+            width: 100%;
+        }
     }
     &-two-thirds {
         width: rem(683px);
+        @include mediaMax(780px) {
+            width: 100%;
+        }
     }
     &__title {
         padding-bottom: rem(21px);

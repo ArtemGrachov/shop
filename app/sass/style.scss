@@ -38,6 +38,12 @@ body {
     padding: 0 rem(28px);
     max-width: 1144px;
     @extend %clearfix;
+    @include mediaMax(670px) {
+        padding: 0 rem(14px);
+    }
+    @include mediaMax(425px) {
+        padding: 0 rem(10px);
+    }
 }
 
 .main {
@@ -171,6 +177,7 @@ body {
     border: 1px solid $red;
     font-size: rem(18px);
     transition: $transition;
+    text-align: center;
     cursor: pointer;
     &:hover {
         background: none;
@@ -238,12 +245,9 @@ body {
     &_md {
         font-size: rem(18px);
         letter-spacing: rem(-0.38px);
-    }
-    @include mediaMax(650px) {
-        font-size: rem(24px);
-    }
-    @include mediaMax(480px) {
-        font-size: rem(20px);
+        @include mediaMax(650px) {
+            font-size: rem(16px);
+        }
     }
 }
 
@@ -372,9 +376,15 @@ body {
     font-size: rem(18px);
     margin-bottom: rem(55px);
     font-family: 'MuseoSlab500';
+    @include mediaMax(500px) {
+        font-size: rem(14px);
+    }
     &__right {
         float: right;
         padding: rem(16px) 0 rem(11px);
+        @include mediaMax(500px) {
+            display: none;
+        }
     }
     select {
         background: #fc7373;

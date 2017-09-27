@@ -10,6 +10,23 @@
             }
         }
     }
+    &-left {
+        float: left;
+        @include mediaMax(650px) {
+            float: none;
+            display: block;
+            width: 100%;
+            margin-bottom: rem(10px);
+        }
+    }
+    &-right {
+        float: right;
+        @include mediaMax(650px) {
+            float: none;
+            display: block;
+            width: 100%;
+        }
+    }
     &-table {
         th {
             &:nth-child(1) {

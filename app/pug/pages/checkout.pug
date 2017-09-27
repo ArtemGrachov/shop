@@ -8,12 +8,12 @@ block content
     .container
         .block.block_bg
             .block__body.clearfix
-                .title.title_md.text_red.left Do you already have an account?
-                a(href="#").btn.btn_xs.right Login
+                .title.title_md.text_red.checkout-left Do you already have an account?
+                a(href="#").btn.btn_xs.checkout-right Login
         .block.block_bg
             .block__body.clearfix
-                .title.title_md.text_red.left Create an accountif you don't have one
-                a(href="#").btn.btn_xs.right Create
+                .title.title_md.text_red.checkout-left Create an accountif you don't have one
+                a(href="#").btn.btn_xs.checkout-right Create
         form.block.block_bg
             .block__header
                 .title.title_md.text_red Please enter your billing address.
@@ -25,7 +25,7 @@ block content
                 .form-group.form-two-thirds
                     label(for="first_name").label_strong Last name 
                         span.text_red *
-                    input(type="text" id="last_name").input.input_width
+                    input(type="text" id="last_name").input.form-third
                 .form-group.form-third
                     label(for="email").label_strong Email 
                         span.text_red *
@@ -33,7 +33,7 @@ block content
                 .form-group.form-two-thirds
                     label(for="phone").label_strong Phone number 
                         span.text_red *
-                    input(type="text" id="phone").input.input_width
+                    input(type="text" id="phone").input.form-third
                 .form-group.form-third
                     label(for="address1").label_strong Address line 1 
                         span.text_red *
@@ -56,8 +56,8 @@ block content
                     +dropdown(['Netherlands','Belgium','Luxemburg','France','Germany','Switcerland'],'country','checkout-dropdown')
         .block.block_bg
             .block__body.clearfix
-                .title.title_md.text_red.left Please enter your shipping address.
-                .right
+                .title.title_md.text_red.checkout-left Please enter your shipping address.
+                .checkout-right
                     input(type="checkbox" id="shipping_address").input_check
                     label(for="shipping_address") Use my billing address
         .block.block_bg

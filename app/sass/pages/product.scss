@@ -4,6 +4,25 @@
         height: rem(324px);
         float: left;
         border-right: 1px solid #e3e3e3;
+        @include mediaMax(1100px) {
+            width: 56%;
+        }
+        @include mediaMax(600px) {
+            width: 100%;
+            border: none;
+            float: none;
+        }
+    }
+    &-select {
+        width: rem(255px);
+        float: right;
+        @include mediaMax(1100px) {
+            width: 38%;
+        }
+        @include mediaMax(600px) {
+            width: 100%;
+            float: none;
+        }
     }
     &__input {
         padding: rem(14px) rem(10px);
@@ -13,10 +32,6 @@
         margin: auto;
         max-width: 100%;
         max-height: 100%;
-    }
-    &-select {
-        width: rem(255px);
-        float: right;
     }
     &-form-group {
         margin: rem(10px) 0 rem(20px);
@@ -49,6 +64,11 @@
         display: flex;
         line-height: 1;
         margin: rem(27px) 0 rem(32px);
+        text-align: center;
+        @include mediaMax(690px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
     &__price {
         font-family: 'MuseoSlab500';
@@ -61,6 +81,13 @@
         &_old {
             color: #b5b5b5;
             text-decoration: line-through;
+        }
+        @include mediaMax(690px) {
+            width: 50%;
+            margin: 0 0 rem(10px);
+            flex-shrink: 0;
+            flex-grow: 0;
+            border: none;
         }
     }
     &__currency {
@@ -91,7 +118,14 @@
                             border-color: $red;
                             color: $red;
                         }
+                        @include mediaMax(780px) {
+                            display: block;
+                        }
                     }
+                }
+                @include mediaMax(780px) {
+                    margin: 0;
+                    display: block;
                 }
             }
             &-list {
@@ -155,6 +189,13 @@
                 font-size: rem(50px);
                 top: 0;
                 height: 100%;
+            }
+            @include mediaMax(460px) {
+                padding-right: rem(56px);
+                &:after {
+                    width: rem(48px);
+                    font-size: rem(24px);
+                }
             }
         }
         &__link {

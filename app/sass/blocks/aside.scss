@@ -13,7 +13,7 @@
         margin: rem(4px) 0 rem(28px);
     }
     &-media-none {
-        @include mediaMax(1100px) {
+        @include mediaMax(940px) {
             display: none;
         }
     }
@@ -25,7 +25,7 @@
             .aside-item {
                 width: rem(344px);
             }
-            @include mediaMax(1100px) {
+            @include mediaMax(940px) {
                 display: block;
                 .aside-item {
                     width: 100%;

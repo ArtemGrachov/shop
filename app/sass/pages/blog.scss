@@ -64,6 +64,9 @@
             display: flex;
             padding-bottom: rem(33px);
             margin-bottom: rem(25px);
+            @include mediaMax(670px) {
+                display: block;
+            }
         }
         &-user {
             display: flex;
@@ -76,9 +79,24 @@
             flex-shrink: 0;
             width: rem(180px);
             margin-right: rem(24px);
+            @include mediaMax(670px) {
+                width: 100%;
+                border-bottom: 1px solid $border-grey-lg;
+                border-right: none;
+                margin-bottom: rem(15px);
+                padding-bottom: rem(15px);
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+            }
         }
         &__avatar {
             flex-shrink: 0;
+            @include mediaMax(670px) {
+                width: rem(32px);
+                height: rem(32px);
+                margin-right: rem(20px);
+            }
         }
         &__img {
             max-width: 100%;
