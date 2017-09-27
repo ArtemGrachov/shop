@@ -1,7 +1,9 @@
-mixin useful-info-item(title)
+mixin useful-info-item(title,icon)
+    - iconUrl = './img/png-icons/' + icon + '.png'
     li.useful-info-item.block.block_bg
         .block__body.useful-info-block
             .useful-info__icon
+                img(src=iconUrl).useful-info__img
             .useful-info__body
                 .useful-info__title.title.title_md #{title}
                     span.text_red .

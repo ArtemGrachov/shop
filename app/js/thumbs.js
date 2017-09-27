@@ -1,0 +1,3 @@
+const thumbs = function () {
+
+}
