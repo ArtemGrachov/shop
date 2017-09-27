@@ -1,4 +1,4 @@
-let slider = function (duration, toggleSpeed) {
+const slider = function (duration, toggleSpeed) {
     let flag = true,
         timer;
 
@@ -40,7 +40,6 @@ let slider = function (duration, toggleSpeed) {
                     oldPosEnd = '-100%';
                     newActive = oldActive.next();
                     if (!newActive.length) {
-                        console.log(newActive)
                         newActive = slider.find('.slider-item').first();
                     }
                 } else if (dir === 'left') {

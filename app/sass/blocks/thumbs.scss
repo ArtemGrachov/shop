@@ -137,6 +137,15 @@
                 margin: rem(35px) 0 rem(35px);
                 display: block;
             }
+            &_active {
+                .thumbs-select__link {
+                    color: $red;
+                    text-decoration: none;
+                    &:after {
+                        background-image: url('../img/png-icons/active.png')
+                    }
+                }
+            }
         }
         &__link {
             font-family: 'MuseoSlab500';
@@ -159,7 +168,7 @@
                 background-repeat: no-repeat;
                 background-color: $body-bg;
             }
-            &_active,
+            ;
             &:hover {
                 color: $red;
                 text-decoration: none;

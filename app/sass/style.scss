@@ -368,9 +368,6 @@
             }
             &-btn {
                 color: black;
-                &:after {
-                    background: $text-grey-lg;
-                }
             }
         }
     }
@@ -388,6 +385,9 @@
         color: $grey-input;
         transition: $transition;
         &:focus {
+            color: black;
+        }
+        &:hover {
             color: black;
         }
         position: relative;
@@ -422,6 +422,9 @@
         &:hover {
             background: $red;
             color: white;
+        }
+        &_active {
+            color: $red;
         }
     }
 }
