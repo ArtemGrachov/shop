@@ -6,6 +6,7 @@ const slider = function (duration, toggleSpeed) {
         init: function () {
             const _this = this;
             _this.autoSwitch();
+            _this.swipe();
             $('.slider').each(function () {
                 const $this = $(this);
                 $this.find('.slider-item')
@@ -83,6 +84,35 @@ const slider = function (duration, toggleSpeed) {
                 clearInterval(timer);
                 this.autoSwitch();
             }
+        },
+        swipe: function () {
+            let moveStart,
+                moveTime,
+                minDist = 100,
+                minDur = 100;
+            const _this = this;
+
+            $('.slider')
+                .on('touchstart', function (e) {
+                    moveStart = e.changedTouches[0].pageX;
+                    moveTime = new Date().getTime();
+                })
+                .on('touchmove', function (e) {})
+                .on('touchend', function (e) {
+                    const diff = e.changedTouches[0].pageX - moveStart,
+                        $this = $(this);
+
+                    if (Math.abs(diff) > minDist) {
+                        e.preventDefault();
+                        if (new Date().getTime() - moveTime > minDur) {
+                            if (diff > 0) {
+                                _this.moveSlide($this, 'left');
+                            } else {
+                                _this.moveSlide($this, 'right');
+                            }
+                        }
+                    }
+                })
         }
     }
 };
