@@ -14,7 +14,7 @@ block content
                 li.breadcrumbs-item Mens
             .browse-sort-wrap
                 label(for="sort") Sort by
-                +dropdown(['Price (Low to High)','Price (High to Low)','Name (A-Z)','Name (Z-A)'],'sort','browse-select')
+                +dropdown([['Price (Low to High)','toHigh'],['Price (High to Low)','toLow'],['Name (A-Z)','nameAZ'],['Name (Z-A)','nameZA']],'sort','browse-select')
     .container
         ul.thumbs-list
             +thumbs-item('Dope T-Shirt', '799')

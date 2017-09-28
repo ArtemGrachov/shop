@@ -14,10 +14,10 @@ block content
                     .product-select
                         .product-form-group
                             label(for="size").product__label Pick your desired size
-                            +dropdown(['Medium (M)', 'Small (S)', 'Large (L)'],'size')
+                            +dropdown([['Medium (M)','m'],[ 'Small (S)','s'], ['Large (L)','l']],'size')
                         .product-form-group
                             label(for="color").product__label Pick your desired color
-                            +dropdown(['Yellow','Green','Blue','Red'],'color')
+                            +dropdown([['Yellow','yellow'],['Green','green'],['Blue','blue'],['Red','red']],'color')
                         .product-form-group
                             label(for="quantity").product__label Select a quantity
                             input(type="number" id="quantity" value="12").input.product__input
@@ -41,7 +41,7 @@ block content
                 .product-info
                     .product-tabs
                         ul.product-tabs-nav-list
-                            li.product-tabs-nav-item.product-tabs-nav-item_active
+                            li.product-tabs-nav-item
                                 a.product-tabs-nav__link(href="#") Description
                                     span.text_red .
                             li.product-tabs-nav-item
@@ -55,9 +55,9 @@ block content
                                 p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quibusdam, at corrupti dolorem hic repudiandae fugiat necessitatibus amet, esse voluptatem sapiente, cupiditate ducimus delectus dolorum officiis nisi error aperiam officia.
                                 p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, eos? Recusandae, enim illo consequuntur iure autem cupiditate quisquam voluptatibus quas, odit eos repellendus incidunt, debitis est tempora repudiandae modi sint!
                             li.product-tabs-item
-                                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quibusdam, at corrupti dolorem hic repudiandae fugiat necessitatibus amet, esse voluptatem sapiente, cupiditate ducimus delectus dolorum officiis nisi error aperiam officia.
-                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, eos? Recusandae, enim illo consequuntur iure autem cupiditate quisquam voluptatibus quas, odit eos repellendus incidunt, debitis est tempora repudiandae modi sint!
-                            li.product-tabs-item.product-tabs-item_active
+                                p Magna ullamco ad aliqua enim ut aliquip ex ex commodo do aute ipsum dolore veniam. Commodo est irure labore et eiusmod fugiat cupidatat eu labore excepteur veniam. Excepteur nostrud laboris Lorem magna laborum anim qui consequat esse aute eu irure et ex. Velit non ullamco irure aute duis culpa officia do laboris aliquip esse exercitation Lorem ex. Deserunt quis ut dolore ullamco veniam aute ex non labore labore. Commodo exercitation consequat dolore in commodo sit sint ea culpa esse deserunt aliqua Lorem non.
+                                p Elit culpa irure anim dolore officia. In aute commodo nostrud Lorem ea eiusmod laborum labore ut commodo nisi ea. Pariatur ex aliqua anim veniam et labore officia proident qui dolore aute.
+                            li.product-tabs-item
                                 .form-group.form_two-groups
                                     .form-group.form-group_sm
                                         input(type="text" placeholder="Name").input.input_msg-form

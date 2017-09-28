@@ -1,10 +1,9 @@
 const thumbs = (function () {
+    const duration = 500;
     return {
         init: function () {
             const _this = this;
-
             _this.click('hot', $('#thumbsHot').parent());
-
             $('#thumbsHot').on('click', function (e) {
                 e.preventDefault();
                 _this.click('hot', $(this).parent());
@@ -19,24 +18,26 @@ const thumbs = (function () {
             });
         },
         click: function (category, li) {
-            const _this = this;
-            const thumbsUp = $('#thumbsUp'),
-                thumbsDown = $('#thumbsBottom'),
-                duration = 500;
-            li
-                .addClass('thumbs-select-item_active')
-                .siblings()
-                .removeClass('thumbs-select-item_active');
-            thumbsUp.stop(true, true).animate({
-                opacity: '0'
-            }, duration);
-            thumbsDown.stop(true, true).animate({
-                opacity: '0'
-            }, duration);
-            setTimeout(
-                function () {
-                    fakeBackend(category).then(res => _this.view(res));
+            const activeClass = 'thumbs-select-item_active';
+            if (!li.hasClass(activeClass)) {
+                const _this = this;
+                const thumbsUp = $('#thumbsUp'),
+                    thumbsDown = $('#thumbsBottom')
+                li
+                    .addClass(activeClass)
+                    .siblings()
+                    .removeClass(activeClass);
+                thumbsUp.stop(true, true).animate({
+                    opacity: '0'
                 }, duration);
+                thumbsDown.stop(true, true).animate({
+                    opacity: '0'
+                }, duration);
+                setTimeout(
+                    function () {
+                        fakeBackend(category).then(res => _this.view(res));
+                    }, duration);
+            }
         },
         view: function (res) {
             const thumbsUp = $('#thumbsUp'),
@@ -73,10 +74,10 @@ const thumbs = (function () {
                     }
                     thumbsUp.animate({
                         opacity: '1'
-                    }, 200);
+                    }, duration);
                     thumbsDown.animate({
                         opacity: '1'
-                    }, 200);
+                    }, duration);
                 }
             )
         }

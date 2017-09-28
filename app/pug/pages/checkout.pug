@@ -53,7 +53,7 @@ block content
                     input(type="text" id="zip").input
                 .form-group.form-third
                     label(for="country").label_strong Select country
-                    +dropdown(['Netherlands','Belgium','Luxemburg','France','Germany','Switcerland'],'country','checkout-dropdown')
+                    +dropdown([['Netherlands','nd'],['Belgium','be'],['luxembourg','lu'],['France','fr'],['Germany','ge'],['Switzerland','ch']],'country','checkout-dropdown')
         .block.block_bg
             .block__body.clearfix
                 .title.title_md.text_red.checkout-left Please enter your shipping address.
