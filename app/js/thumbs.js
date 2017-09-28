@@ -2,6 +2,9 @@ const thumbs = (function () {
     return {
         init: function () {
             const _this = this;
+
+            _this.click('hot', $('#thumbsHot').parent());
+
             $('#thumbsHot').on('click', function (e) {
                 e.preventDefault();
                 _this.click('hot', $(this).parent());
