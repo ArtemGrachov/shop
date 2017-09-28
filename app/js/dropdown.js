@@ -13,11 +13,11 @@ const dropdown = function () {
     $('.dropdown-btn').on('click', function (e) {
         e.preventDefault();
         const $this = $(this);
-        $('.dropdown')
-            .not(this)
-            .removeClass('dropdown_active');
         $this.closest('.dropdown')
             .toggleClass('dropdown_active');
+        $('.dropdown')
+            .not($this.parent())
+            .removeClass('dropdown_active');
     })
     $('.dropdown-item').on('click', function () {
         const $this = $(this),

@@ -1,11 +1,15 @@
-mixin dropdown(list, id, cls)
+mixin dropdown(list, id, cls, placeholder)
     if cls
         - $class="dropdown " + cls
     else
         - $class="dropdown"
 
     div(class=$class data-value=list[0][1])
-        button(id=id).dropdown-btn #{list[0][0]}
+        button(id=id).dropdown-btn 
+            if placeholder
+                | #{placeholder}
+            else
+                | #{list[0][0]}
         ul.dropdown-list
             each item in list
                 li.dropdown-item(data-value=item[1]) #{item[0]}
