@@ -96,6 +96,10 @@ table {
     letter-spacing: 0;
 }
 
+.table-wrap {
+    overflow-x: auto;
+}
+
 .label {
     &_strong {
         font-family: 'RalewayBold';

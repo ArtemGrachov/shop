@@ -53,7 +53,7 @@ block content
                     input(type="text" id="zip").input
                 .form-group.form-third
                     label(for="country").label_strong Select country
-                    +dropdown([['Netherlands','nd'],['Belgium','be'],['luxembourg','lu'],['France','fr'],['Germany','ge'],['Switzerland','ch']],'country','checkout-dropdown')
+                    +dropdown([['Netherlands','nd'],['Belgium','be'],['Luxembourg','lu'],['France','fr'],['Germany','ge'],['Switzerland','ch']],'country','checkout-dropdown')
         .block.block_bg
             .block__body.clearfix
                 .title.title_md.text_red.checkout-left Please enter your shipping address.
@@ -62,42 +62,43 @@ block content
                     label(for="shipping_address") Use my billing address
         .block.block_bg
             .title.title_md.text_red.block__header Your order
-            table.checkout-table
-                thead
-                    tr
-                        th Item
-                        th Quantity
-                        th Unit price
-                        th Total
-                tbody
-                    tr
-                        td
-                            img.table__img(src="https://www.customink.com/mms/images/catalog/styles/297300/catalog_detail_image_large.jpg")
-                            | Adidas Commander TD3 Code G48794
-                        td 12
-                        td 29,99 USD
-                        td.text_strong 159,99 USD
-                    tr
-                        td
-                            img.table__img(src="https://www.customink.com/mms/images/catalog/styles/297300/catalog_detail_image_large.jpg")
-                            | Adidas Axz 1 Code V21609
-                        td 2
-                        td 39,99 USD
-                        td.text_strong 169,99 USD
-                    tr
-                        td
-                            img.table__img(src="https://www.customink.com/mms/images/catalog/styles/297300/catalog_detail_image_large.jpg")
-                            | Adidas Barricade 6 Andy Murray Code G40436
-                        td 15
-                        td 49,99 USD
-                        td.text_strong 179,99 USD
-                    tr
-                        td
-                            img.table__img(src="https://www.customink.com/mms/images/catalog/styles/297300/catalog_detail_image_large.jpg")
-                            | Adidas Galaxy Arriba II Code G60635
-                        td 20
-                        td 59,99 USD
-                        td.text_strong 189,99 USD
+            .table-wrap
+                table.checkout-table
+                    thead
+                        tr
+                            th Item
+                            th Quantity
+                            th Unit price
+                            th Total
+                    tbody
+                        tr
+                            td
+                                img.table__img(src="https://www.customink.com/mms/images/catalog/styles/297300/catalog_detail_image_large.jpg")
+                                | Adidas Commander TD3 Code G48794
+                            td 12
+                            td 29,99 USD
+                            td.text_strong 159,99 USD
+                        tr
+                            td
+                                img.table__img(src="https://www.customink.com/mms/images/catalog/styles/297300/catalog_detail_image_large.jpg")
+                                | Adidas Axz 1 Code V21609
+                            td 2
+                            td 39,99 USD
+                            td.text_strong 169,99 USD
+                        tr
+                            td
+                                img.table__img(src="https://www.customink.com/mms/images/catalog/styles/297300/catalog_detail_image_large.jpg")
+                                | Adidas Barricade 6 Andy Murray Code G40436
+                            td 15
+                            td 49,99 USD
+                            td.text_strong 179,99 USD
+                        tr
+                            td
+                                img.table__img(src="https://www.customink.com/mms/images/catalog/styles/297300/catalog_detail_image_large.jpg")
+                                | Adidas Galaxy Arriba II Code G60635
+                            td 20
+                            td 59,99 USD
+                            td.text_strong 189,99 USD
         include ../includes/discount-coupon.pug
         .block.block_bg
             .block__header
