@@ -8,11 +8,6 @@
         position: relative;
         height: 100%;
     }
-    &-list {
-        @extend %list;
-        position: relative;
-        height: rem(644px);
-    }
     &:after {
         display: block;
         height: rem(33px);
@@ -21,15 +16,9 @@
         background: url('../img/patterns/round-border.png');
     }
     &-item {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: none;
-        &_active {
-            display: block;
-        }
+        height: rem(624px);
+        max-width: rem(1144px);
+        width: 80%;
     }
     &-btn {
         position: absolute;
