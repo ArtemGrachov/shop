@@ -1,5 +1,6 @@
 const slider = function (duration, toggleSpeed) {
     let flag = true,
+        swipeMove = false,
         timer;
 
     return {
@@ -30,7 +31,7 @@ const slider = function (duration, toggleSpeed) {
             })
         },
         moveSlide: function (slider, dir) {
-            if (flag) {
+            if (flag && !swipeMove) {
                 flag = false;
                 const _this = this,
                     oldActive = slider.find('.slider-item_active');
@@ -64,9 +65,12 @@ const slider = function (duration, toggleSpeed) {
                     left: '0'
                 }, toggleSpeed, () => {
                     oldActive.removeClass('slider-item_active');
+                })
+
+                setTimeout(() => {
                     flag = true;
                     _this.clearTimer();
-                })
+                }, toggleSpeed)
             }
         },
         autoSwitch: function () {
@@ -101,8 +105,7 @@ const slider = function (duration, toggleSpeed) {
                 rightSlide,
                 leftX,
                 centerX,
-                rightX,
-                swipeMove = false;
+                rightX;
 
             const pixelToNumber = function (str) {
                 return +str.replace('px', '');
@@ -148,6 +151,7 @@ const slider = function (duration, toggleSpeed) {
                     moveStart = e.changedTouches[0].pageX;
                 })
                 .on('touchmove', function (e) {
+                    const $this = $(this);
                     let moveDiff = e.changedTouches[0].pageX - moveStart;
                     if (swipeMove) {
                         const $this = $(this);
@@ -170,18 +174,16 @@ const slider = function (duration, toggleSpeed) {
                             _this.clearCss($this);
                             setSlides($this, rightSlide);
                         }
-                    } else if (Math.abs(moveDiff) > 100) {
+                    } else if (Math.abs(moveDiff) > 100 && flag) {
                         flag = false;
                         swipeMove = true;
-                        const $this = $(this);
                         setSlides($this, $this.find('.slider-item_active'));
                     }
                 })
                 .on('touchend', function (e) {
-
                     if (swipeMove) {
                         _this.clearTimer();
-                        const $this = $(this);
+                        $this = $(this);
                         let arrX = [
                             [leftSlide, pixelToNumber(leftSlide.css('left'))],
                             [centerSlide, pixelToNumber(centerSlide.css('left'))],
@@ -200,19 +202,21 @@ const slider = function (duration, toggleSpeed) {
                         const moveDiff = arrX[0][1];
                         setSlides($this, arrX[0][0])
 
-                        arrX[0][0].animate({
+                        arrX[0][0].
+                        animate({
                             left: arrX[0][1] - moveDiff
-                        }, duration / 3)
+                        }, 100)
                         arrX[1][0].animate({
                             left: arrX[1][1] - moveDiff
-                        }, duration / 3)
+                        }, 100)
                         arrX[2][0].animate({
                             left: arrX[2][1] - moveDiff
-                        }, duration / 3)
+                        }, 100)
                         setTimeout(() => {
                             flag = true;
                             swipeMove = false;
-                        }, duration / 3);
+                            _this.clearCss($this);
+                        }, 100);
                     }
                 })
 
