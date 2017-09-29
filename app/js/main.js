@@ -5,4 +5,5 @@ $(document).ready(() => {
     dropdown();
     tabs('product-tabs').init();
     slider();
+    loadUserLocalData();
 })
