@@ -16,6 +16,7 @@ const slider = function (duration, toggleSpeed) {
             })
 
             $('.slider-btn').on('click', function (e) {
+                console.log('!')
                 e.preventDefault();
                 const $this = $(this),
                     slider = $this.closest('.slider'),
@@ -176,18 +177,12 @@ const slider = function (duration, toggleSpeed) {
 
             $('.slider')
                 .on('touchstart', function (e) {
-                    if (flag) {
-                        const $this = $(this);
-                        moveStart = e.changedTouches[0].pageX;
-                        setSlides($this, $this.find('.slider-item_active'));
-                        flag = false;
-                        swipeMove = true;
-                    }
+                    moveStart = e.changedTouches[0].pageX;
                 })
                 .on('touchmove', function (e) {
+                    let moveDiff = e.changedTouches[0].pageX - moveStart;
                     if (swipeMove) {
                         const $this = $(this);
-                        let moveDiff = e.changedTouches[0].pageX - moveStart;
                         leftSlide.css({
                             left: leftX + moveDiff
                         })
@@ -209,6 +204,13 @@ const slider = function (duration, toggleSpeed) {
                             _this.clearCss(slider);
                             setSlides($this, rightSlide);
                         }
+                    } else if (moveDiff > 100) {
+                        if (flag) {
+                            const $this = $(this);
+                            setSlides($this, $this.find('.slider-item_active'));
+                            flag = false;
+                            swipeMove = true;
+                        }
                     }
                 })
                 .on('touchend', function (e) {
@@ -229,6 +231,10 @@ const slider = function (duration, toggleSpeed) {
                         });
 
                         const moveDiff = arrX[0][1];
+                        arrX[0][0]
+                            .addClass('slide-item_active')
+                            .siblings()
+                            .removeClass('slider-item_active');
 
                         arrX[0][0].animate({
                             left: arrX[0][1] - moveDiff
