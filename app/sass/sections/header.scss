@@ -9,16 +9,14 @@
             position: absolute;
             display: block;
             content: '';
-            top: 0;
+            bottom: 0;
             left: 50%;
-            height: 100%;
-            width: rem(1144px);
+            height: 100px;
+            width: 100%;
+            max-width: rem(1144px);
             transform: translateX(-50%);
             border-radius: 25%;
-            clip: rect(64px auto 500px auto);
-            @include mediaMax(1032px) {
-                content: none;
-            }
+            clip: rect(100px auto 500px auto);
         }
     }
     &-top {

@@ -157,8 +157,12 @@
     &_md {
         font-size: rem(18px);
         letter-spacing: rem(-0.38px);
-        @include mediaMax(650px) {
-            font-size: rem(16px);
+    }
+    @include mediaMax(500px) {
+        font-size: rem(22px);
+        &_md {
+            font-size: rem(18px);
+            letter-spacing: rem(-0.38px);
         }
     }
 }
@@ -384,6 +388,7 @@
         display: block;
         color: $grey-input;
         transition: $transition;
+        cursor: pointer;
         &:focus {
             color: black;
         }
@@ -419,6 +424,7 @@
     &-item {
         padding: rem(13px) rem(21px);
         transition: $transition;
+        cursor: pointer;
         &:hover {
             background: $red;
             color: white;

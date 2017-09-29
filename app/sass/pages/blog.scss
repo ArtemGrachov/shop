@@ -41,7 +41,20 @@
             }
             &:first-child {
                 &:before {
-                    content: none;
+                    display: none;
+                }
+            }
+            @include mediaMax(490px) {
+                display: block;
+                margin: 0 0 rem(10px);
+                &:before {
+                    content: '\f0da';
+                    font-family: 'FontAwesome';
+                }
+                &:first-child {
+                    &:before {
+                        display: inline;
+                    }
                 }
             }
         }

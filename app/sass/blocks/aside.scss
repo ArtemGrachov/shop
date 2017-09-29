@@ -5,6 +5,9 @@
         border-bottom: 4px solid #dddddd;
         letter-spacing: rem(-1.45px);
         padding-bottom: rem(27px);
+        @include mediaMax(500px) {
+            font-size: rem(22px);
+        }
     }
     &__body {
         padding: rem(23px) 0;

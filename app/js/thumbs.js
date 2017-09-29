@@ -177,7 +177,7 @@ const fakeBackend = function (category) {
             price: 209,
             img: 'https://www.nhsfunfactory.com/mm5/graphics/00000001/INDY_SS_heavensent_blk_sum17_256x256.jpg'
         }, {
-            name: 'Google Zero T-Shirt',
+            name: 'Google T-Shirt',
             price: 799,
             img: 'https://www.pascogifts.com/files/cache/square/files/migrated-t-shirt-everyday-quality-b763.jpg'
         }, {
