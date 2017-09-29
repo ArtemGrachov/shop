@@ -5,7 +5,7 @@ const slider = function (duration, toggleSpeed) {
     return {
         init: function () {
             const _this = this;
-            // _this.autoSwitch();
+            _this.autoSwitch();
             _this.swipe();
             $('.slider').each(function () {
                 const $this = $(this);
@@ -65,7 +65,7 @@ const slider = function (duration, toggleSpeed) {
                 }, toggleSpeed, () => {
                     oldActive.removeClass('slider-item_active');
                     flag = true;
-                    this.clearTimer();
+                    _this.clearTimer();
                 })
             }
         },
@@ -180,6 +180,7 @@ const slider = function (duration, toggleSpeed) {
                 .on('touchend', function (e) {
 
                     if (swipeMove) {
+                        _this.clearTimer();
                         const $this = $(this);
                         let arrX = [
                             [leftSlide, pixelToNumber(leftSlide.css('left'))],
