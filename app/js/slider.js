@@ -35,6 +35,7 @@ const slider = function (duration, toggleSpeed) {
                 const _this = this,
                     oldActive = slider.find('.slider-item_active');
                 let newPosStart, oldPosEnd, newActive;
+                _this.clearCss(slider);
 
                 if (dir === 'right') {
                     newPosStart = '100%';
@@ -85,6 +86,14 @@ const slider = function (duration, toggleSpeed) {
                 this.autoSwitch();
             }
         },
+        clearCss: function (slider) {
+            slider
+                .find('.slider-item')
+                .css({
+                    left: '',
+                    display: ''
+                })
+        },
         // swipe: function () {
         //     let moveStart,
         //         moveTime,
@@ -115,13 +124,15 @@ const slider = function (duration, toggleSpeed) {
         //         })
         // }
         swipe: function () {
+            const _this = this;
             let moveStart,
                 leftSlide,
                 centerSlide,
                 rightSlide,
                 leftX,
                 centerX,
-                rightX;
+                rightX,
+                swipeMove = false;
 
             const pixelToNumber = function (str) {
                 return +str.replace('px', '');
@@ -163,44 +174,75 @@ const slider = function (duration, toggleSpeed) {
                 rightX = pixelToNumber(rightSlide.css('left'));
             }
 
-            const clearCss = function (slide) {
-                slide.css({
-                    display: '',
-                    left: ''
-                })
-            }
             $('.slider')
                 .on('touchstart', function (e) {
-                    const $this = $(this);
-                    moveStart = e.changedTouches[0].pageX;
-                    setSlides($this, $this.find('.slider-item_active'));
+                    if (flag) {
+                        const $this = $(this);
+                        moveStart = e.changedTouches[0].pageX;
+                        setSlides($this, $this.find('.slider-item_active'));
+                        flag = false;
+                        swipeMove = true;
+                    }
                 })
                 .on('touchmove', function (e) {
-                    const $this = $(this);
-                    let moveDiff = e.changedTouches[0].pageX - moveStart;
-                    leftSlide.css({
-                        left: leftX + moveDiff
-                    })
-                    centerSlide.css({
-                        left: centerX + moveDiff
-                    })
-                    rightSlide.css({
-                        left: rightX + moveDiff
-                    })
-                    if (pixelToNumber(leftSlide.css('left')) >= 0) {
-                        moveStart = e.changedTouches[0].pageX;
-                        clearCss(leftSlide);
-                        clearCss(centerSlide);
-                        clearCss(rightSlide);
-                        setSlides($this, leftSlide);
-                    }
+                    if (swipeMove) {
+                        const $this = $(this);
+                        let moveDiff = e.changedTouches[0].pageX - moveStart;
+                        leftSlide.css({
+                            left: leftX + moveDiff
+                        })
+                        centerSlide.css({
+                            left: centerX + moveDiff
+                        })
+                        rightSlide.css({
+                            left: rightX + moveDiff
+                        })
+                        if (pixelToNumber(leftSlide.css('left')) >= 0) {
+                            moveStart = e.changedTouches[0].pageX;
 
-                    if (pixelToNumber(rightSlide.css('left')) <= 0) {
-                        moveStart = e.changedTouches[0].pageX;
-                        clearCss(leftSlide);
-                        clearCss(centerSlide);
-                        clearCss(rightSlide);
-                        setSlides($this, rightSlide);
+                            _this.clearCss(slider);
+                            setSlides($this, leftSlide);
+                        }
+                        if (pixelToNumber(rightSlide.css('left')) <= 0) {
+                            moveStart = e.changedTouches[0].pageX;
+
+                            _this.clearCss(slider);
+                            setSlides($this, rightSlide);
+                        }
+                    }
+                })
+                .on('touchend', function (e) {
+                    if (swipeMove) {
+                        let arrX = [
+                            [leftSlide, pixelToNumber(leftSlide.css('left'))],
+                            [centerSlide, pixelToNumber(centerSlide.css('left'))],
+                            [rightSlide, pixelToNumber(rightSlide.css('left'))],
+                        ].sort((a, b) => {
+                            const absA = Math.abs(a[1]);
+                            const absB = Math.abs(b[1]);
+                            if (absA > absB) {
+                                return 1
+                            } else if (absA < absB) {
+                                return -1
+                            }
+                            return 0
+                        });
+
+                        const moveDiff = arrX[0][1];
+
+                        arrX[0][0].animate({
+                            left: arrX[0][1] - moveDiff
+                        }, duration)
+                        arrX[1][0].animate({
+                            left: arrX[1][1] - moveDiff
+                        }, duration)
+                        arrX[2][0].animate({
+                            left: arrX[2][1] - moveDiff
+                        }, duration)
+                        setTimeout(() => {
+                            flag = true;
+                            swipeMove = false;
+                        }, duration);
                     }
                 })
         }
