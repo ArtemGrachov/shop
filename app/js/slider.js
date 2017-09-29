@@ -5,7 +5,7 @@ const slider = function (duration, toggleSpeed) {
     return {
         init: function () {
             const _this = this;
-            _this.autoSwitch();
+            // _this.autoSwitch();
             _this.swipe();
             $('.slider').each(function () {
                 const $this = $(this);
@@ -85,32 +85,122 @@ const slider = function (duration, toggleSpeed) {
                 this.autoSwitch();
             }
         },
+        // swipe: function () {
+        //     let moveStart,
+        //         moveTime,
+        //         minDist = 100,
+        //         minDur = 100;
+        //     const _this = this;
+
+        //     $('.slider')
+        //         .on('touchstart', function (e) {
+        //             moveStart = e.changedTouches[0].pageX;
+        //             moveTime = new Date().getTime();
+        //         })
+        //         .on('touchmove', function (e) {})
+        //         .on('touchend', function (e) {
+        //             const diff = e.changedTouches[0].pageX - moveStart,
+        //                 $this = $(this);
+
+        //             if (Math.abs(diff) > minDist) {
+        //                 e.preventDefault();
+        //                 if (new Date().getTime() - moveTime > minDur) {
+        //                     if (diff > 0) {
+        //                         _this.moveSlide($this, 'left');
+        //                     } else {
+        //                         _this.moveSlide($this, 'right');
+        //                     }
+        //                 }
+        //             }
+        //         })
+        // }
         swipe: function () {
             let moveStart,
-                moveTime,
-                minDist = 100,
-                minDur = 100;
-            const _this = this;
+                leftSlide,
+                centerSlide,
+                rightSlide,
+                leftX,
+                centerX,
+                rightX;
 
+            const pixelToNumber = function (str) {
+                return +str.replace('px', '');
+            }
+
+            const setSlides = function (slider, cnSlide) {
+                centerSlide = cnSlide;
+                leftSlide = centerSlide.prev();
+                rightSlide = centerSlide.next();
+
+                if (!cnSlide.hasClass('slider-item_active')) {
+                    cnSlide.addClass('slider-item_active')
+                        .siblings()
+                        .removeClass('slider-item_active')
+                }
+
+                if (leftSlide.length == 0) {
+                    leftSlide = slider.find('.slider-item').last()
+                }
+                if (rightSlide.length == 0) {
+                    rightSlide = slider.find('.slider-item').first()
+                }
+
+                if (leftSlide.css('display') != 'block') {
+                    leftSlide.css({
+                        display: 'block',
+                        left: -(pixelToNumber(slider.css('width')))
+                    })
+                }
+                if (rightSlide.css('display') != 'block') {
+                    rightSlide.css({
+                        display: 'block',
+                        left: pixelToNumber(slider.css('width'))
+                    })
+                }
+
+                leftX = pixelToNumber(leftSlide.css('left'));
+                centerX = pixelToNumber(centerSlide.css('left'));
+                rightX = pixelToNumber(rightSlide.css('left'));
+            }
+
+            const clearCss = function (slide) {
+                slide.css({
+                    display: '',
+                    left: ''
+                })
+            }
             $('.slider')
                 .on('touchstart', function (e) {
+                    const $this = $(this);
                     moveStart = e.changedTouches[0].pageX;
-                    moveTime = new Date().getTime();
+                    setSlides($this, $this.find('.slider-item_active'));
                 })
-                .on('touchmove', function (e) {})
-                .on('touchend', function (e) {
-                    const diff = e.changedTouches[0].pageX - moveStart,
-                        $this = $(this);
+                .on('touchmove', function (e) {
+                    const $this = $(this);
+                    let moveDiff = e.changedTouches[0].pageX - moveStart;
+                    leftSlide.css({
+                        left: leftX + moveDiff
+                    })
+                    centerSlide.css({
+                        left: centerX + moveDiff
+                    })
+                    rightSlide.css({
+                        left: rightX + moveDiff
+                    })
+                    if (pixelToNumber(leftSlide.css('left')) >= 0) {
+                        moveStart = e.changedTouches[0].pageX;
+                        clearCss(leftSlide);
+                        clearCss(centerSlide);
+                        clearCss(rightSlide);
+                        setSlides($this, leftSlide);
+                    }
 
-                    if (Math.abs(diff) > minDist) {
-                        e.preventDefault();
-                        if (new Date().getTime() - moveTime > minDur) {
-                            if (diff > 0) {
-                                _this.moveSlide($this, 'left');
-                            } else {
-                                _this.moveSlide($this, 'right');
-                            }
-                        }
+                    if (pixelToNumber(rightSlide.css('left')) <= 0) {
+                        moveStart = e.changedTouches[0].pageX;
+                        clearCss(leftSlide);
+                        clearCss(centerSlide);
+                        clearCss(rightSlide);
+                        setSlides($this, rightSlide);
                     }
                 })
         }
